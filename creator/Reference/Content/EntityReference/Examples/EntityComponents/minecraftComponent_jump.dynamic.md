@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:jump.dynamic
-ms.prod: gaming
+description: "A reference document detailing the 'jump.dynamic' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:jump.dynamic
@@ -20,7 +21,10 @@ ms.prod: gaming
 
 ### rabbit
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/rabbit.json" range="129-130":::
+```json
+"minecraft:jump.dynamic": {
+      }
+```
 
 ## Vanilla entities using `minecraft:jump.dynamic`
 

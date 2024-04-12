@@ -1,13 +1,14 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.look_at_entity
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.look_at_entity' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.look_at_entity
 
-`minecraft:behavior.look_at_entity` allows an entity to look at a specific entity by rotating the head bone pose within a set limit.
+`minecraft:behavior.look_at_entity` compels an entity to look at a specific entity by rotating the head bone pose within a set limit.
 
 ## Parameters
 
@@ -40,7 +41,18 @@ ms.prod: gaming
 
 ### ravager
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/ravager.json" range="114-123":::
+```json
+"minecraft:behavior.look_at_entity": {
+          "priority": 10,
+          "look_distance": 8,
+          "angle_of_view_horizontal": 45,
+          "filters": {
+            "test": "is_family",
+            "subject": "other",
+            "value": "mob"
+          }
+        }
+```
 
 ## Vanilla entities using `minecraft:behavior.look_at_entity`
 

@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: mooshroom_shear
-ms.prod: gaming
+description: "A code snippet for the mooshroom shear entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
 # mooshroom shear

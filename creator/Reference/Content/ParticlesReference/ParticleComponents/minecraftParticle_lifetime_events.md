@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: mammerla
+ms.author: mikeam
 title: Particle Documentation - Particle Lifetime Events component
-ms.prod: gaming
+description: "A reference document detailing the 'particle lifetime events' particle component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Particle Documentation - Particle Lifetime Events component
@@ -17,14 +18,6 @@ This component allows for triggering events based on various lifetime events.
       "creation_event": <string>
       "expiration_event": [<string>, ...] // fires when the particle expires (does not wait for particles to expire too)
       "expiration_event": <string>,
-
-      "custom_events: {
-        {
-          "eventtrigger" molang,
-          "eventname": event
-        },
-        ...
-      }
 
       // event timeline
       "timeline": {

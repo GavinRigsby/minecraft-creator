@@ -1,8 +1,9 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: mammerla
+ms.author: mikeam
 title: Entity Documentation - Entity JSON Introduction
-ms.prod: gaming
+description: "A reference document providing an introduction to the concept of entity JSON"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - Entity JSON Introduction
@@ -16,7 +17,7 @@ To start, create a new folder and name it "entity" inside the root of the Resour
 
 The minecraft:client_entity section contains the description for the entity. Under description there are a number of things that you can set for an entity. Generally, this file is defining what resources a mob requires and gives a friendly name to each, that the other definition files can use.
 
-### Example client entity definitions JSON for the pig
+## Example client entity definitions JSON for the pig
 
 ```json
 "format_version": "1.8.0",
@@ -130,6 +131,14 @@ This determines if the entity can equip attachables when this is set to true. Th
 "enable_attachables": true
 ```
 
+### held_item_ignores_lighting
+
+This determines if the item held by an entity should render fully lit up (if true), or depending on surrounding lighting.
+
+```json
+"held_item_ignores_lighting": true
+```
+
 ### hide_armor
 
 This determines if the armor attached to an entity should be hidden when set to true. This overrides the rendering settings specified by `enable_attachables`
@@ -138,12 +147,13 @@ This determines if the armor attached to an entity should be hidden when set to 
 "hide_armor": true
 ```
 
-## Spawn Egg
+### Spawn Egg
 
 This sets the color or texture used for the entity Spawn Egg. There are 2 ways to do this. The first is to use the hex value for the base color and the overlay color.
 
 ### Example Spawn Egg using `hex value`
-```
+
+```json
 "spawn_egg": {
   "base_color": "#53443E",
   "overlay_color": "#2E6854"
@@ -152,7 +162,7 @@ This sets the color or texture used for the entity Spawn Egg. There are 2 ways t
 
 When there are more than one texture associated with a texture name you can use an index to pick the one that you want. If no index is specified than it is assumed to be 0 and the first texture in the list is used.
 
-## Example Spawn Egg specifying a texture
+### Example Spawn Egg specifying a texture
 
 ```json
 "spawn_egg": {

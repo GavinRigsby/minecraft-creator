@@ -1,19 +1,21 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: JimSeaman42
+ms.author: mikeam
 title: Entity Documentation - minecraft:movement.fly
-ms.prod: gaming
+description: "A reference document detailing the 'movement.fly' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:movement.fly
 
-`minecraft:movement.fly` causes the mob to fly.
+`minecraft:movement.fly` compels the entity to fly.
 
 ## Parameters
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-| max_turn| 30.0| Decimal| The maximum number in degrees the mob can turn per tick. |
+| start_speed| 0.1| Decimal|Initial speed of the entity when it starts gliding. |
+| speed_when_turning| 0.2| Decimal|Speed that the entity adjusts to when it has to turn quickly. |
 
 ## Example
 
@@ -27,7 +29,10 @@ ms.prod: gaming
 
 ### parrot
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/parrot.json" range="142-143":::
+```json
+"minecraft:movement.fly": {
+      }
+```
 
 ## Vanilla entities using `minecraft:movement.fly`
 

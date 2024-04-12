@@ -1,14 +1,14 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.jump_to_block
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.jump_to_block' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.jump_to_block
 
-`minecraft:behavior.jump_to_block` allows the mob to search around for a block to jump to and then jump to that block.
-
+`minecraft:behavior.jump_to_block` compels the mob to search around for a block to jump to and then jump to that block.
 
 ## Parameters
 
@@ -21,10 +21,10 @@ ms.prod: gaming
 | minimum_path_length| 5| Integer| The minimum length (in blocks) of the mobs path to a block, in order to consider jumping to it. |
 | preferred_blocks| | Array| Blocks that the mob prefers jumping to. |
 | preferred_blocks_chance| 1.000000| Decimal| Chance (between 0.0 and 1.0) that the mob will jump to a preferred block, if in range. Only matters if preferred blocks are defined. |
-| scale_factor| 0.700000| Decimal| The scalefactor of the bounding box of the mob while it is jumping. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+| scale_factor| 0.700000| Decimal| The scale factor of the bounding box of the mob while it is jumping. |
 | search_height| 10| Integer| The height (in blocks, in range [2, 15]) of the search box, centered around the mob. |
 | search_width| 8| Integer| The width (in blocks, in range [2, 15]) of the search box, centered around the mob. |
-
 
 ## Example
 
@@ -36,7 +36,7 @@ ms.prod: gaming
     "max_velocity": 10.0,
     "minimum_path_length": 4,
     "minimum_distance": 6,
-    "cooldown_range": [5, 10],
+    "cooldown_range": [5, 10]
 }
 ```
 
@@ -58,6 +58,7 @@ ms.prod: gaming
     ]
 }
 ```
+
 ## Vanilla Mobs using `minecraft:behavior.jump_to_block`
 
 - [goat](../../../../Source/VanillaBehaviorPack_Snippets/entities/goat.md)

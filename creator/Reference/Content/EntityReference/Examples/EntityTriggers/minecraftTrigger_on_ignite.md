@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:on_ignite
-ms.prod: gaming
+description: "A reference document detailing the 'on_ignite' entity trigger"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:on_ignite

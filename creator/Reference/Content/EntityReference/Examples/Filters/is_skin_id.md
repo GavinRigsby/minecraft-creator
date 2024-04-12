@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Entity Documentation - is_skin_id
-ms.prod: gaming
+description: "A reference document detailing the 'is_skin_id' entity filter"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - is_skin_id
@@ -23,7 +24,7 @@ Returns true if the subject entity uses the skin id number provided.
 | Options| Description |
 |:-----------|:-----------|
 | block| The block involved with the interaction. |
-| damager| The damaging actor involved with the interaction. |
+| damager| The damaging entity involved with the interaction. |
 | other| The other member of an interaction, not the caller. |
 | parent| The caller's current parent. |
 | player| The player involved with the interaction. |
@@ -50,7 +51,7 @@ Returns true if the subject entity uses the skin id number provided.
 ### Full
 
 ```json
-{ "test": "is_skin_id", "subject": "self", "operator": "equals", "value": true}
+{ "test": "is_skin_id", "subject": "self", "operator": "equals", "value": 0 }
 ```
 
 ### Short (using Defaults)
@@ -63,7 +64,9 @@ Returns true if the subject entity uses the skin id number provided.
 
 ### villager_v2
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/villager_v2.json" range="2013-2066":::
+```json
+{ "test": "is_skin_id", "subject": "other", "value": 0 }
+```
 
 ## Vanilla entities using `is_skin_id`
 

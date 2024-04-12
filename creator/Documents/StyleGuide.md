@@ -1,9 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: mammerla
+ms.author: mikeam
 title: Contributor Style Guide
-ms.prod: gaming
-description: An article covering the style and tone used when writing content for the Creator Portal
+description: "An article covering the style and tone used when writing content for the Creator Portal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Contributor Style Guide
@@ -61,7 +61,7 @@ Minecraft has many various editions, such as Bedrock Edition or Java Edition. To
 
 ```Minecraft: Bedrock Edition```
 
-To break that down, use "Minecraft" as previously discussed. After Minecraft, use a colon to name the edition. Make sure you capitalize both the name of the edition (Bedrock, Java, Education, etc.) *and* the word "Edition".
+To break that down, use "Minecraft" as previously discussed. After Minecraft, use a colon to name the edition. Make sure you capitalize both the name of the edition (Bedrock, Java, etc.) *and* the word "Edition". The exception to this rule is "Minecraft Education," which as of January 2023 has no colon or 'Edition' suffix.
 
 After you have introduced a Minecraft edition, you can just refer to it by the edition name, like this:
 

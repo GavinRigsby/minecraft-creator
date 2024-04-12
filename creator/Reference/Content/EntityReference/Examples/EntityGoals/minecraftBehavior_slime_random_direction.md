@@ -1,13 +1,14 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.slime_random_direction
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.slime_random_direction' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.slime_random_direction
 
-`minecraft:behavior.slime_random_direction` allows the entity to move in random directions like a slime.
+`minecraft:behavior.slime_random_direction` compels the entity to move in random directions like a slime.
 
 ## Parameters
 
@@ -16,6 +17,7 @@ ms.prod: gaming
 | add_random_time_range| 3| Integer| Additional time (in whole seconds), chosen randomly in the range of [0, "add_random_time_range"], to add to "min_change_direction_time". |
 | min_change_direction_time| 2| Decimal| Constant minimum time (in seconds) to wait before choosing a new direction. |
 | turn_range| 360| Integer| Maximum rotation angle range (in degrees) when randomly choosing a new direction. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 
 ## Example
 

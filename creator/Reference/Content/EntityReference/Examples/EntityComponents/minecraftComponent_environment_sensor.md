@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:environment_sensor
-ms.prod: gaming
+description: "A reference document detailing the 'enviroment_sensor' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:environment_sensor
@@ -13,12 +14,12 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-| triggers| *not set*| List| The list of triggers that fire when the environment conditions match the given filter criteria. |
+| triggers| *not set*| List| The list of triggers that initiate when the environment conditions match the given filter criteria. |
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-| event| *not set* | string |The event to run when the conditions for this trigger are met.|
-| filters|*not set* |List / Filter| The list of conditions for this trigger to execute.|
+| event| *not set* | string |The event to run when the conditions are met.|
+| filters|*not set* |List / Filter| The list of conditions for this trigger to initiate.|
 | target| self|string|The target of the event. |
 
 ## Example
@@ -50,7 +51,30 @@ ms.prod: gaming
 
 ### fox
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/fox.json" range="116-137":::
+```json
+"minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "weather_at_position", "operator": "!=", "value": "thunderstorm" },
+                  { "test": "is_daytime", "value": true }
+                ]
+              },
+              "event": "minecraft:fox_configure_day"
+            },
+            {
+              "filters": {
+                "all_of": [
+                  { "test": "weather_at_position", "operator": "!=", "value": "thunderstorm" },
+                  { "test": "is_daytime", "value": false }
+                ]
+              },
+              "event": "minecraft:fox_configure_night"
+            }
+          ]
+        }
+```
 
 ## Vanilla entities using `minecraft:environment_sensor`
 

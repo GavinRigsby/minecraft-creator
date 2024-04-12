@@ -1,8 +1,9 @@
 ---
 author: mammerla
-ms.author: v-josjones
+ms.author: mikeam
 title: Entity Documentation - weather_at_position
-ms.prod: gaming
+description: "A reference document detailing the 'weather_at_position' entity filter"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - weather_at_position
@@ -13,7 +14,13 @@ Tests the current weather, at the actor's position, against a provided weather v
 
 |Name |Default Value  |Type  |Description  |
 |---------|---------|---------|---------|
-|value |*not set* |String |(Required) The Family name to look for. |
+|value |*not set* |String |(Required) The weather type to test against. |
+
+## values
+
+clear - no precipitation
+rain - precipitation, or snow in cold biomes
+thunder - lightning and sky noises, or blizzard in cold biomes
 
 >[!Note]
 > `weather_at_position` can also use `subject` and [operator](../Definitions/NestedTables/operator.md) parameters but they are optional.
@@ -23,7 +30,7 @@ Tests the current weather, at the actor's position, against a provided weather v
 | Options| Description |
 |:-----------|:-----------|
 | block| The block involved with the interaction. |
-| damager| The damaging actor involved with the interaction. |
+| damager| The damaging entity involved with the interaction. |
 | other| The other member of an interaction, not the caller. |
 | parent| The caller's current parent. |
 | player| The player involved with the interaction. |
@@ -45,24 +52,18 @@ Tests the current weather, at the actor's position, against a provided weather v
 | equals| Test for equality. |
 | not| Test for inequality. |
 
-### value
-
-|Name |Default Value  |Type  |Description  |
-|---------|---------|---------|---------|
-|value |true |Boolean |(Optional) true or false. |
-
 ## Example
 
 ### Full
 
 ```json
-{ "test": "weather_at_position", "subject": "self", "operator": "equals", "value": "player" }
+{ "test": "weather_at_position", "subject": "self", "operator": "equals", "value": "rain" }
 ```
 
 ### Short (using Defaults)
 
 ```json
-{ "test": "weather_at_position", "value": "player" }
+{ "test": "weather_at_position", "value": "rain" }
 ```
 
 ## Vanilla entities examples

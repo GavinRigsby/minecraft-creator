@@ -1,10 +1,10 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: World Height Changes in Caves and Cliffs Part 2
-ms.prod: gaming
-description: "Effects of world height changes in Caves and Cliffs: Part 2 on creators."
+description: "Effects of world height changes in Caves and Cliffs: Part 2 on creators"
 
+ms.service: minecraft-bedrock-edition
 ---
 
 # World Height Changes in Caves and Cliffs Part 2
@@ -18,12 +18,11 @@ All existing worlds will be automatically updated to reflect the new world heigh
 >
 > You may want to set a base game version if players will encounter issues with your world or gameplay experience with the new world height values.
 
-> [!TIP]
-> To learn more about old world types, please visit [Old Worlds Types in Minecraft: Bedrock Edition](https://feedback.minecraft.net/hc/en-us/articles/4411688594317-Old-Worlds-Types-in-Minecraft-Bedrock-Edition-FAQ-)
-
 ## Updating Your Minecraft World
 
-Existing Minecraft worlds that use the **Infinite** World Type will be updated differently than **Flat** worlds.
+Existing Minecraft worlds that use the **Infinite** World Type will be updated differently than **Flat** worlds. 
+
+To learn more about old world types, please visit [Old World Types in Minecraft: Bedrock Edition](https://feedback.minecraft.net/hc/en-us/articles/4411688594317-Old-Worlds-Types-in-Minecraft-Bedrock-Edition-FAQ-).
 
 ### Updating Infinite Worlds
 

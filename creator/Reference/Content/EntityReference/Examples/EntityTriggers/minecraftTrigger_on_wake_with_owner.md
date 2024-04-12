@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:on_wake_with_owner
-ms.prod: gaming
+description: "A reference document detailing the 'on_wake_with_owner' entity trigger"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:on_wake_with_owner
@@ -34,7 +35,12 @@ ms.prod: gaming
 
 ### cat
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/cat.json" range="190-193":::
+```json
+"minecraft:on_wake_with_owner": {
+    "event": "minecraft:pet_slept_with_owner",
+    "target": "self"
+}
+```
 
 ## Vanilla entities using `minecraft:on_wake_with_owner`
 

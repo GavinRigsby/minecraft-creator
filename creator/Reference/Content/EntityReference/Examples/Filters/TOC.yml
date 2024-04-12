@@ -1,5 +1,11 @@
 - name: Filters List
   href: ../FilterList.md
+- name: actor_health
+  href: actor_health.md
+- name: all_slots_empty
+  href: all_slots_empty.md
+- name: any_slot_empty
+  href: any_slot_empty.md
 - name: clock_time
   href: clock_time.md
 - name: distance_to_nearest_player
@@ -88,18 +94,26 @@
   href: is_moving.md
 - name: is_owner
   href: is_owner.md
+- name: is_panicking
+  href: is_panicking.md
 - name: is_persistent
   href: is_persistent.md
+- name: is_raider
+  href: is_raider.md
 - name: is_riding
   href: is_riding.md
 - name: is_skin_id
   href: is_skin_id.md
 - name: is_sleeping
   href: is_sleeping.md
+- name: is_sneak_held
+  href: is_sneak_held.md
 - name: is_sneaking
   href: is_sneaking.md
 - name: is_snow_covered
   href: is_snow_covered.md
+- name: is_sprinting
+  href: is_sprinting.md
 - name: is_target
   href: is_target.md
 - name: is_temperature_type
@@ -120,8 +134,12 @@
   href: moon_intensity.md
 - name: moon_phase
   href: moon_phase.md
+- name: on_fire
+  href: on_fire.md
 - name: on_ground
   href: on_ground.md
+- name: on_hot_block
+  href: on_hot_block.md
 - name: on_ladder
   href: on_ladder.md
 - name: random_chance
@@ -130,8 +148,12 @@
   href: rider_count.md
 - name: surface_mob
   href: surface_mob.md
+- name: target_distance
+  href: target_distance.md
 - name: trusts
   href: trusts.md
+- name: was_last_hurt_by
+  href: was_last_hurt_by.md
 - name: weather_at_position
   href: weather_at_position.md
 - name: weather

@@ -1,15 +1,16 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: v-jillheaden
 title: Getting Started with Command Blocks
-ms.prod: gaming
-description: A tutorial that is an introduction to Command Blocks where you will learn how to access Command Blocks, how to create chains and how to design a gameplay loop with Command Blocks.
+description: "An introduction to Minecraft: Bedrock Edition Command Blocks including how to access Command Blocks, how to create chains, and how to design a gameplay loop with Command Blocks."
+ms.service: minecraft-bedrock-edition
 ---
+
 # Getting Started with Command Blocks
 
 Command blocks are a specialized type of block within a Minecraft: Bedrock Edition world that allows the use of console commands in-game. The same commands that players can type from chat can be run automatically by command blocks using redstone power.
 
-In this tutorial, you will learn the following;
+In this tutorial, you will learn the following:
 
 > [!div class="checklist"]
 >
@@ -25,7 +26,7 @@ In this guide, we will set up a command block chain to look for a certain type o
 - [Introduction to Commands](CommandsIntroduction.md)
 - A Minecraft world with cheats enabled.
 
-#### Setting the map up
+#### Setting the world up
 
 While command blocks can be used in any Minecraft world, we will be using a flat world for a simple and clean environment.
 
@@ -83,7 +84,7 @@ A use case of command blocks is allowing creators to create gameplay loops withi
 
 ### Setting up the first Command Block
 
-Now that we have looked at the settings of a command block, let’s set up the first block to detect a certain type of block in a location.
+Now that we have looked at the settings of a command block, let's set up the first block to detect a certain type of block in a location.
 
 1. Place a command block on the ground in a location near your player character.
 1. Open up the command block interface.
@@ -122,7 +123,7 @@ Since the second block is set to **Conditional**, this new block will only execu
 
 ### Setting up the Reward Command Block
 
-Let’s add a third block to set a command to reward the player for placing a block in the right spot.
+Let's add a third block to set a command to reward the player for placing a block in the right spot.
 
 1. Place another command block next to the existing block. Make sure that the new block is placed in front of the direction that the arrow is pointing.
 1. Open the command block interface.
@@ -147,3 +148,7 @@ If we stop now, placing the diamond block at `0 4 0` will give the player 20 eme
 ### Testing the loop
 
 If everything has been set up correctly, you can now place a diamond block on location `0, 4, 0` and you will receive a single emerald in your player inventory.
+
+> [!div class="nextstepaction"]
+> [Commands Introduction](CommandsIntroduction.md)
+> [Popular Commands](CommandsPopularCommands.md)

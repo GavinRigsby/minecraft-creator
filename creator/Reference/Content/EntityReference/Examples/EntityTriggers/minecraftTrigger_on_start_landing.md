@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:on_start_landing
-ms.prod: gaming
+description: "A reference document detailing the 'on_start_landing' entity trigger"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:on_start_landing
@@ -34,7 +35,12 @@ ms.prod: gaming
 
 ### ender_dragon
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/ender_dragon.json" range="86-89":::
+```json
+"minecraft:on_start_landing": {
+    "event": "minecraft:start_land",
+    "target": "self"
+}
+```
 
 ## Vanilla entities using `minecraft:on_start_landing`
 

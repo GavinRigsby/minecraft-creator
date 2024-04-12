@@ -1,13 +1,14 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.follow_parent
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.follow_parent' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.follow_parent
 
-`minecraft:behavior.follow_parent` allows an entity that has been tagged as a baby to follow their parent around.
+`minecraft:behavior.follow_parent` compels an entity that has been tagged as a baby to follow their parent around.
 
 >[!IMPORTANT]
 > `minecraft:behavior.follow_parent` requires the `minecraft:is_baby` component in order to have an adult mob tagged as a parent for the entity.
@@ -16,14 +17,15 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|speed_multiplier| 1.0| Decimal| Movement speed multiplier of the mob when using this AI Goal |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+|speed_multiplier| 1.0| Decimal| Movement speed multiplier of the mob when using this AI Goal. |
 
 ## Example
 
 ```json
 "minecraft:behavior.follow_parent":{
     "priority": 2,
-    "speed_multiplier":1.10,
+    "speed_multiplier":1.10
 }
 ```
 
@@ -31,7 +33,12 @@ ms.prod: gaming
 
 ### horse
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/horse.json" range="56-59":::
+```json
+"minecraft:behavior.follow_parent": {
+          "priority": 4,
+          "speed_multiplier": 1.0
+        }
+```
 
 ## Vanilla entities using `minecraft:behavior.follow_parent`
 

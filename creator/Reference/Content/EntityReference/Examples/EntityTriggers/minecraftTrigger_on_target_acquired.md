@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:on_target_acquired
-ms.prod: gaming
+description: "A reference document detailing the 'on_target_acquired' entity trigger"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:on_target_acquired
@@ -37,7 +38,12 @@ ms.prod: gaming
 
 ### enderman
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/enderman.json" range="12-15":::
+```json
+"minecraft:on_target_acquired": {
+    "event": "minecraft:become_angry",
+    "target": "self"
+}
+```
 
 ## Vanilla entities using `minecraft:on_target_acquired`
 

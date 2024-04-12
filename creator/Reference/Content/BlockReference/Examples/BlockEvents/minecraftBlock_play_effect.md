@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Block Documentation - play_effect
-ms.prod: gaming
+description: "A reference document detailing the 'play_effect' block event response"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Block Documentation - play_effect
@@ -23,7 +24,7 @@ ms.prod: gaming
 
 ```json
 "play_effect":{
-    "delta" : 0,
+    "data" : 0,
     "effect" : "particle_sparks",
     "target" : {"test": "random_chance", "value": "3"} //25%
 }

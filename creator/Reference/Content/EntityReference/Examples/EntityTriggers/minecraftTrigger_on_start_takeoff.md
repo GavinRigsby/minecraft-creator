@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:on_start_takeoff
-ms.prod: gaming
+description: "A reference document detailing the 'on_start_takeoff' entity trigger"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:on_start_takeoff
@@ -34,7 +35,12 @@ ms.prod: gaming
 
 ### ender_dragon
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/ender_dragon.json" range="90-93":::
+```json
+"minecraft:on_start_takeoff": {
+    "event": "minecraft:start_fly",
+    "target": "self"
+}
+```
 
 ## Vanilla entities using `minecraft:on_start_takeoff`
 

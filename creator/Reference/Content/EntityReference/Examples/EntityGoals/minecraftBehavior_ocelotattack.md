@@ -1,8 +1,9 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.ocelotattack
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.ocelotattack' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.ocelotattack
@@ -11,13 +12,13 @@ ms.prod: gaming
 
 ## Parameter
 
-
 | Name| Default Value| Type| Description |
 |:-----------:|:-----------:|:-----------:|:-----------:|
 | cooldown_time| 1| Decimal| Time (in seconds) between attacks. |
 | max_distance| 15| Decimal| Max distance from the target, this entity will use this attack behavior. |
 | max_sneak_range| 15| Decimal| Max distance from the target, this entity starts sneaking. |
 | max_sprint_range| 4| Decimal| Max distance from the target, this entity starts sprinting (sprinting takes priority over sneaking). |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 | reach_multiplier| 2| Decimal| Used with the base size of the entity to determine minimum target-distance before trying to deal attack damage. |
 | sneak_speed_multiplier| 0.6| Decimal| Modifies the attacking entity's movement speed while sneaking. |
 | sprint_speed_multiplier| 1.33| Decimal| Modifies the attacking entity's movement speed while sprinting. |
@@ -67,4 +68,3 @@ ms.prod: gaming
 
 - [cat](../../../../Source/VanillaBehaviorPack_Snippets/entities/cat.md)
 - [ocelot](../../../../Source/VanillaBehaviorPack_Snippets/entities/ocelot.md)
-

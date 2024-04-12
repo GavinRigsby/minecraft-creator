@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Recipe Documentation - Potion Brewing Mix
-ms.prod: gaming
+description: "A reference document detailing potion brewing mix recipes"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Recipe Documentation - Potion Brewing Mix
@@ -20,7 +21,7 @@ Represents a Potion Brewing Mix.
 
 ## Potion Brewing Mix Example
 
-```JSON
+```json
 {
 "format_version": "1.18",
 "minecraft:recipe_brewing_mix": {
@@ -32,7 +33,7 @@ Represents a Potion Brewing Mix.
  
     "input": "minecraft:potion_type:awkward",
     "reagent": "minecraft:blaze_powder",
-    "output": "minecraft:potion_type:strength",
+    "output": "minecraft:potion_type:strength"
  
     }
 }
@@ -42,4 +43,4 @@ Represents a Potion Brewing Mix.
 
 ### Slow-Falling Redstone potion
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack_Snippets/recipes/brew_slow_falling_redstone.json":::
+:::code language="json" source="../../../../Source/VanillaBehaviorPack/recipes/brew_slow_falling_redstone.json":::

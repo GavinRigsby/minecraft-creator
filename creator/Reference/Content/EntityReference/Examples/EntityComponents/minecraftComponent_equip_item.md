@@ -1,13 +1,20 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: JimSeaman42
+ms.author: mikeam
 title: Entity Documentation - minecraft:equip_item
-ms.prod: gaming
+description: "A reference document detailing the 'equip_item' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:equip_item
 
-`minecraft:equip_item` allows the entity to equip desired equipment.
+`minecraft:equip_item` compels the entity to equip desired equipment.
+
+## Parameters
+
+|Name |Default Value  |Type  |Description  |
+|:----------|:----------|:----------|:----------|
+| excluded_items| *not set*| List| The list of items that the entity should not equip. |
 
 ## Example
 
@@ -20,7 +27,10 @@ ms.prod: gaming
 
 ### skeleton
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/skeleton.json" range="186-187":::
+```json
+"minecraft:equip_item": {
+      },
+```
 
 ## Vanilla entities using `minecraft:equip_item`
 

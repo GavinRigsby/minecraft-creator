@@ -1,26 +1,28 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.flee_sun
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.flee_sun' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.flee_sun
 
-`minecraft:behavior.flee_sun` will make the entity actively avoid the sunlight.
+`minecraft:behavior.flee_sun` compels the entity to actively avoid the sunlight.
 
 ## Parameters
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|speed_multiplier| 1.0| Decimal| Movement speed multiplier of the mob when using this AI Goal |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+|speed_multiplier| 1.0| Decimal| Movement speed multiplier of the mob when using this AI Goal. |
 
 ## Example
 
 ```json
 "minecraft:behavior.flee_sun":{
     "priority": 2,
-    "speed_multiplier":1.50,
+    "speed_multiplier":1.50
 }
 ```
 
@@ -28,7 +30,12 @@ ms.prod: gaming
 
 ### skeleton
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/skeleton.json" range="540-543":::
+```json
+"minecraft:behavior.flee_sun": {
+        "priority": 2,
+        "speed_multiplier": 1
+      }
+```
 
 ## Vanilla entities using `minecraft:behavior.flee_sun`
 

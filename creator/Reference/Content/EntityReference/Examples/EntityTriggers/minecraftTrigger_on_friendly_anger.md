@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:on_friendly_anger
-ms.prod: gaming
+description: "A reference document detailing the 'on_friendly_anger' entity trigger"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:on_friendly_anger
@@ -31,10 +32,15 @@ ms.prod: gaming
 
 ### polar_bear
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/polar_bear.json" range="74-77":::
+```json
+"minecraft:on_friendly_anger": {
+    "event": "minecraft:on_anger",
+    "target": "self"
+}
+```
 
 ## Vanilla entities using `minecraft:on_friendly_anger`
 
-- [llama](../../../../Source/VanillaBehaviorPack_Snippets/entities/llama.md)
 - [panda](../../../../Source/VanillaBehaviorPack_Snippets/entities/panda.md)
 - [polar_bear](../../../../Source/VanillaBehaviorPack_Snippets/entities/polar_bear.md)
+- [trader_llama](../../../../Source/VanillaBehaviorPack_Snippets/entities/trader_llama.md)

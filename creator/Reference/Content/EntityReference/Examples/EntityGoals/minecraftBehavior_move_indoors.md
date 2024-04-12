@@ -1,22 +1,22 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.move_indoors
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.move_indoors' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.move_indoors
 
-`minecraft:behavior.move_indoors` allows an entity to move indoors.
-
-
+`minecraft:behavior.move_indoors` compels an entity to move indoors.
 
 ## Parameters
 
 | Name| Default Value| Type| Description |
 |:-----------:|:-----------:|:-----------:|:-----------:|
+| priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 | speed_multiplier| 0.800000| Decimal| The movement speed modifier to apply to the entity while it is moving indoors. |
-| timeout_cooldown| 8.000000| Decimal| The cooldown time in seconds before the goal can be reused after pathfinding fails |
+| timeout_cooldown| 8.000000| Decimal| The cooldown time in seconds before the goal can be reused after pathfinding fails. |
 
 ## Example
 
@@ -27,7 +27,7 @@ ms.prod: gaming
 }
 ```
 
-## Vanilla mob examples
+## Vanilla examples
 
 ### villager_v2
 
@@ -43,4 +43,3 @@ ms.prod: gaming
 
 - [villager](../../../../Source/VanillaBehaviorPack_Snippets/entities/villager.md)
 - [villager_v2](../../../../source/vanillabehaviorpack_snippets/entities/villager_v2.md)
-

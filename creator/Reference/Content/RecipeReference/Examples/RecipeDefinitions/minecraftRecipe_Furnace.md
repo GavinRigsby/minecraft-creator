@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Recipe Documentation - Furnace Recipe
-ms.prod: gaming
+description: "A reference document detailing furnace recipes"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Recipe Documentation - Furnace Recipe

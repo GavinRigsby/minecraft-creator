@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: simple_dungeons
-ms.prod: gaming
+description: "A code snippet for the simple dungeons chest loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
 # simple_dungeons

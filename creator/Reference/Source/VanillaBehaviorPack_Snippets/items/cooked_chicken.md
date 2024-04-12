@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: cooked_chicken
-ms.prod: gaming
+description: "A code snippet for the coked_chicken item"
+ms.service: minecraft-bedrock-edition
 ---
 
 # cooked_chicken

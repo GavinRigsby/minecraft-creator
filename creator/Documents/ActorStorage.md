@@ -1,14 +1,14 @@
 ---
-author: ArendDanielek
-ms.author: v-jillheaden
+author: iconicNurdle
+ms.author: mikeam
 title: Actor Storage in Minecraft - Bedrock Edition
-ms.prod: gaming
 description: "How actor data is organized in the LevelDB on disk"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Actor Storage in Minecraft: Bedrock Edition
 
-Minecraft has inspired many third parties to create useful world file viewing and editing tools that exist outside the client. Tools like the Universal Minecraft Editor and MCEdit are community favorites and are dependent upon knowing where to find each piece of the level's data on disk in the LevelDB files. With the upgrade from legacy actor storage to modern actor storage in R18U2, the locations in the LevelDB files which the data for actors is stored has changed and these third party developers need to be aware.
+Minecraft has inspired many third parties to create useful world file viewing and editing tools that exist outside the client. Tools like the Universal Minecraft Editor and MCEdit are community favorites and are dependent upon knowing where to find each piece of the level's data on disk in the LevelDB files. With the upgrade from legacy actor storage to modern actor storage in 1.18.20, the locations in the LevelDB files which the data for actors (entities) is stored has changed and these third party developers need to be aware.
 
 ### What did legacy actor data look like?
 
@@ -37,11 +37,11 @@ Let's take a look at how this appears on disk:
 On the left of the diagram, we can see the chunk key space. These keys take the legacy chunk key form of `<Chunk Position><DimensionID>`. 
 There is a very old legacy chunk format in which there is no dimension ID, so it is possible to load a really old world in which chunk keys do not have a dimension ID. They will be saved out under a new key with the dimension ID. This is old behavior that still exists.
 
-These are the smallest keys used by pushing them together contiguously on disk. The chunk key is used as a prefix for keys which store all non-actor data from the chunk. Each type of data from the chunk has it's own key ID that is appended to the chunk key prefix.
+These are the smallest keys used by pushing them together contiguously on disk. The chunk key is used as a prefix for keys which store all non-actor data from the chunk. Each type of data from the chunk has its own key ID that is appended to the chunk key prefix.
 
 ### Non-Actor Data Chunk Key IDs
 
-```json
+```cpp
 enum class LevelChunkTag : char {
   Data3D = 43,
   Version, // This was moved to the front as needed for the extended heights feature. Old chunks will not have this data.

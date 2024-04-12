@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Entity Documentation - is_color
-ms.prod: gaming
+description: "A reference document detailing the 'is_color' entity filter"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - is_color
@@ -46,7 +47,7 @@ Below is a list of color types that can be used for the `value` string.
 | Options| Description |
 |:-----------|:-----------|
 | block| The block involved with the interaction. |
-| damager| The damaging actor involved with the interaction. |
+| damager| The damaging entity involved with the interaction. |
 | other| The other member of an interaction, not the caller. |
 | parent| The caller's current parent. |
 | player| The player involved with the interaction. |
@@ -86,7 +87,9 @@ Below is a list of color types that can be used for the `value` string.
 
 ### evocation_illager
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/evocation_illager.json" range="191-196":::
+```json
+{ "test" :  "is_color", "subject" : "other", "value" :  "blue"}
+```
 
 ## Vanilla entities using is_color
 

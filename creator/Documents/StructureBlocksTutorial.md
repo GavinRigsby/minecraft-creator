@@ -1,9 +1,9 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
-title: Structure Blocks Tutorial
-ms.prod: gaming
+author: JimSeaman42
+ms.author: mikeam
+title: Create a Village with Structure Blocks
 description: "A tutorial on using Structure Blocks for Minecraft: Bedrock Edition"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Structure Block Tutorial
@@ -25,6 +25,10 @@ In this tutorial, you will learn the following:
 > - How to load a log cabin structure with a structure block.
 > - How to use the `/structure` command to place structures.
 > - How to animate a structure into Adventure or Survival mode using a command block and the /structure command.
+
+## Structure Block Sample Behavior Pack
+
+There is a [sample Structure Blocks behavior pack](https://github.com/microsoft/minecraft-samples/tree/main/structure_blocks_sample_behavior_pack) available at the Minecraft samples Github. You can download it to use the same structures used in the tutorial, or to get a sense of the structure of behavior packs.
 
 ## Create a structure
 
@@ -69,7 +73,7 @@ I'll need another set of stairs but otherwise it's looking good! Now you can pla
 
 ## Creating structures using the /structure command
 
-So now we have a saved structure in a structure block. But what if we want to interact with a structure without using a structure block? Let’s get to know the /structure command. 
+So now we have a saved structure in a structure block. But what if we want to interact with a structure without using a structure block? Let's get to know the /structure command. 
 
 Let's get to know the `/structure` command.
 
@@ -80,7 +84,7 @@ structure save <name: string> <from: x y z> <to: x y z> [saveMode: StructureSave
 This command saves a structure and takes in a name, coordinates, and optionally a save mode, a flag to include entities, and a flag to include blocks.
 
 ```
-structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [animationMode: StructureAnimationMode] [animationSeconds: float] [includesEntites: Boolean] [includesBlocks: Boolean] [integrity: float] [seed: string]
+structure load <name: string> <to: x y z> [rotation: Rotation] [mirror: Mirror] [animationMode: StructureAnimationMode] [animationSeconds: float] [includesEntites: Boolean] [includesBlocks: Boolean] [waterlogged: Boolean] [integrity: float] [seed: string] 
 ```
 
 This command loads a structure and takes in the name, location, and optionally rotation, mirroring, animations, entities, and information on whether blocks are include, along with integrity and integrity string.
@@ -131,6 +135,6 @@ Now you're familiar with structure blocks and the `/structure` command. You coul
 
 > [!div class="nextstepaction"]
 > [Popular Commands](CommandsPopularCommands.md)
-> [How to Make a Complete the Monument Map](CommandsHowToMakeACTMMap.md)
+> [Create an In-World Game](CreateAnInWorldGame.md)
 
 To see examples of structures, check out the Minecraft [Structure Blocks Behavior Pack Samples](https://github.com/microsoft/minecraft-samples/blob/main/structure_blocks_sample_behavior_pack/README.md).

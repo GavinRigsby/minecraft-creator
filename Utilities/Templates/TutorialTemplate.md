@@ -27,9 +27,9 @@ In this tutorial, you will learn the following;
 > - Any additional use cases for this feature/tool/process/etc.
 > - Any additional information creators may need or want.
 
-### Requirements
+## Requirements
 
-It’s recommended that the following be completed before beginning this tutorial.
+It's recommended that the following be completed before beginning this tutorial.
 
 - Link to any other articles/tutorials that creators should read prior to starting this tutorial.
 - Link to or describe any settings, software, or tools that creators should know before starting this tutorial.

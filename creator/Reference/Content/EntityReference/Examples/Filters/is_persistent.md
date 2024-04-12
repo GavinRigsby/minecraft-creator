@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Entity Documentation - is_persistent
-ms.prod: gaming
+description: "A reference document detailing the 'is_persistent' entity filter"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - is_persistent
@@ -11,7 +12,7 @@ Tests if the subject's persistence matches the bool value passed in.
 
 ## Parameters
 
-> [!Note]
+> [!NOTE]
 > `is_persistent` does **not** require any parameters to work properly. It can be used as a standalone filter.
 >
 > `is_persistent` can also use `subject`, [operator](../Definitions/NestedTables/operator.md) and `value` parameters.
@@ -21,7 +22,7 @@ Tests if the subject's persistence matches the bool value passed in.
 | Options| Description |
 |:-----------|:-----------|
 | block| The block involved with the interaction. |
-| damager| The damaging actor involved with the interaction. |
+| damager| The damaging entity involved with the interaction. |
 | other| The other member of an interaction, not the caller. |
 | parent| The caller's current parent. |
 | player| The player involved with the interaction. |
@@ -67,7 +68,9 @@ Tests if the subject's persistence matches the bool value passed in.
 
 ### zoglin
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/zoglin.json" range="141-181":::
+```json
+{ "test": "is_persistent", "value": false }
+```
 
 ## Vanilla entities using `is_persistent`
 

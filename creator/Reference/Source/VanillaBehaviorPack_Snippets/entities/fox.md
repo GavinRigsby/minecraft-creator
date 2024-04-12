@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: fox
-ms.prod: gaming
+description: "A code snippet for the fox entity"
+ms.service: minecraft-bedrock-edition
 ---
 
 # fox

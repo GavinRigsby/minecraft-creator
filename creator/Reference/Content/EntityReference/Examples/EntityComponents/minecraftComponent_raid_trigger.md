@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: JimSeaman42
+ms.author: mikeam
 title: Entity Documentation - minecraft:raid_trigger
-ms.prod: gaming
+description: "A reference document detailing the 'raid_trigger' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:raid_trigger
@@ -13,7 +14,7 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-| triggered_event| *not set*| String | Event to run we attempt to trigger a raid on the village. |
+| triggered_event| *not set*| String | Event to run when a raid is triggered. |
 
 ## Example
 
@@ -27,7 +28,19 @@ ms.prod: gaming
 
 ### player
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/player.json" range="36-41":::
+```json
+"minecraft:raid_trigger": {
+        "minecraft:raid_trigger": {
+          "triggered_event": {
+            "event": "minecraft:remove_raid_trigger",
+            "target": "self"
+          }
+        },
+        "minecraft:spell_effects": {
+          "remove_effects": "bad_omen"
+        }
+      }
+```
 
 ## Vanilla entities using `minecraft:raid_trigger`
 

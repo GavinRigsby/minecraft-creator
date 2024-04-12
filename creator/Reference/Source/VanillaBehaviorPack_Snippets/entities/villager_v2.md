@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: villager_v2
-ms.prod: gaming
+description: "A code snippet for the villager_v2 entity"
+ms.service: minecraft-bedrock-edition
 ---
 
 # villager_v2

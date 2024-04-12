@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Entity Documentation - hourly_clock_time
-ms.prod: gaming
+description: "A reference document detailing the 'hourly_clock_time' entity filter"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - hourly_clock_time
@@ -23,7 +24,7 @@ Compares the current 24 hour time with an int value in the range[0, 24000]
 | Options| Description |
 |:-----------|:-----------|
 | block| The block involved with the interaction. |
-| damager| The damaging actor involved with the interaction. |
+| damager| The damaging entity involved with the interaction. |
 | other| The other member of an interaction, not the caller. |
 | parent| The caller's current parent. |
 | player| The player involved with the interaction. |
@@ -63,7 +64,10 @@ Compares the current 24 hour time with an int value in the range[0, 24000]
 
 ### villager_v2
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/villager_v2.json" range="34-43":::
+```json
+{ "test": "hourly_clock_time", "operator": ">=", "value": 0 },
+{ "test": "hourly_clock_time", "operator": "<", "value": 8000 }
+```
 
 ## Vanilla entities using `hourly_clock_time`
 

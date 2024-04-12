@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Entity Documentation - has_equipment
-ms.prod: gaming
+description: "A reference document detailing the 'has_equipment' entity filter"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - has_equipment
@@ -23,7 +24,7 @@ Tests for the presence of a named item in the designated slot of the subject ent
 | Options| Description |
 |:-----------|:-----------|
 | block| The block involved with the interaction. |
-| damager| The damaging actor involved with the interaction. |
+| damager| The damaging entity involved with the interaction. |
 | other| The other member of an interaction, not the caller. |
 | parent| The caller's current parent. |
 | player| The player involved with the interaction. |
@@ -56,6 +57,7 @@ Domain is used to test where the equipment is located.
 | feet|
 | hand|
 | head|
+| inventory|
 | leg|
 | torso|
 
@@ -73,15 +75,13 @@ Domain is used to test where the equipment is located.
 { "test": "has_equipment", "value": "dirt" }
 ```
 
-## Vanilla entities examples
-
-### cow
-
-:::code language="json" source="../../../../../Documents/CodeSnippets/BehaviorPack/cow.json" range="56-73":::
+## Vanilla entities example
 
 ### mule
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/mule.json" range="199-219":::
+```json
+{ "test": "has_equipment", "subject": "other", "domain": "hand", "value": "chest"}
+```
 
 ## Vanilla entities using `has_equipment`
 

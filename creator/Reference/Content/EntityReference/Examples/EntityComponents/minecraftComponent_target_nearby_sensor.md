@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:target_nearby_sensor
-ms.prod: gaming
+description: "A reference document detailing the 'target_nearby_sensor' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:target_nearby_sensor
@@ -46,7 +47,25 @@ ms.prod: gaming
 
 ### creeper
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/creeper.json" range="122-138":::
+```json
+"minecraft:target_nearby_sensor": {
+        "inside_range": 2.5,
+        "outside_range": 6.0,
+        "must_see": true,
+        "on_inside_range": {
+          "event": "minecraft:start_exploding",
+          "target": "self"
+        },
+        "on_outside_range": {
+          "event": "minecraft:stop_exploding",
+          "target": "self"
+        },
+        "on_vision_lost_inside_range": {
+            "event": "minecraft:stop_exploding",
+            "target": "self"
+        }
+      }
+```
 
 ## Vanilla entities using `minecraft:target_nearby_sensor`
 

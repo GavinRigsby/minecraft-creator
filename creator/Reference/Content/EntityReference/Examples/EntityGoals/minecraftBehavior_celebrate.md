@@ -1,16 +1,16 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.celebrate
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.celebrate' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.celebrate
 
-`minecraft:behavior.celebrate` allows this entity to celebrate surviving a raid by making celebration sounds and jumping.
+`minecraft:behavior.celebrate` allows this entity to celebrate by making celebration sounds and jumping.
 
 ## Parameters
-
 
 | Name| Default Value | Type | Description |
 |:-----------:|:-----------:|:-----------:|:-----------:|
@@ -18,6 +18,7 @@ ms.prod: gaming
 | duration| 30.000000 | Decimal | The duration in seconds that the celebration lasts for. |
 | jump_interval| [1, 3.5] | Range [a, b]| Minimum and maximum time between jumping (positive, in seconds). |
 | on_celebration_end_event| | Trigger | The event to trigger when the goal's duration expires. |
+| priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 | sound_interval| [2, 7] | Range [a, b] | Minimum and maximum time between sound events (positive, in seconds). |
 
 ## Example
@@ -41,6 +42,7 @@ ms.prod: gaming
             "target": "self"
         }
     }
+ }
 ```
 
 ## Vanilla entities examples
@@ -76,4 +78,3 @@ ms.prod: gaming
 - [villager_v2](../../../../Source/VanillaBehaviorPack_Snippets/entities/villager_v2.md)
 - [vindicator](../../../../Source/VanillaBehaviorPack_Snippets/entities/vindicator.md)
 - [witch](../../../../Source/VanillaBehaviorPack_Snippets/entities/witch.md)
-

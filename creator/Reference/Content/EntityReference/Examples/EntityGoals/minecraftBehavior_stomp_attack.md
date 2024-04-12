@@ -1,17 +1,16 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.stomp_attack
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.stomp_attack' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.stomp_attack
 
 `minecraft:behavior.stomp_attack` allows an entity to attack using stomp AoE damage behavior.
 
-
 ## Parameters
-
 
 | Name| Default Value| Type| Description |
 |:-----------:|:-----------:|:-----------:|:-----------:|
@@ -29,10 +28,11 @@ ms.prod: gaming
 | path_fail_time_increase| 0.75| Decimal| Time (in seconds) to add to attack path recalculation when this entity cannot move along the current path. |
 | path_inner_boundary| 16| Decimal| Distance at which to increase attack path recalculation by "inner_boundary_tick_increase". |
 | path_outer_boundary| 32| Decimal| Distance at which to increase attack path recalculation by "outer_boundary_tick_increase". |
-| random_stop_interval| 0| Integer| This entity will have a 1 in N chance to stop it's current attack, where N = "random_stop_interval". |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+| random_stop_interval| 0| Integer| This entity will have a 1 in N chance to stop its current attack, where N = "random_stop_interval". |
 | reach_multiplier| 2| Decimal| Used with the base size of the entity to determine minimum target-distance before trying to deal attack damage. |
 | require_complete_path| false| Boolean| Toggles (on/off) the need to have a full path from the entity to the target when using this melee attack behavior. |
-| set_persistent| false| Boolean| Allows the actor to be set to persist upon targeting a player |
+| set_persistent| false| Boolean| Allows the entity to be set to persist upon targeting a player |
 | speed_multiplier| 1| Decimal| This multiplier modifies the attacking entity's speed when moving toward the target. |
 | stomp_range_multiplier| 2| Decimal| Multiplied with the base size of the entity to determine stomp AoE damage range. |
 | target_dist| N/a| Decimal| Unused. No effect on "minecraft:behavior.melee_attack". |

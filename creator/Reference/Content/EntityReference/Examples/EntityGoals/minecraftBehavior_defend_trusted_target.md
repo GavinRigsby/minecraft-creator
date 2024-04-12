@@ -1,13 +1,14 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.defend_trusted_target
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.defend_trusted_target' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.defend_trusted_target
 
-`minecraft:behavior.defend_trusted_target` allows an entity to react with an event when a trusted target is attacked.
+`minecraft:behavior.defend_trusted_target` compels an entity to react with an event when a trusted target is attacked.
 
 >[!IMPORTANT]
 > `minecraft:behavior.defend_trusted_target` requires a mob to be set to a trusted relationship in order for the behavior to work properly.
@@ -18,12 +19,17 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
+|[entity_types](../Definitions/NestedTables/entity_types.md)|*not set* | JSON Object| List of entity types that this mob considers valid targets.|
 |aggro_sound|*not set* | String| Sound to occasionally play while defending. |
 |attack_interval| 0| Integer| Time in seconds between attacks |
-|[entity_types](../Definitions/NestedTables/entity_types.md)|*not set* | JSON Object| List of entity types that this mob considers valid targets|
-|must_see| false| Boolean| If true, only entities in this mob's viewing range can be selected as targets |
-|must_see_forget_duration| 3.0| Decimal| Determines the amount of time in seconds that this mob will look for a target before forgetting about it and looking for a new one when the target isn't visible any more |
-|within_radius| 0.0| Decimal| Distance in blocks that the target can be within to launch an attack|
+|cooldown| 0.0| Decimal | The amount of time in seconds that the mob has to wait before selecting a target of the same type again. |
+|must_see| false| Boolean| If true, only entities in this mob's viewing range can be selected as targets. |
+|must_see_forget_duration| 3.0| Decimal| Determines the amount of time in seconds that this mob will look for a target before forgetting about it and looking for a new one when the target isn't visible any more. |
+|reevaluate_description| false| Boolean| If true, the mob will stop being targeted if it stops meeting any conditions. |
+|on_defend_start | *not set* | Array | Event that can occur with Target when defense event begins. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+|sound_chance| 0.05| Decimal | Probability that a sound will play. |
+|within_radius| 0.0| Decimal| Distance in blocks that the target can be within to launch an attack.|
 
 ## Example
 
@@ -45,7 +51,19 @@ ms.prod: gaming
 
 ### fox
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/fox.json" range="79-89":::
+```json
+"minecraft:behavior.defend_trusted_target": {
+          "priority": 0,
+          "within_radius": 25,
+          "must_see": false,
+          "aggro_sound": "mad",
+          "sound_chance": 0.05,
+          "on_defend_start": {
+            "event": "minecraft:fox_configure_defending",
+            "target": "self"
+          }
+}
+```
 
 ## Vanilla entities using `minecraft:behavior.defend_trusted_target`
 

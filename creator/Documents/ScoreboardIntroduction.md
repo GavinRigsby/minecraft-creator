@@ -1,9 +1,9 @@
 ---
-author: JDHeaden
-ms.author: v-jillheaden
+author: IconicNurdle
+ms.author: mikeam
 title: Introduction to Scoreboards
-ms.prod: gaming
-description: A guide about scoreboards and different ways to use them.
+description: "A guide about scoreboards and different ways to use them"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Introduction to Scoreboards
@@ -20,7 +20,7 @@ In this tutorial you will learn the following:
 
 ### Requirements
 
-It’s recommended that the following be completed before beginning this tutorial.
+It's recommended that the following be completed before beginning this tutorial.
 
 - [Introduction to Commands](CommandsIntroduction.md)
 
@@ -55,7 +55,7 @@ Because the objectives we are tracking do not already exist in the game, you wil
 
 ## Scoreboard Objectives Commands
 
-The available scoreboard objective commands can be listed using the chat’s auto-complete feature.
+The available scoreboard objective commands can be listed using the chat's auto-complete feature.
 
 ```
 /scoreboard objectives 
@@ -110,7 +110,7 @@ Use the **belowname** option to display objective information below player names
 
 ## Scoreboard Players Commands
 
-The following scoreboard player commands affect a player's score value. The arguments can be listed using the chat’s auto-complete feature.
+The following scoreboard player commands affect a player's score value. The arguments can be listed using the chat's auto-complete feature.
 
 ### set
 
@@ -223,4 +223,4 @@ Now that you have learned more about scoreboards, you could learn more about sco
 
 > [!div class="nextstepaction"]
 > [Scoreboard Operations Tutorial](ScoreboardOperationsTutorial.md)
-> [Complete the Monument](CommandsHowToMakeACTMMap.md)
+> [Create an In-World Game](CreateAnInWorldGame.md)

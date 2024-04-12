@@ -1,8 +1,9 @@
 ---
-author: mammerla
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - is_sleeping
-ms.prod: gaming
+description: "A reference document detailing the 'is_sleeping' entity filter"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - is_sleeping
@@ -11,7 +12,7 @@ Tests whether the Subject is sleeping.
 
 ## Parameters
 
-> [!Note]
+> [!NOTE]
 > `is_sleeping` does **not** require any parameters to work properly. It can be used as a standalone filter.
 >
 > `is_sleeping` can also use `subject`, [operator](../Definitions/NestedTables/operator.md) and `value` parameters.
@@ -21,7 +22,7 @@ Tests whether the Subject is sleeping.
 | Options| Description |
 |:-----------|:-----------|
 | block| The block involved with the interaction. |
-| damager| The damaging actor involved with the interaction. |
+| damager| The damaging entity involved with the interaction. |
 | other| The other member of an interaction, not the caller. |
 | parent| The caller's current parent. |
 | player| The player involved with the interaction. |
@@ -69,7 +70,7 @@ Tests whether the Subject is sleeping.
 
 ```json
 { "test": "is_sleeping", "value": true }
-``````
+```
 
 ## Vanilla entities using `is_sleeping`
 

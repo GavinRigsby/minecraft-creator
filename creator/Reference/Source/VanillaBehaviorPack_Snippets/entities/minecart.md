@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: minecart
-ms.prod: gaming
+description: "A code snippet for the minecart entity"
+ms.service: minecraft-bedrock-edition
 ---
 
 # minecart

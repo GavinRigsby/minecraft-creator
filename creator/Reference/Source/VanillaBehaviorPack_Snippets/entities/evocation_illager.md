@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: evocation_illager
-ms.prod: gaming
+description: "A code snippet for the evocation_illager entity"
+ms.service: minecraft-bedrock-edition
 ---
 
 # evocation_illager

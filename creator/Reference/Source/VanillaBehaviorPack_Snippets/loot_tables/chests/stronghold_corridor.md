@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: stronghold_corridor
-ms.prod: gaming
+description: "A code snippet for the stronghold corridor chest loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
 # stronghold_corridor

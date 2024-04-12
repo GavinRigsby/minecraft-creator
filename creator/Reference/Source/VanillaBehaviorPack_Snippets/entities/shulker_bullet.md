@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: shulker_bullet
-ms.prod: gaming
+description: "A code snippet for the shulker_bullet entity"
+ms.service: minecraft-bedrock-edition
 ---
 
 # shulker_bullet

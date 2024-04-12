@@ -1,13 +1,14 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.swim_wander
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.swim_wander' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.swim_wander
 
-`minecraft:behavior.swim_wander` allows the entity to wander around while swimming, when not path-finding.
+`minecraft:behavior.swim_wander` compels the entity to wander around while swimming, when not path-finding.
 
 ## Parameters
 
@@ -15,9 +16,9 @@ ms.prod: gaming
 |:-----------:|:-----------:|:-----------:|:-----------:|
 | interval| 0.00833| Decimal| Percent chance to start wandering, when not path-finding. 1 = 100% |
 | look_ahead| 5| Decimal| Distance to look ahead for obstacle avoidance, while wandering. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 | speed_multiplier| 1| Decimal| This multiplier modifies the entity's speed when wandering. |
 | wander_time| 5| Decimal| Amount of time (in seconds) to wander after wandering behavior was successfully started. |
-
 
 ## Example
 

@@ -1,9 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: mammerla
+ms.author: mikeam
 title: Introduction to the Caves & Cliffs Entities
-ms.prod: gaming
-description: An introduction to the new Entities that are included in the Caves & Cliffs update
+description: "An introduction to the new Entities that are included in the Caves & Cliffs update"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Introduction to the Caves & Cliffs Entities

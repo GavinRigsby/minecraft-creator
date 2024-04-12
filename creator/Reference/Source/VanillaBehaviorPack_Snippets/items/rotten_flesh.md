@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: rotten_flesh
-ms.prod: gaming
+description: "A code snippet for the rotten_flesh item"
+ms.service: minecraft-bedrock-edition
 ---
 
 # rotten_flesh

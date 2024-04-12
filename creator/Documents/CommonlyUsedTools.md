@@ -1,25 +1,17 @@
 ---
 author: neonerz
-ms.author: v-jeffreykim
+ms.author: mikeam
 title: Commonly Used Tools
-ms.prod: gaming
+description: "A guide detailing popular tools used to modify Minecraft content"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Commonly Used Tools
 
 There are a wide variety of tools that have been created for the purpose of increasing the efficiency of Minecraft content creation. Tools can help with a variety of things from creating skins, to crafting beautiful custom worlds. This article will explore some of the most commonly used tools currently available and some of their uses.
 
-In this tutorial you will learn the following:
-
-> [!div class="checklist"]
->
-> - A variety of tools useful for content creation, including transferring content between editions.
-
-### Requirements
-
-It’s recommended that the following be completed before beginning this tutorial before using tools that convert between Minecraft editions.
-
-- [Differences Between Minecraft: Bedrock Edition and Minecraft: Java Edition](DifferencesBetweenBedrockAndJava.md)
+>[!IMPORTANT]
+>These tools are provided by external, third-party contributors and are not Mojang/Microsoft offerings. Users should use at their own discretion.
 
 ## Creating maps
 
@@ -28,10 +20,6 @@ Map creation is one of the largest and most time-consuming components of content
 ### [Chunker](https://chunker.app/)
 
 Chunker is a web tool for Minecraft: Bedrock Edition worlds. It's specifically useful for converting worlds between Minecraft: Java Edition and Bedrock Edition, as well as easily configuring world settings. Conversion includes level settings, chunk data (such as blocks and biomes), dimensions, and more. To learn more about using Chunker, you can begin with the [Chunker Overview](ChunkerOverview.md) guide, which goes over the steps needed to do simple conversions and leads to more advanced features of the tool.
-
-### [WorldPainter](https://www.worldpainter.net/)
-
-World Painter is an application for Java Edition that allows creators to create custom worlds using tools similar to a traditional painting application. It includes features such as sculpting and molding terrain, as well as the ability to paint in materials such as snow and ice, or entire builds like trees and houses. WorldPainter saves custom worlds in the Java Edition world format and would need to be converted to Bedrock Edition-compatible worlds before they can be used in Bedrock Edition.
 
 ### [Amulet](https://www.amuletmc.com/)
 
@@ -45,12 +33,6 @@ Amulet is a utility tool designed to edit Minecraft maps. It can come in handy f
 ### [Image Map](https://github.com/tryashtar/image-map)
 
 Image Map is a small application for both Bedrock Edition and Java Edition that can convert images to Minecraft maps. This can be used to add custom banners and art inside of Minecraft worlds.
-
-### [bridge.](https://bridge-core.app)
-
-bridge. is a powerful add-on editor designed to speed up your development process. It provides a rich editing experience for all files inside behavior packs, resource packs, skin packs and world templates and provides a powerful work environment for JavaScript, JSON, functions and more. bridge. also allows you to choose between the tree editor or raw text editor for JSON files. A summary of bridge.'s most notable features can be found [here](https://github.com/bridge-core/editor/blob/main/README.md). Unleash the full power of add-ons with [bridge. extensions](https://bridge-core.app/extension-docs/) and make use of rich auto-completions provided as you navigate through a file.
-
-You can also visit the [github repo](https://github.com/solvedDev/bridge.) by clicking the link provided.
 
 ## Server Based Tools
 
@@ -80,7 +62,14 @@ Blockbench is a free entity-modeling application for creating working Bedrock Ed
 
 ### [Blockception VSCode Extension](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
 
-An extension that provides support for files such as .mcfunction, .json and .lang. This extension adds features like completion, validations, formatters, diagnostics, cheat-sheets, code-actions, generation of files, and development tools to help develop Minecraft Bedrock Addons or Minecraft Education Edition. It's recommended that you use the Dark+ theme for the best color highlighting.
+An extension that provides support for files such as .mcfunction, .json and .lang. This extension adds features like completion, validations, formatters, diagnostics, cheat-sheets, code-actions, generation of files, and development tools to help develop Minecraft: Bedrock Edition Addons or Minecraft Education. It's recommended that you use the Dark+ theme for the best color highlighting.
+
+### [bridge.](https://bridge-core.app)
+
+bridge. is a light-weight, dedicated editor for Minecraft Add-Ons that makes it easy to get started with Add-Ons and later scales with your growing needs. It requires zero setup and provides you with an [instantly bootable development environment](https://editor.bridge-core.app/) with syntax highlighting, [code completions and file diagnostics](https://bridge-core.app/guide/features/index.html#auto-completions-and-validation) all designed to make developing Minecraft Add-Ons more convenient. To read more, please refer to bridge.'s [getting started guide](https://bridge-core.app/guide/index.html) or [learn more about why you should use bridge.](https://bridge-core.app/guide/why-bridge.html)
+
+bridge. is [open source](https://github.com/bridge-core/editor) and freely available to all Add-On creators on desktop and mobile platforms.
+
 
 ### [Snowstorm](https://jannisx11.github.io/snowstorm/)
 
@@ -92,7 +81,13 @@ Skin and resource pack creation can be done primarily within any image-editing s
 
 ### [Blockbench](https://blockbench.net/)
 
-Blockbench is also used in many character skin workflows alongside applications like Photoshop or Aseprite. 
+Blockbench has a skin editor that allows skins to be edited in 3D (or 2D) with Blockbench's advanced paint tools such as mirror painting and color palettes. It has presets to create entity textures for resource packs as well.
+
+Skins can be packaged for the Marketplace using the [Skin Pack Packager plugin](https://www.blockbench.net/plugins/skin_packager) in Blockbench.
+
+### [PMCSkin3D](https://www.planetminecraft.com/pmcskin3d/)
+
+PMCSkin3D is a web-based dedicated skin editor from PlanetMinecraft. It has a 3D and 2D as well as split-screen mode and advanced brush options. There is also a lite edition with simplified tools.
 
 ### [Aseprite](https://www.aseprite.org/)
 

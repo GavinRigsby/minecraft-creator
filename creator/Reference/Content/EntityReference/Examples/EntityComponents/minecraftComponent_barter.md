@@ -1,20 +1,21 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: JimSeaman42
+ms.author: mikeam
 title: Entity Documentation - minecraft:barter
-ms.prod: gaming
+description: "A reference document detailing the 'barter' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:barter
 
-`minecraft:barter` enables the component to drop an item as a barter exchange.
+`minecraft:barter` compels the entity to drop an item as a barter exchange.
 
 ## Parameters
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|barter_table|*not set* | String| Loot table that's used to drop a random item. |
-|cooldown_after_being_attacked| 0| Integer|  Duration, in seconds, for which mob won't barter items if it was hurt |
+|barter_table|*not set* | String| Loot table used to drop a random item |
+|cooldown_after_being_attacked| 0| Integer|  Duration, in seconds, when the entity won't barter items if it was hurt |
 
 ## Example
 
@@ -30,9 +31,10 @@ ms.prod: gaming
 ### piglin
 
 ```json
-"minecraft:behavior.barter": {
-    "priority": 3
-}
+"minecraft:barter": {
+    "barter_table": "loot_tables/entities/piglin_barter.json",
+    "cooldown_after_being_attacked": 20
+},
 ```
 
 ## Vanilla entities using `minecraft:barter`

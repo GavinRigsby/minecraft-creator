@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: JimSeaman42
+ms.author: mikeam
 title: Entity Documentation - minecraft:boss
-ms.prod: gaming
+description: "A reference document detailing the 'boss' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:boss
@@ -13,8 +14,8 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-| hud_range| 55| Integer| The max distance from the boss at which the boss's health bar is present on the players screen. |
-| name|*not set* | String| The name that will be displayed above the boss's health bar. |
+| hud_range| 55| Integer| The max distance from the boss at which the boss's health bar appears on the screen. |
+| name|*not set* | String| The name that displays above the boss's health bar. |
 |should_darken_sky| Boolean| false| Whether the sky should darken in the presence of the boss. |
 
 ## Example

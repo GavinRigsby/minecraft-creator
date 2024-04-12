@@ -1,13 +1,14 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Item Documentation - Item List
-ms.prod: gaming
+description: "A reference document all available item JSON files"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Item Documentation - Items
 
-Below is a list of all the available Item JSON files within Minecraft:Bedrock Edition.
+Below is a list of all the available Item JSON files within Minecraft: Bedrock Edition.
 
 - [apple](../../../Source/VanillaBehaviorPack_Snippets/items/apple.md)
 - [appleEnchanted](../../../Source/VanillaBehaviorPack_Snippets/items/appleEnchanted.md)

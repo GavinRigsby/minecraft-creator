@@ -1,19 +1,25 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.random_look_around
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.random_look_around' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.random_look_around
 
-`minecraft:behavior.random_look_around` allows an entity to choose a random direction to look in for a random duration within a range.
+`minecraft:behavior.random_look_around` compels an entity to choose a random direction to look in for a random duration within a range.
 
 ## Parameters
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|look_time| [2, 4]| Range [a, b]|  The range of time in seconds the mob will stay looking in a random direction before looking elsewhere |
+|angle_of_view_horizontal|360|Integer|The angle in degrees that an entity can see in the Y-axis (up-down).|
+|angle_of_view_vertical|360|Integer|The angle in degrees that an entity can see in the X-axis (left-right).|
+|look_distance|8.0|Float|The distance in blocks from which the entity will look at.|
+|look_time| [2, 4]| Range [a, b]|  The range of time in seconds the mob will stay looking in a random direction before looking elsewhere. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+|probability|0.2|Float|The probability of looking at the target. A value of 1.00 is 100%.|
 
 ## Example
 
@@ -28,9 +34,13 @@ ms.prod: gaming
 
 ### blaze
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/blaze.json" range="136-138":::
+```json
+"minecraft:behavior.random_look_around": {
+        "priority": 5
+      }
+```
 
-## Vanilla entities using `minecraft:behavior.random_look_around`
+### Vanilla entities using `minecraft:behavior.random_look_around`
 
 - [bee](../../../../Source/VanillaBehaviorPack_Snippets/entities/bee.md)
 - [blaze](../../../../Source/VanillaBehaviorPack_Snippets/entities/blaze.md)

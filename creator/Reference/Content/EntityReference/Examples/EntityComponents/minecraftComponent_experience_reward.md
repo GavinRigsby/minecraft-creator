@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: JimSeaman42
+ms.author: mikeam
 title: Entity Documentation - minecraft:experience_reward
-ms.prod: gaming
+description: "A reference document detailing the 'experience_reward' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:experience_reward
@@ -13,8 +14,8 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-| on_bred| 0| Molang| A Molang expression defining the amount of experience rewarded when this entity is successfully bred. An array of expressions adds each expression's result together for a final total. |
-| on_death| 0| Molang| A Molang expression defining the amount of experience rewarded when this entity dies. An array of expressions adds each expression's result together for a final total. |
+| on_bred| 0| Molang| A Molang expression defining the amount of experience rewarded when the entity is successfully bred. An array of expressions adds each expression's result together for a final total. |
+| on_death| 0| Molang| A Molang expression defining the amount of experience rewarded when the entity dies. An array of expressions adds each expression's result together for a final total. |
 
 ## Example
 
@@ -29,7 +30,12 @@ ms.prod: gaming
 
 ### cow
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/cow.json" range="33-36":::
+```json
+"minecraft:experience_reward": {
+          "on_bred": "Math.Random(1,7)",
+          "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+        }
+```
 
 ## Vanilla entities using `minecraft:experience_reward`
 

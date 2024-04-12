@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: skeleton
-ms.prod: gaming
+description: "A code snippet for the skeleton entity"
+ms.service: minecraft-bedrock-edition
 ---
 
 # skeleton

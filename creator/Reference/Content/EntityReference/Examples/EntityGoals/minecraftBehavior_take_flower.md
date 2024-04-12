@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.take_flower
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.take_flower' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.take_flower
@@ -12,11 +13,17 @@ ms.prod: gaming
 > [!NOTE]
 > This behavior can only be used by the `villager` entity type.
 
+## Parameters
+
+|Name |Default Value  |Type  |Description  |
+|:----------|:----------|:----------|:----------|
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+
 ## Example
 
 ```json
 "minecraft:behavior.take_flower":{
-    "priority": 2,
+    "priority": 2
 }
 ```
 
@@ -24,7 +31,11 @@ ms.prod: gaming
 
 ### villager_v2
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/villager_v2.json" range="1148-1150":::
+```json
+"minecraft:behavior.take_flower":{
+    "priority": 9
+}
+```
 
 ## Vanilla entities using `minecraft:behavior.take_flower`
 

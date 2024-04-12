@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: fox_equipment
-ms.prod: gaming
+description: "A code snippet for the fox equipment entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
 # fox_equipment

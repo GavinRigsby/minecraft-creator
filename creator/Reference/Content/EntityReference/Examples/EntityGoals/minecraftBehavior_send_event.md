@@ -1,23 +1,25 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.send_event
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.send_event' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.send_event
 
-`minecraft:behavior.send_event` allows an entity to send an event to another entity.
+`minecraft:behavior.send_event` compels an entity to send an event to another entity.
 
 ## Parameters
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|cast_duration|*not set*| Decimal| Time in seconds for the entire event sending process |
-|look_at_target| true|Boolean| If true, the mob will face the entity it sends an event to |
-|sequence|*not set* | List| List of events to send
+|cast_duration|*not set*| Decimal| Time in seconds for the entire event sending process. |
+|look_at_target| true|Boolean| If true, the mob will face the entity it sends an event to. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+|sequence|*not set* | List| List of events to send.|
 
-#### sequence
+### sequence
 
 `sequence` is a list variable that can use the following parameters:
 
@@ -48,7 +50,35 @@ ms.prod: gaming
 
 ### evocation_illager
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/evocation_illager.json" range="181-207":::
+```json
+"minecraft:behavior.send_event": {
+        "priority": 3,
+        "event_choices": [
+          {
+            "min_activation_range": 0.0,
+            "max_activation_range": 16.0,
+            "cooldown_time": 5.0,
+            "cast_duration": 3.0,
+            "particle_color": "#FFB38033",
+            "weight": 3,
+            "filters": { 
+                "all_of": [
+                  { "test" :  "is_family", "subject" : "other", "value" :  "sheep"},
+                  { "test" :  "is_color", "subject" : "other", "value" :  "blue"}
+                ] 
+            },
+            "start_sound_event": "cast.spell",
+            "sequence": [
+              {
+                "base_delay": 2.0,
+                "event": "wololo",
+                "sound_event": "prepare.wololo"
+              }
+            ]
+          }
+        ]
+      }
+```
 
 ## Vanilla entities using `minecraft:behavior.send_event`
 

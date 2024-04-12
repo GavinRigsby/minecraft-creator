@@ -1,20 +1,21 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.swoop_attack
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.swoop_attack' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.swoop_attack
 
-`minecraft:behavior.swoop_attack` allows an entity to attack using swoop attack behavior. Ideal for use with flying mobs. The behavior ends if the entity has a horizontal collision or gets hit.
+`minecraft:behavior.swoop_attack` compels an entity to attack using swoop attack behavior. Ideal for use with flying mobs. The behavior ends if the entity has a horizontal collision or gets hit.
 
 | Name| Default Value| Type| Description |
 |:-----------:|:-----------:|:-----------:|:-----------:|
 | damage_reach| 0.2| Decimal| Added to the base size of the entity, to determine the target's maximum allowable distance, when trying to deal attack damage. |
 | delay_range| [10, 20]| Range [a, b]| Minimum and maximum cooldown time-range (in seconds) between each attempted swoop attack. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 | speed_multiplier| 1| Decimal| During swoop attack behavior, this determines the multiplier the entity's speed is modified by when moving toward the target. |
-
 
 ## Example
 
@@ -43,4 +44,3 @@ ms.prod: gaming
 ## Vanilla entities using `minecraft:behavior.swoop_attack`
 
 - [phantom](../../../../Source/VanillaBehaviorPack_Snippets/entities/phantom.md)
-

@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: suspicious_stew
-ms.prod: gaming
+description: "A code snippet for the suspicious_stew item"
+ms.service: minecraft-bedrock-edition
 ---
 
 # suspicious_stew

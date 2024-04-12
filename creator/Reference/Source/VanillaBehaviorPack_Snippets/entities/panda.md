@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: panda
-ms.prod: gaming
+description: "A code snippet for the panda entity"
+ms.service: minecraft-bedrock-edition
 ---
 
 # panda

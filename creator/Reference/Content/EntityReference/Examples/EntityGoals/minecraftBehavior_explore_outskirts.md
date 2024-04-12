@@ -1,13 +1,14 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.explore_outskirts
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.explore_outskirts' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.explore_outskirts
 
-`minecraft:behavior.explore_outskirts` allows the entity to first travel to a random point on the outskirts of the village, and then explore random points within a small distance. This goal requires "minecraft:dweller" and "minecraft:navigation" to execute.
+`minecraft:behavior.explore_outskirts` compels the entity to first travel to a random point on the outskirts of the village, and then explore random points within a small distance. This goal requires `minecraft:dweller` and `minecraft:navigation` to execute.
 
 ## Parameters
 
@@ -22,6 +23,7 @@ ms.prod: gaming
 | min_wait_time| 3.0| Decimal| The wait time in seconds between choosing new explore points will be chosen on a random interval between this value and the maximum wait time. |
 | next_xz| 5| Integer| A new explore point will randomly be chosen within this XZ distance of the current target position when navigation has finished and the wait timer has elapsed. |
 | next_y| 3| Integer| A new explore point will randomly be chosen within this Y distance of the current target position when navigation has finished and the wait timer has elapsed. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 | speed_multiplier| 1.0| Decimal| The multiplier for speed while using this goal. 1.0 maintains the speed. |
 | timer_ratio| 2.0| Decimal| Each new explore point will be chosen on a random interval between the minimum and the maximum wait time, divided by this value. This does not apply to the first explore point chosen when the goal runs. |
 

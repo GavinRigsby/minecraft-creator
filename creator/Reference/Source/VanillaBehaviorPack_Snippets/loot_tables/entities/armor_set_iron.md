@@ -1,10 +1,11 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: armor_set_iron
-ms.prod: gaming
+description: "A code snippet for the armor set iron entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
-# armor_set_iron 
+# armor_set_iron
 
 :::code language="json" source="../../../VanillaBehaviorPack/loot_tables/entities/armor_set_iron.json":::

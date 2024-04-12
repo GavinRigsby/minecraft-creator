@@ -1,13 +1,14 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:rail_movement
-ms.prod: gaming
+description: "A reference document detailing the 'rail_movement' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:rail_movement
 
-`minecraft:rail_movement` defines the entity's movement on the rails. An entity with this component is only allowed to move on the rail.
+`minecraft:rail_movement` defines the entity's movement on rails. An entity with this component is only allowed to move on the rail.
 
 ## Parameters
 
@@ -27,7 +28,10 @@ ms.prod: gaming
 
 ### minecart
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/minecart.json" range="21-22":::
+```json
+"minecraft:rail_movement": {
+}
+```
 
 ## Vanilla entities using `minecraft:rail_movement`
 

@@ -1,10 +1,10 @@
 ---
-author: docsbryce
+author: mammerla
 ms.author: v-bbortree
 title: Getting Started with Ray Tracing
-ms.prod: gaming
 ms.topic: tutorial
 description: "An introduction to the Ray Tracing features in Minecraft: Bedrock Edition."
+ms.service: minecraft-bedrock-edition
 ---
 
 # Getting Started with Ray Tracing
@@ -34,7 +34,7 @@ By the end of this series, you will learn:
 
 ### Requirements
 
-It’s recommended that you have the following when working with ray tracing in Minecraft: Bedrock Edition:
+It's recommended that you have the following when working with ray tracing in Minecraft: Bedrock Edition:
 
 - Operating System (OS): Windows 64-bit
 - GPU: DirectX hardware ray tracing capable GPU like NVIDIA GeForce® RTX 20 Series and higher, and AMD Radeon RX 6000 Series and higher
@@ -73,7 +73,7 @@ Next, we will create  PBR textures as a resource pack and you can enable it in t
 
 ### Introduction to Physically Based Rendering
 
-You will learn about each new texture map Creators can use to build and design photorealistic materials and lighting effects, and you will learn how to use texture maps to create a mirror in-game.
+You will learn about each new texture map creators can use to build and design photorealistic materials and lighting effects, and you will learn how to use texture maps to create a mirror in-game.
 
 > [!div class="nextstepaction"]
 > [Introduction to Physically Based Rendering](./RTXPBRIntro.md)

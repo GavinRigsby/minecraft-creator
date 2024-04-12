@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.dragonholdingpattern
-ms.prod: gaming
+description: "A reference document detailing the 'dragonholdingpattern' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.dragonholdingpattern
@@ -12,19 +13,29 @@ ms.prod: gaming
 > [!NOTE]
 > This behavior can only be used by the `ender_dragon` entity type.
 
+## Parameters
+
+|Name |Default Value  |Type  |Description  |
+|:----------|:----------|:----------|:----------|
+| priority|*not set*| Integer |The higher the priority, the sooner this behavior will be executed as a goal.|
+
 ## Example
 
 ```json
 "minecraft:behavior.dragonholdingpattern":{
-    "priority": 3,
+    "priority": 3
 }
 ```
 
-## Vanilla entities examples
+## Vanilla entities example
 
 ### ender_dragon
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/ender_dragon.json" range="33-35":::
+```json
+"minecraft:behavior.dragonholdingpattern": {
+     "priority": 3
+}
+```
 
 ## Vanilla entities using `minecraft:behavior.dragonholdingpattern`
 

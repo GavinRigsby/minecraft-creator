@@ -1,10 +1,11 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: giant
-ms.prod: gaming
+description: "A code snippet for the giant entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
-# giant 
+# giant
 
 :::code language="json" source="../../../VanillaBehaviorPack/loot_tables/entities/giant.json":::

@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
-title: moorshroom
-ms.prod: gaming
+author: mammerla
+ms.author: mikeam
+title: mooshroom
+description: "A code snippet for the mooshroom entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
 # mooshroom

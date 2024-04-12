@@ -1,10 +1,11 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: panda_sneeze
-ms.prod: gaming
+description: "A code snippet for the panda sneeze entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
-# panda_sneeze 
+# panda_sneeze
 
 :::code language="json" source="../../../VanillaBehaviorPack/loot_tables/entities/panda_sneeze.json":::

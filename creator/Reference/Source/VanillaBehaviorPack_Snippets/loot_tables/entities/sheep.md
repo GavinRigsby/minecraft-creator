@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: sheep
-ms.prod: gaming
+description: "A code snippet for the sheep entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
 # sheep

@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:rail_sensor
-ms.prod: gaming
+description: "A reference document detailing the 'rail_sensor' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:rail_sensor
@@ -13,9 +14,9 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-| check_block_types| False| Boolean| If true, on tick this entity will trigger its on_deactivate behavior |
-| eject_on_activate| True| Boolean| If true, this entity will eject all of its riders when it passes over an activated rail |
-| eject_on_deactivate| False| Boolean| If true, this entity will eject all of its riders when it passes over a deactivated rail |
+| check_block_types| False| Boolean| If true, on tick the entity will trigger its on_deactivate behavior |
+| eject_on_activate| True| Boolean| If true, the entity will eject all of its riders when it passes over an activated rail |
+| eject_on_deactivate| False| Boolean| If true, the entity will eject all of its riders when it passes over a deactivated rail |
 | on_activate| *not set*| JSON Object | Event to call when the rail is activated |
 | on_deactivate| *not set*| JSON Object | Event to call when the rail is deactivated |
 | tick_command_block_on_activate| True| Boolean| If true, command blocks will start ticking when passing over an activated rail |
@@ -43,7 +44,11 @@ ms.prod: gaming
 
 ### minecart
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/minecart.json" range="32-34":::
+```json
+"minecraft:rail_sensor": {
+    "eject_on_activate": true
+}
+```
 
 ## Vanilla entities using `minecraft:rail_sensor`
 

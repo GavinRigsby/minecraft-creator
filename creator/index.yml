@@ -7,40 +7,40 @@ metadata:
   title: "Minecraft: Bedrock Edition Creator Documentation" # Required; page title shown in search results < 60 chars
   description: "Learn how to mod Minecraft with Add-Ons. Create skins, design unique experiences, discover the latest features, and develop your skills as a Minecraft creator." # < 160 chars
   service: service
-  ms.service: service # Required; service per approved list.
+  ms.service: minecraft-bedrock-edition
   ms.topic: hub-page # Required
   ms.date: 08/30/2021
   author: mammerla # Required; Github alias
-  ms.author: v-jillheaden # Required; Microsoft alias; with correct grammar
+  ms.author: kakinnun # Required; Microsoft alias; with correct grammar
 
 # highlighted content section (optional), will outlined up to 8 items in a 4x2 grid.
 highlightedContent:
 # itemType:  architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
   items:
-    #card used to define plugin
-    - title: "Physically-Based Rendering"
-      itemType: whats-new
-      url: Documents/RTXPBRIntro.md
     #card
-    - title: "Installing Add-Ons in Minecraft: Bedrock Edition"
-      itemType: deploy
-      url: Documents/AddonPackInstallation.md
-    #card
-    - title: A Redstone Guide
-      itemType: whats-new
-      url: Documents/RedstoneGuide.md
-    #card
-    - title: "Experimental Features in Minecraft: Bedrock Edition"
-      itemType: architecture
-      url: Documents/ExperimentalFeaturesToggle.md
-    #card
-    - title: GameTest Reference Documentation
+    - title: Scripting
       itemType: reference
       url: ScriptAPI/index.yml
     #card
-    - title: Differences Between Minecraft Bedrock Edition and Minecraft Java Edition
-      itemType: architecture
-      url: Documents/DifferencesBetweenBedrockAndJava.md
+    - title: "Minecraft Bedrock Editor"
+      itemType: whats-new
+      url: Documents/EditorOverview.md
+    #card
+    - title: "1.20.70 Update Summary"
+      itemType: whats-new
+      url: Documents/Update1.20.70.md
+    #card
+    - title: Camera Command
+      itemType: whats-new
+      url: Documents/CameraCommandIntroduction.md
+    #card
+    - title: "Building Editor Extensions"
+      itemType: whats-new
+      url: Documents/EditorExtensionsIntroduction.md
+    #card
+    - title: Minecraft Item Wizard
+      itemType: whats-new
+      url: Documents/MinecraftItemWizard.md
 
 # productDirectory section (optional)
 productDirectory:
@@ -50,17 +50,17 @@ productDirectory:
     # Card
     - title: Getting Started with Add-On Development
       imageSrc: images/Add-Resource-Pack.png
-      summary: Working with Add-Ons in Minecraft:Bedrock Edition is easy! Learn how to get started
+      summary: "Working with Add-Ons in Minecraft: Bedrock Edition is easy! Learn how to get started"
       url: Documents/GettingStarted.md
     # Card
-    - title: JSON Reference Documentation
-      imageSrc: images/Script.png
-      summary: Discover the different features and components used within Minecraft
-      url: Reference/index.yml
+    - title: Getting Started with Minecraft Block Wizard
+      imageSrc: images/Firework.png
+      summary: Rapidly design, build and deploy a brand new Block with the new Minecraft Block Wizard Tool
+      url: Documents/MinecraftBlockWizard.md
     # Card
     - title: Getting Started with Minecraft Entity Wizard
       imageSrc: images/Firework.png
-      summary: Rapidly design, build and deploy a brand new Entity with the new Minecraft Entity Wizard Tool
+      summary: Rapidly design, build and deploy a brand new Entity with the Minecraft Entity Wizard Tool
       url: Documents/MinecraftEntityWizard.md
 
 # conceptualContent section (optional)
@@ -81,11 +81,11 @@ conceptualContent:
             - url: Documents/BehaviorPack.md
               itemType: get-started
               text: Introduction to Behavior Packs
-            - url: Documents/CustomBlock.md
+            - url: Documents/AddCustomDieBlock.md
               itemType: how-to-guide
               text: How to add a Custom Block
         # card
-        - title: Build a "Complete the Monument" map with Commands
+        - title: Build a simple game with Commands
           summary: "Commands are a powerful way to add logic into your experiences."
           links:
             - url: Documents/CommandsIntroduction.md
@@ -96,23 +96,36 @@ conceptualContent:
               text: Popular Commands
             - url: Documents/CommandBlocks.md
               itemType: get-started
-              text: Getting Started with Command Blocks
-            - url: Documents/CommandsHowToMakeACTMMap.md
-              itemType: get-started
-              text: How To Make a Complete the Monument Map
+              text: Introduction to Command Blocks
+            - url: Documents/CreateAnInWorldGame.md
+              itemType: how-to-guide
+              text: Create an In-World Game with Commands
+            - url: Commands/index.yml
+              itemType: reference
+              text: Command Reference Documentation
+
         # card
         - title: Adding new Minecraft Entities
           summary: "Learn how to create and implement your own custom entities."
           links:
             - url: Documents/IntroductionToAddEntity.md
               itemType: get-started
-              text: Introduction to Add Entity
+              text: Creating New Entity Types
             - url: Documents/EntityModelingAndAnimation.md
               itemType: tutorial
               text: Entity Modeling and Animation
             - url: Documents/EntityBehaviorIntroduction.md
               itemType: tutorial
               text: Entity Behavior Introduction
+            - url: Documents/EntityEvents.md
+              itemType: tutorial
+              text: Entity Events
+            - url: Documents/IntroductionToEntityProperties.md
+              itemType: tutorial
+              text: Entity Properties
+            - url: Reference/Content/molangreference/index.yml
+              itemType: reference
+              text: Molang Documentation
         # card
         - title: Adding NPCs
           summary: "Populate your world with interactive characters to create unique narrative experiences."
@@ -132,80 +145,77 @@ conceptualContent:
             text: Introduction to Loot Tables
           - url: Documents/LootAndTradeTableFunctions.md
             itemType: overview
-            text: Loot and Trade Table Functions
-          - url: Documents/LootSpawnAndKill.md
+            text: Loot Overloads
+          - url: Documents/LootOverloads.md
             itemType: overview
-            text: Learn about Loot Spawn and Kill
+            text: Learn about Loot Overloads
         # card
-        - title: Working with Chunker
-          summary: "Utilize Chunker to convert your existing Minecraft: Java Edition worlds to Minecraft: Bedrock Edition"
+        - title: Adding new Custom Blocks
+          summary: "Learn how to make your own custom blocks to decorate your world."
           links:
-          - url: Documents/ChunkerOverview.md
-            itemType: overview
-            text: Chunker - Overview
-          - url: Documents/ChunkerWorldSettings.md
+          - url: Documents/AddCustomDieBlock.md
             itemType: tutorial
-            text: Chunker - World Settings
-          - url: Documents/ChunkerTheNether.md
+            text: Simple Blocks
+          - url: Documents/AdvancedCustomBlocks.md
             itemType: tutorial
-            text: Chunker - How to Clear The Nether
-          - url: Documents/ChunkerAdvancedMode.md
+            text: Unique Shape Blocks
+          - url: Documents/CustomBlockRenderLighting.md
             itemType: tutorial
-            text: Chunker - Advanced Mode
+            text: Block Render and Lighting Options
+          - url: Documents/CustomBlockOversized.md
+            itemType: tutorial
+            text: Oversized Blocks
     # Reference Section
     - title: References  # < 60 chars (optional)
       summary: "Learn how content works with Reference documentation and how GameTest can empower your workflow." # < 160 chars (optional)
       items:
       # card
-      - title: Using GameTest
-        summary: "Learn how the new GameTest Frameworks can speed up your development time."
+      - title: Using Script APIs
+        summary: "Learn how new Script APIs can speed up your development time and make more dynamic content."
         links:
-          - url: ScriptAPI/mojang-gametest/mojang-gametest.md
-            itemType: reference
-            text: GameTest API
-          - url:  Documents/GameTestGettingStarted.md
+          - url:  Documents/ScriptingIntroduction.md
             itemType: get-started
-            text: Getting Started with GameTest
-          - url: Documents/GameTestBuildYourFirstGameTest.md
-            itemType: how-to-guide
-            text: Build your first GameTest
+            text: Getting Started with Scripting APIs
+          - url: ScriptAPI/index.yml
+            itemType: reference
+            text: Scripting API Reference
+          - url:  Documents/ScriptingGettingStarted.md
+            itemType: get-started
+            text: Using TypeScript with Minecraft Scripting APIs
           - url: Documents/ScriptDeveloperTools.md
             itemType: how-to-guide
             text: Use Visual Studio Code tools to write script
+          - url: Documents/EditorExtensionsIntroduction.md
+            itemType: get-started
+            text: Getting Started with Editor Extensions
       # card
-      - title: Reference Documentation
-        summary: "Need a hand creating your content? View the reference documentation to see how things work in-game."
+      - title: JSON Reference Documentation
+        summary: "Need a hand creating your content? View the JSON reference documentation to see how things work in-game."
         links:
           - url: Reference/Content/addonsreference/index.yml
             itemType: reference
-            text: Addons JSON Documentation
+            text: Addons JSON
           - url: Reference/Content/animationsreference/index.yml
             itemType: reference
-            text: Animation JSON Documentation
+            text: Animation JSON
           - url: Reference/Content/blockreference/index.yml
             itemType: reference
-            text: Block JSON Documentation
+            text: Block JSON
           - url: Reference/Content/entityreference/index.yml
             itemType: reference
-            text: Entity JSON Documentation
+            text: Entity JSON
           - url: Reference/Content/featuresreference/index.yml
             itemType: reference
-            text: Features JSON Documentation
+            text: Features JSON
           - url: Reference/Content/itemreference/index.yml
             itemType: reference
-            text: Item JSON Documentation
-          - url: Reference/Content/molangreference/index.yml
-            itemType: reference
-            text: Molang Documentation
+            text: Item JSON
           - url: Reference/Content/Recipereference/index.yml
             itemType: reference
-            text: Recipe JSON Documentation
+            text: Recipe JSON
           - url: Reference/Content/particlesreference/index.yml
             itemType: reference
-            text: Particle JSON Documentation
-          - url: Reference/Content/volumereference/index.yml
-            itemType: reference
-            text: Volume JSON Documentation
+            text: Particle JSON
       # card
       - title: Common Schema Documentation
         summary: "See how Schemas are used to validate JSON files in Minecraft: Bedrock Edition "
@@ -228,9 +238,6 @@ tools:
     - title: Visual Studio Code
       imageSrc: images/VSCode.png
       url: "https://code.visualstudio.com/Download"
-    - title: Vanilla Behavior Pack
+    - title: Vanilla Resource and Behavior Packs
       imageSrc: images/ResourcePack64.png
       url: "https://aka.ms/behaviorpacktemplate"
-    - title: Vanilla Resource Pack
-      imageSrc: images/ResourcePack64.png
-      url: "https://aka.ms/resourcepacktemplate"

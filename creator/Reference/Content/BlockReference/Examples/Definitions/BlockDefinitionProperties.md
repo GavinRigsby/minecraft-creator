@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Block Documentation - Block Properties & Descriptions
-ms.prod: gaming
+description: "A reference document discussing block definitions and properties used in block JSON files"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Block Documentation - Block Properties & Descriptions
@@ -13,7 +14,7 @@ These properties are part of the Block Definition and Block Properties that are 
 
 ```json
 {
-  "format_version": "1.16.0",
+  "format_version": "1.20.70",
   "minecraft:block": {
     "description": {
       "identifier": "design:lavenderstone"
@@ -26,8 +27,8 @@ These properties are part of the Block Definition and Block Properties that are 
       "minecraft:flammable": {
         "flame_odds": 50,
         "burn_odds": 0
-	      },
-      "minecraft:block_light_emission": 1.0
+       },
+      "minecraft:light_emission": 1
     }
   }
 }

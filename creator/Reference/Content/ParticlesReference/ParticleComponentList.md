@@ -1,24 +1,25 @@
 ---
-author: v-josjones
-ms.author: v-josjones
-title: Particle Documentation - Particle Component List
-ms.prod: gaming
+author: iconicNurdle
+ms.author: mikeam
+title: Particle Component List
+description: "A reference document listing currently available particle components"
+ms.service: minecraft-bedrock-edition
 ---
 
-# Particle Documentation - Particle Component List
+# Particle Component List
 
-There are two components that are used with particle systems in Minecraft: Bedrock Edition; Emitter Components and Particle Components. Listed below are the currently available components.
+There are two types of components used with particle systems in Minecraft: Bedrock Edition: **emitter** components and **particle** components.
 
 > [!NOTE]
 > For fields in these components, the following shorthand is used:
 >
-> ```JSON
+> ```json
 > <float> - field takes a floating point input
-> <float/Molang> - field takes a floating point input, or a Molang expression
-> <default:val> - specifies the default value used if field isn't specified
-> <bool> - "true" or "false"
-> <string> - a string ("this is a string"
-> <default> - not a part of the particular line, this just says what this field defaults to if not specified
+> <float/Molang> - field takes a floating point input or a Molang expression
+> <default:val> - specifies the default value used if no value is given
+> <bool> - `true` or `false`
+> <string> - a string of characters like this: "Hello! I'm a string."
+> <default> - not a part of the particular line, this just says what the field defaults to if not otherwise specified
 > ```
 
 ## Emitter Components
@@ -54,8 +55,8 @@ There are two components that are used with particle systems in Minecraft: Bedro
 
 ### Particle Initial State Components
 
-- [Particle Initial State component](ParticleComponents\minecraftParticle_initial_state.md)
 - [Particle Initial Speed component](ParticleComponents\minecraftParticle_initial_speed.md)
+- [Particle Initial Spin component](ParticleComponents\minecraftParticle_initial_spin.md)
 
 ### Particle Motion Components
 
@@ -73,6 +74,6 @@ There are two components that are used with particle systems in Minecraft: Bedro
 
 - [Particle Lifetime Expression component](ParticleComponents\minecraftParticle_lifetime_expression.md)
 - [Particle Lifetime Events component](ParticleComponents\minecraftParticle_lifetime_events.md)
-- [Particle Expire If In Blocks component](ParticleComponents\minecraftParticle_expire_if_in_blocks.md)
-- [Particle Expire If Not In Blocks component](ParticleComponents\minecraftParticle_expire_if_not_in_blocks.md)
+- [Particle Expire if in Blocks component](ParticleComponents\minecraftParticle_expire_if_in_blocks.md)
+- [Particle Expire if Not in Blocks component](ParticleComponents\minecraftParticle_expire_if_not_in_blocks.md)
 - [Particle Lifetime Kill-Plane component](ParticleComponents\minecraftParticle_lifetime_kill-plane.md)

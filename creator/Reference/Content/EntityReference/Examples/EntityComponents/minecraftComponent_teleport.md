@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:teleport
-ms.prod: gaming
+description: "A reference document detailing the 'teleport' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:teleport
@@ -41,7 +42,16 @@ ms.prod: gaming
 
 ### enderman
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/enderman.json" range="85-92":::
+```json
+"minecraft:teleport": {
+    "random_teleports": true,
+    "max_random_teleport_time": 30,
+    "random_teleport_cube": [ 64, 32, 64 ],
+    "target_distance": 16,
+    "target_teleport_chance": 0.05,
+    "light_teleport_chance": 0.05
+}
+```
 
 ## Vanilla entities using `minecraft:teleport`
 

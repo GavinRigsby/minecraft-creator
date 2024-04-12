@@ -1,15 +1,15 @@
 ---
 author: neonerz
-ms.author: v-jeffreykim
-title: Introduction to Add Entity
-ms.prod: gaming
-description: "Building upon the knowledge learned in the Resource Pack Tutorial, Introduction to Add Entity goes over the steps needed to start creating your own custom Entity"
+ms.author: mikeam
+title: Creating New Entity Types
+description: "A guide detailing the steps needed to start creating a custom entity type"
+ms.service: minecraft-bedrock-edition
 ---
 
-# Introduction to Add Entity
+# Creating New Entity Types
 
-You can add an entity to Minecraft: Bedrock Edition using a behavior pack and a resource pack. As you learned from the recommended tutorials, the behavior of entities can be changed with a behavior pack and you can change the appearance with a resource pack. Both are required to add a working entity to the game. 
-This guide has two parts: the first part covers the files and folder structure needed to add a custom entity to Minecraft. The second part shows you how to breathe life into the entity using behavior components and animations.
+You can add new entity types to Minecraft: Bedrock Edition using a behavior pack and a resource pack. As you learned from the recommended tutorials, the behavior of entity types can be changed with a behavior pack and you can change the appearance with a resource pack. Both are required to add a working entity type to the game. 
+This guide has two parts: the first part covers the files and folder structure needed to add a custom entity type to Minecraft. The second part shows you how to breathe life into the entity using behavior components and animations.
 
 :::image type="content" source="Media/AddEntity/Introduction-to-Add-Entity.jpg" alt-text="Image of a Blue Whale that has been created in a modeling package.":::
 
@@ -17,17 +17,17 @@ In this tutorial you will learn the following:
 
 > [!div class="checklist"]
 >
-> - How to create a new custom entity using behavior and resource packs.
-> - How to apply various features to the entity, including components and animations.
+> - How to create a new custom entity type using behavior and resource packs.
+> - How to apply various features to the entity type, including components and animations.
 > - Make use of translations for entity names.
 
 ### Requirements
 
-It’s recommended that the following be completed before beginning this tutorial.
+It's recommended that the following be completed before beginning this tutorial.
 
 - [Introduction to Behavior Packs](BehaviorPack.md)
 - [Introduction to Resource Packs](ResourcePack.md)
-- Download the [**min robot** and **full robot** resource and behavior packs](https://drive.google.com/drive/folders/1UMANLzCnGmAMdaosnLkXyJoM6pcbsS5J?usp=sharing)
+- Download the [**min robot** and **full robot** resource and behavior packs](https://github.com/microsoft/minecraft-samples/tree/main/add_entity_robot)
 
 
 Knowledge of the following is also recommended to help better understand this article.
@@ -45,7 +45,7 @@ In the behavior pack, an entity file is responsible for defining the entity on t
 
 To give you a point of reference for this tutorial, we are providing two versions of the same entity: a robot that can spawn randomly in the world and has three random textures, a wheel animation, various components, and a custom water mechanic. The download link is in the **Requirements** section above.
 
-To see the robot in action, pick one of the sets of resource and behavior packs you just downloaded. (We recommend trying the minimum one for now.) Put the resource and behavior packs in their respective com.mojang sub-folders, launch a world with cheats enabled, and use `/summon compass:robot`.
+To see the robot in action, pick one of the sets of resource and behavior packs you just downloaded. (We recommend trying the minimum one for now.) Put the resource and behavior packs in their respective com.mojang sub-folders, launch a world with cheats enabled, and use `/summon sample:robot`.
 
 This is the structure of the finished "minimum robot" behavior pack and resource pack:
 
@@ -59,7 +59,7 @@ A good starting point would be to use the resource and behavior packs you create
 
 ## Naming
 
-When you create an entity, one of the first things to consider is what ID you're going to give it. The files in your resource and behavior packs will need to be synced using the entity ID that you give your entity. This ID consists of a namespace and a name separated by a colon. That was the `compass:robot` ID we used previously to summon the robot.
+When you create an entity, one of the first things to consider is what ID you're going to give it. The files in your resource and behavior packs will need to be synced using the entity ID that you give your entity. This ID consists of a namespace and a name separated by a colon. That was the `sample:robot` ID we used previously to summon the robot.
 
 Your own namespace can be a short version of your team name or product name. The ID should only include lower case letters, digits, and underscores. Do not use "minecraft" as the namespace for custom content. The "minecraft" namespace is reserved for vanilla resources, so you should only use "minecraft" if you are overwriting vanilla content.
 
@@ -88,7 +88,7 @@ The first practical step to add a robot into the game starts in the behavior pac
     "format_version": "1.12.0",
     "minecraft:entity": {
         "description": {
-            "identifier": "compass:robot",
+            "identifier": "sample:robot",
             "is_spawnable": true,
             "is_summonable": true
         },
@@ -118,7 +118,7 @@ Now, we need to add the entity to the resource pack to give it a visual appearan
     "format_version": "1.10.0",
     "minecraft:client_entity": {
         "description": {
-            "identifier": "compass:robot",
+            "identifier": "sample:robot",
             "spawn_egg": {
                 "base_color": "#505152",
                 "overlay_color": "#3b9dff"
@@ -150,7 +150,7 @@ For most entities (such as our robot), we can use the default render controller 
     "format_version": "1.10.0",
     "minecraft:client_entity": {
         "description": {
-            "identifier": "compass:robot",
+            "identifier": "sample:robot",
             "materials": {
                 "default": "entity"
             },
@@ -183,8 +183,8 @@ In most cases, a custom material is not required. Instead, you can use a default
 Right now, neither the entity itself nor the spawn egg has a proper name in game. To define a name, we need a language file. Create a new folder called `texts` inside your resource pack and create a new file called `en_US.lang`. For custom entities, we only need to change this language file, as all other languages will default to American English. Inside this file, add these two lines:
 
 ```json
-entity.compass:robot.name=Robot
-item.spawn_egg.entity.compass:robot.name=Spawn Robot
+entity.sample:robot.name=Robot
+item.spawn_egg.entity.sample:robot.name=Spawn Robot
 ```
 
 The first line defines the name of the entity. This will be visible in death messages and in the output of some commands. Key and value are always separated by an equals sign. The first line can be broken down into:
@@ -207,7 +207,7 @@ Now would be a good time to try the **full robot** resource and behavior packs. 
 
 ## Components
 
-Components tell the entity how to act in game. Let’s add a few components and explain in detail what they do.
+Components tell the entity how to act in game. Let's add a few components and explain in detail what they do.
 
 In the **behavior pack/entities/** folder, open `robot.json` and replace the single entry of `"minecraft:physics": {} ` with all of this...
 
@@ -320,7 +320,7 @@ Render controllers allow us to change the geometry, textures, and materials of t
 }
 ```
 
-If we just want to use one default geometry, material, and texture, we can just leave it to point to the default render controller as we did before. But, this is a good time to learn how to add random textures, so let’s break down how render controllers work.
+If we just want to use one default geometry, material, and texture, we can just leave it to point to the default render controller as we did before. But, this is a good time to learn how to add random textures, so let's break down how render controllers work.
 
 ### Render Controller Explanation
 
@@ -332,7 +332,7 @@ Inside the render controller tag, the different resources are specified, but you
 
 ### Geometry
 
-One render controller can display only one geometry at a time. That’s why it is linked directly as one string. This string can be a Molang expression and should always return a geometry. In this case, it's calling `Geometry.default`, which means that it will return the geometry that's linked as `default` by whatever entity using the render controller.
+One render controller can display only one geometry at a time. That's why it is linked directly as one string. This string can be a Molang expression and should always return a geometry. In this case, it's calling `Geometry.default`, which means that it will return the geometry that's linked as `default` by whatever entity using the render controller.
 
 You can render multiple geometries on one entity by using multiple render controllers. This can be tricky though, and can lead to unexpected behavior. Therefore, it's only recommended for experienced creators.
 
@@ -351,7 +351,7 @@ In this example, we first apply the default material to all bones. Then, we over
 
 ### Textures
 
-Textures are specified in an array. In most cases, only one texture will be linked here since entities don’t support separate textures. There is one exception though: materials can support multiple textures layered on top of each other, such as the material `entity_multitexture`. For example, this is used by llamas to overlay the décor.
+Textures are specified in an array. In most cases, only one texture will be linked here since entities don't support separate textures. There is one exception though: materials can support multiple textures layered on top of each other, such as the material `entity_multitexture`. For example, this is used by llamas to overlay the décor.
 
 ### Arrays
 
@@ -402,13 +402,13 @@ Now, the textures are linked. The last step is to randomize the variant in the b
             ...
         },
         "component_groups": {
-            "compass:color_0": {
+            "sample:color_0": {
                 "minecraft:variant": {"value": 0}
             },
-            "compass:color_1": {
+            "sample:color_1": {
                 "minecraft:variant": {"value": 1}
             },
-            "compass:color_2": {
+            "sample:color_2": {
                 "minecraft:variant": {"value": 2}
             }
         },
@@ -417,15 +417,15 @@ Now, the textures are linked. The last step is to randomize the variant in the b
                 "randomize": [
                     {
                         "add": {
-                            "component_groups": ["compass:color_0"]
+                            "component_groups": ["sample:color_0"]
                         }
                     }, {
                         "add": {
-                            "component_groups": ["compass:color_1"]
+                            "component_groups": ["sample:color_1"]
                         }
                     }, {
                         "add": {
-                            "component_groups": ["compass:color_2"]
+                            "component_groups": ["sample:color_2"]
                         }
                     }
                 ]
@@ -437,7 +437,7 @@ Now, when we first spawn the entity, it will randomly choose a component group a
 
 ## Spawning
 
-Spawn rules define how entities randomly spawn in the world. We’ll create a spawn rules file for our robot. 
+Spawn rules define how entities randomly spawn in the world. We'll create a spawn rules file for our robot. 
 First, create a folder called `spawn_rules` in your behavior pack. 
 Inside the folder, create a new text file called `robot.json`. The content of the file should look like this:
 
@@ -446,7 +446,7 @@ Inside the folder, create a new text file called `robot.json`. The content of th
     "format_version": "1.8.0",
     "minecraft:spawn_rules": {
         "description": {
-            "identifier": "compass:robot",
+            "identifier": "sample:robot",
             "population_control": "animal"
         },
         "conditions": []
@@ -479,7 +479,7 @@ For a basic spawn rule, one condition is enough. For the robot, we will use this
     "format_version": "1.8.0",
     "minecraft:spawn_rules": {
         "description": {
-            "identifier": "compass:robot",
+            "identifier": "sample:robot",
             "population_control": "animal"
         },
         "conditions": [
@@ -516,7 +516,7 @@ Robots will now spawn anywhere on the surface where animals can spawn and where 
 
 Behavior animations work similarly to regular animations but run in the behavior pack. While regular animations animate the movement of the model as well as sounds and particles, behavior animations can run regular commands, trigger entity events, or run Molang expressions. Behavior animations are also often referred to as **Entity Events**, although that name tends to be a bit confusing.
 
-Since robots don’t like water, we'll add a mechanic to damage robots in water or rain. First, we're going to create an animation controller to test when the entity is in water using a Molang query. Create a new folder in the behavior pack called `animation_controllers` and create the file `robot.animation_controllers.json` inside it:
+Since robots don't like water, we'll add a mechanic to damage robots in water or rain. First, we're going to create an animation controller to test when the entity is in water using a Molang query. Create a new folder in the behavior pack called `animation_controllers` and create the file `robot.animation_controllers.json` inside it:
 
 ```json
 {
@@ -542,7 +542,7 @@ Since robots don’t like water, we'll add a mechanic to damage robots in water 
 
 The animation controller looks very similar to regular client-side animation controllers. It has two states that get toggled depending on whether the robot is in water or not.
 
-Now, let’s add an animation to give a poison effect to the robot. Create the folder `animations` inside the behavior pack and create a file called `robot.animation.json`:
+Now, let's add an animation to give a poison effect to the robot. Create the folder `animations` inside the behavior pack and create a file called `robot.animation.json`:
 
 ```json
 {
@@ -563,13 +563,13 @@ Now, let’s add an animation to give a poison effect to the robot. Create the f
 
 Instead of using the bone tag here to animate bones, we're using the timeline tag. In resource packs, timelines can only be used to run Molang code. In behavior animations, you can use this to run Molang code, commands, or trigger entity events. Note that all these are provided as a string. The game will figure out the type of the string from its content. If the string starts with a slash, it will run as a command. If it fits this scheme: `@s namespace:event`, it will run as an entity event. If it looks like Molang, it will run as Molang.
 
-For that reason, it's important to start commands with a slash in behavior animations. Also, note that we're applying poison for two seconds because one would not be enough to actually apply damage. The `true` at the end of the command will make the status effect ambient, meaning that there won’t be any particles.
+For that reason, it's important to start commands with a slash in behavior animations. Also, note that we're applying poison for two seconds because one would not be enough to actually apply damage. The `true` at the end of the command will make the status effect ambient, meaning that there won't be any particles.
 
 As with animations in resource packs, we need to link all of our animations and animation controllers in the description tag of our entity, which will look like this:
 
 ```json
         "description": {
-            "identifier": "compass:robot",
+            "identifier": "sample:robot",
             "is_spawnable": true,
             "is_summonable": true,
             "animations": {
@@ -586,7 +586,7 @@ As with animations in resource packs, we need to link all of our animations and 
 
 The animations section lists all animations and animation controllers that the entity uses and gives them a short name. In the scripts/animate section, we list the animations that should always run. We want the controller to detect the state to always run, but not the poison effect.
 
-Now, we need to go back to the animation controller and add the poison effect. We’ll also add a little regeneration mechanic along with a sound effect, so the robot won’t die as easily.
+Now, we need to go back to the animation controller and add the poison effect. We'll also add a little regeneration mechanic along with a sound effect, so the robot won't die as easily.
 
 ```json
             "states": {

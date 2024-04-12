@@ -1,13 +1,14 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.skeleton_horse_trap
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.skeleton_horse_trap' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.skeleton_horse_trap
 
-`minecraft:behavior.skeleton_horse_trap` allows an entity to function as a Skeleton horse trap and be triggered like them, spawning a lightning bolt, additional skeleton horses and skeleton horse riders when a player gets nearby.
+`minecraft:behavior.skeleton_horse_trap` allows an entity to function as a skeleton horse trap and be triggered, spawning a lightning bolt, additional skeleton horses, and skeleton horse riders, when a player approaches to within a set radius.
 
 > [!NOTE]
 > This behavior can only be used by the `horse`, `mule`, `donkey` and `skeleton horses` entity type.
@@ -16,8 +17,9 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|duration| 1.0| Decimal| Amount of time in seconds the trap exists. After this amount of time is elapsed, the trap is removed from the world if it hasn't been activated |
-|within_radius| 0.0| Decimal| Distance in blocks that the player has to be within to trigger the horse trap |
+|duration| 1.0| Decimal| Amount of time in seconds the trap exists. After this amount of time is elapsed, the trap is removed from the world if it hasn't been activated. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+|within_radius| 0.0| Decimal| Distance in blocks that the player has to be within to trigger the horse trap. |
 
 ## Example
 
@@ -25,7 +27,7 @@ ms.prod: gaming
 "minecraft:behavior.skeleton_horse_trap":{
     "priority": 2,
     "duration": 1.0,
-    "within_radius": 12.0,
+    "within_radius": 12.0
 }
 ```
 
@@ -33,7 +35,15 @@ ms.prod: gaming
 
 ### skeleton_horse
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/skeleton_horse.json" range="60-64":::
+```json
+"minecraft:skeleton_trap": {
+    "minecraft:behavior.skeleton_horse_trap": {
+      "within_radius": 10.0,
+      "duration": 900.0,
+      "priority": 2
+    }
+}
+```
 
 ## Vanilla entities using `minecraft:behavior.skeleton_horse_trap`
 

@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:mob_effect
-ms.prod: gaming
+description: "A reference document detailing the 'mob_effect' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:mob_effect
@@ -13,10 +14,11 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
+| cooldown_time| 0| Integer| Time in seconds to wait between each application of the effect. |
 | [entity_filter](../FilterList.md)| *not set*| Minecraft Filter | The set of entities that are valid to apply the mob effect to.  |
 | effect_range| 0.2| Decimal| How close a hostile entity must be to have the mob effect applied. |
-| effect_time| 10| Integer| How long the applied mob effect lasts in seconds. |
-| mob_effect| *not set*| String| The mob effect that is applied to entities that enter this entities effect range. |
+| effect_time| 10| Integer| How long in seconds the applied mob effect lasts. |
+| mob_effect| *not set*| String| The mob effect that is applied to entities that enter this entity's effect range. |
 
 ## Example
 
@@ -33,7 +35,19 @@ ms.prod: gaming
 
 ### pufferfish
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/pufferfish.json" range="91-101":::
+```json
+"minecraft:mob_effect": {
+          "effect_range": 0.2,
+          "mob_effect": "poison",
+          "effect_time": 10,
+          "entity_filter": {
+            "any_of": [
+              { "test": "is_family", "subject": "other", "value": "player" },
+              { "test": "is_family", "subject": "other", "value": "monster" }
+            ] 
+          }
+        }
+```
 
 ## Vanilla entities using `minecraft:mob_effect`
 

@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:on_hurt_by_player
-ms.prod: gaming
+description: "A reference document detailing the 'on_hurt_by_player' entity trigger"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:on_hurt_by_player
@@ -31,7 +32,12 @@ ms.prod: gaming
 
 ### blaze
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/blaze.json" range="152-155":::
+```json
+"minecraft:on_hurt_by_player": {
+    "event": "minecraft:on_hurt_event",
+    "target": "self"
+}
+```
 
 ## Vanilla entities using `minecraft:on_hurt_by_player`
 

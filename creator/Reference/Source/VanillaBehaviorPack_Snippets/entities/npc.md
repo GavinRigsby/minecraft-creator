@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: npc
-ms.prod: gaming
+description: "A code snippet for the npc entity"
+ms.service: minecraft-bedrock-edition
 ---
 
 # npc

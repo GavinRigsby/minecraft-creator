@@ -1,10 +1,11 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: zombie_pigman
-ms.prod: gaming
+description: "A code snippet for the zombie pigman entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
-# zombie_pigman 
+# zombie_pigman
 
 :::code language="json" source="../../../VanillaBehaviorPack/loot_tables/entities/zombie_pigman.json":::

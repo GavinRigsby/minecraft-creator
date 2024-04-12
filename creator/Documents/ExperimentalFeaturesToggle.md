@@ -1,34 +1,51 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: v-jillheaden
 title: "Experimental Features in Minecraft: Bedrock Edition"
-ms.prod: gaming
 description: "An overview of experimental content available to creators in Minecraft: Bedrock Edition"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Experimental Features in Minecraft: Bedrock Edition
 
-With each retail version of Minecraft: Bedrock Edition, there are a few features that are currently in an experimental state. Experimental Features can be toggled on for creators who are interested in testing the latest features offered in both the beta and retail versions of Minecraft.
+> [!NOTE]
+> This documentation is segmented into `Stable` and `Experimental` document sets. To see full documentation about experimental features and APIs, be sure to select the [Minecraft Bedrock Experimental APIs option](/minecraft/creator/documents/experimentalfeaturestoggle?view=minecraft-bedrock-experimental).
+![image showing the Document Versions Dropdown.](Media/ExperimentalFeatures/ExperimentalApiDocs.png)
+
+With each retail version of Minecraft: Bedrock Edition, there are a few features that are currently in an experimental state. Experimental Features can be toggled on for creators who are interested in testing the latest features offered in the beta, preview, and retail versions of Minecraft.
+
+> [!NOTE]
+> The Experiments toggle list is subject to frequent changes and could have entirely different options from the ones in your own version of Minecraft.
 
 ## Experimental Features available in Minecraft: Bedrock Edition
 
-There are two sets of experimental features available, depending on whether you are using a stable (retail) version of Minecraft or a beta version of Minecraft.
+There are three sets of experimental features available, depending on whether you are using a stable (retail) version of Minecraft, the latest version of Minecraft Preview, or a beta version of Minecraft.
 
 ### Retail
 
-Listed below are the currently available Experimental Features in the latest retail build.
+Listed below are the currently available Experimental Features in the latest retail build at the time of this writing.
 
 | Experimental Toggle |Features |
 |:------|:------|
 |Holiday Creator Features |Data-driven block and item features. We are receiving feedback on these features from Marketplace creators and map-makers.|
-|Creation of Custom Biomes|Exposing parameters for biome generation to creators, enabling them to create their own unique biome configurations. |
-|Additional Modding Capabilities |Enables an early version of an API for creators. A newer version is in development. This toggle remains to support those who are currently using it. |
-|Upcoming Creator Features |Experimental features including actor properties and fog volumes. We are receiving feedback on these features from Marketplace creators and map-makers.|
-|Enable GameTest Framework |Provides capabilities for creators to validate their worlds and add-ons in Minecraft through a series of contained tests. |
+|Custom Biomes|Exposing parameters for biome generation to creators, enabling them to create their own unique biome configurations. |
+|Upcoming Creator Features |Experimental features including entity permutations and fogs/volumes. We are receiving feedback on these features from Marketplace creators and map-makers.|
+|Beta APIs|Provides "-beta" level script APIs (e.g., @minecraft/server 1.1.0-beta), as well as GameTest Framework APIs. |
+|Molang Features |Container for Molang experimental queries and language features that aren't tied to other experimental toggles. |
+|Next Major Update | Features that will be available after the next major update. |
+
+### Preview
+
+| Experimental Toggle |Features |
+|:------|:------|
+|Custom Biomes|Exposing parameters for biome generation to creators, enabling them to create their own unique biome configurations. |
+|Upcoming Creator Features |Experimental features including entity permutations and fogs/volumes. We are receiving feedback on these features from Marketplace creators and map-makers.|
+|Beta APIs|Provides "-beta" level script APIs (e.g., @minecraft/server 1.1.0-beta), as well as GameTest Framework APIs. |
+|Molang Features |Container for Molang experimental queries and language features that aren't tied to other experimental toggles. |
 
 ### Beta
 
-Listed below are the currently available Experimental Features in the latest beta build.
+Listed below are the currently available Experimental Features in the latest beta build at the time of this writing.
 
 > [!NOTE]
 > Differences between available features are marked in **Bold**.
@@ -36,11 +53,10 @@ Listed below are the currently available Experimental Features in the latest bet
 | Experimental Toggle |Features |
 |:------|:------|
 |Holiday Creator Features |Data-driven block and item features. We are receiving feedback on these features from Marketplace creators and map-makers.|
-|Creation of Custom Biomes|Exposing parameters for biome generation to creators, enabling them to create their own unique biome configurations. |
-|Additional Modding Capabilities |Enables an early version of an API for creators. A newer version is in development. This toggle remains to support those who are currently using it. |
-|Upcoming Creator Features |Experimental features including actor properties and fog volumes. We are receiving feedback on these features from Marketplace creators and map-makers.|
-|Enable GameTest Framework |Provides capabilities for creators to validate their worlds and add-ons in Minecraft through a series of contained tests. |
-|**Experimental Molang Features** |**New container for Molang experimental queries and language features that aren't tied to other experimental toggles.** |
+|Custom Biomes|Exposing parameters for biome generation to creators, enabling them to create their own unique biome configurations. |
+|Upcoming Creator Features |Experimental features including entity permutations and fogs/volumes. We are receiving feedback on these features from Marketplace creators and map-makers.|
+|Beta APIs|Provides "-beta" level script APIs (e.g., @minecraft/server 1.1.0-beta), as well as GameTest Framework APIs. |
+|Molang Features |Container for Molang experimental queries and language features that aren't tied to other experimental toggles. |
 
 ## How do I activate an Experimental Features toggle for my world?
 
@@ -80,15 +96,15 @@ If you want to add experimental features to an existing world, open that world's
 
 3. When you get the popup asking **Activate Experimental Gameplay?**, select **Activate Experiments**.
 
-   ![image showing a pop up to confirm if you want ot activate experimental features in Minecraft](Media/ExperimentalFeatures/ActivateExperiments.png)
+   ![image showing a pop up to confirm if you want ot activate experimental features in Minecraft](Media/ExperimentalFeatures/ActivateExperiments.png)"
 
-After you select **Activate Experiments**, a copy of your existing world will be created. The copy will have the same name as the original world with “Copy of...” added in front of it.
+After you select **Activate Experiments**, a copy of your existing world will be created. The copy will have the same name as the original world with "Copy of..." added in front of it.
 
 :::image type="content" source="Media/ExperimentalFeatures/CopyOfWorld.png" alt-text="Image showing a duplicated world":::
 
 ### Verify that the World has Experimental Features Enabled
 
-After you’ve created a world that has an experimental feature toggle enabled, your world will get a **tag** next to the game mode in your Worlds list that says **Experimental**.
+After you've created a world that has an experimental feature toggle enabled, your world will get a **tag** next to the game mode in your Worlds list that says **Experimental**.
 
 :::image type="content" source="Media/ExperimentalFeatures/SurvivalExperimental.png" alt-text="image showcasing a survival world that has the Experimental tag applied":::
 
@@ -99,12 +115,7 @@ Another way to identify if your world is using experimental toggles is to visit 
 
 ## What's Next?
 
-Now that you have learned about experimental features within Minecraft, you can learn how to build content utilizing Holiday Creator Features such as a custom block.
-
-> [!div class="nextstepaction"]
-> [How to add a Custom Block](CustomBlock.md)
-
-To learn more about the GameTest Framework and how to get started, you can select the link below to run various GameTests in-game.
+If you like experimenting and testing things in Minecraft, you could learn more about the GameTest Framework.
 
 > [!div class="nextstepaction"]
 > [Introduction to the GameTest Framework](GameTestGettingStarted.md)

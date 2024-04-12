@@ -1,9 +1,9 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
-title: Introduction To Behavior Packs
-ms.prod: gaming
-description: A tutorial that is an introduction to Behavior Packs and how to add a series of attacking behaviors to an in-game cow mob.
+author: iconicNurdle
+ms.author: mikeam
+title: 'Create an Angry Cow: An Introduction To Behavior Packs'
+description: "An introduction to Behavior Packs and adding attacking behaviors to an in-game cow mob."
+ms.service: minecraft-bedrock-edition
 ---
 
 # Introduction to Behavior Packs
@@ -19,16 +19,20 @@ In this tutorial, you will learn the following:
 > - That it's possible to change an entity's behavior in Minecraft: Bedrock Edition.
 > - How to link a Behavior Pack to a Resource Pack.
 
+## Sample Behavior Pack
+
+There is a [sample behavior pack](https://github.com/microsoft/minecraft-samples/tree/main/behavior_pack_sample) available at the Microsoft samples Github. It may be used to understand the structure of behavior packs and to check your work after the tutorial.
+
 ### Requirements
 
-It’s recommended that the following be completed before beginning this tutorial.
+It's recommended that the following be completed before beginning this tutorial.
 
 - [Getting Started with Add-On Development](GettingStarted.md)
 - [Introduction To Resource Packs](ResourcePack.md)
 
 ## Building the Behavior Pack
 
-A behavior pack contains files that creators (like you!) use to add, remove, or alter gameplay behavior of entities within Minecraft. An entity's behavior file is what makes each entity do certain actions, like how a chicken follows a player who's holding seeds.
+A behavior pack contains files that creators use to add, remove, or alter gameplay behavior of entities within Minecraft. An entity's behavior file is what makes each entity do certain actions, like how a chicken follows a player who's holding seeds.
 
 For Minecraft to find and use your behavior files, you have to set up the folders and files in a particular structure. This tutorial will guide you through creating this folder and file structure.
 
@@ -66,7 +70,7 @@ To load a behavior pack into Minecraft, you will need to create a manifest file.
   "header": {
     "description": "My attack cow behavior pack Add-On!",
     "name": "My Behavior Pack",
-    "uuid":"",
+    "uuid":"<FIRST GENERATED UUID>",
     "version": [1, 0, 0],
     "min_engine_version": [1, 16, 0]
   },
@@ -75,7 +79,7 @@ To load a behavior pack into Minecraft, you will need to create a manifest file.
       {
         "description": "My First Add-On!",
           "type": "data",
-          "uuid": "",
+          "uuid": "<SECOND GENERATED UUID>",
           "version": [1, 0, 0]
       }
     ],
@@ -119,11 +123,11 @@ Every entity's behaviors are defined in its JSON file that lives inside the code
 1. In the **My_BEHAVIOR_Pack** folder, create a folder and name it **entities**.
 1. Create a text file in the **entities** folder and name it **cow.json**.
 1. Copy and paste the following code into your **cow.json** file. After you save the file, you're ready to go!
- 
+
 >[!Note]
 > This is the entire edited cow.json file. It's big because cows do a lot!
 
-```JSON
+```json
 {
     "format_version": "1.16.0",
     "minecraft:entity": {
@@ -398,6 +402,35 @@ Every entity's behaviors are defined in its JSON file that lives inside the code
 }
 ```
 
+### What changed
+
+This is that code that, when added to the `components` section of a `cow.json` file, turns cows into aggressive killing machines:
+
+```json
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 2,
+                "must_see": true,
+                "reselect_targets": true,
+                "within_radius": 25.0,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        "max_dist": 32
+                    }
+                ]
+            },
+            "minecraft:behavior.melee_attack": {
+                "priority": 3
+            },
+            "minecraft:attack": {
+                "damage": 3
+            }
+```
+
 ### Testing the Pack
 
 Now that the behavior pack has both a manifest file and a cow entity, it is time to launch Minecraft and test your new Add-On. As stated in the resource pack tutorial, **Pack Stacking** will work for behavior packs as well. This means that when content is loaded, vanilla content is loaded first, followed by any Add-Ons. Because all cows are controlled by the **cow.json** behavior file, all cows that spawn into your world will have the new behavior.
@@ -414,6 +447,8 @@ Now that the behavior pack has both a manifest file and a cow entity, it is time
 ## Troubleshooting
 
 Behavior pack woes? Troubleshooting is a normal part of any development process. Here are some places to begin troubleshooting a behavior pack.
+
+You can use the [sample behavior pack](https://github.com/microsoft/minecraft-samples/tree/main/behavior_pack_sample) on the Minecraft samples Github to check the structure of your behavior pack.
 
 ### Behavior Pack Does Not Appear in Minecraft
 
@@ -436,7 +471,7 @@ If your resource pack does not appear in the Add-Ons section, something is wrong
 Now that you have seen a behavior pack in action, you can learn more about how they work and what else you can do with them.
 
 > [!div class="nextstepaction"]
-> [Introduction to Add Entity](introductiontoaddentity.md)
+> [Creating New Entity Types](introductiontoaddentity.md)
 > [Entity JSON Documentation](../Reference/Content/EntityReference/index.yml)
 
 To see examples of unchanged resource and behavior files, check out the Minecraft [Vanilla resource pack](https://aka.ms/resourcepacktemplate) and [Vanilla behavior Pack](https://aka.ms/behaviorpacktemplate).

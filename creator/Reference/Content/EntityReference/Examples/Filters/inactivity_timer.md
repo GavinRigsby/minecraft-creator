@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Entity Documentation - inactivity_timer
-ms.prod: gaming
+description: "A reference document detailing the 'inactivity_timer' entity filter"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - inactivity_timer
@@ -23,7 +24,7 @@ Tests if the entity was inactive for specified duration.
 | Options| Description |
 |:-----------|:-----------|
 | block| The block involved with the interaction. |
-| damager| The damaging actor involved with the interaction. |
+| damager| The damaging entity involved with the interaction. |
 | other| The other member of an interaction, not the caller. |
 | parent| The caller's current parent. |
 | player| The player involved with the interaction. |
@@ -63,7 +64,9 @@ Tests if the entity was inactive for specified duration.
 
 ### piglin_brute
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/piglin_brute.json" range="250-254":::
+```json
+{ "test": "inactivity_timer", "subject": "self", "value": 30 }
+```
 
 ## Vanilla entities using `inactivity_timer`
 

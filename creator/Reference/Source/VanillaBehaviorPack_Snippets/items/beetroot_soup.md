@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: beetroot_soup
-ms.prod: gaming
+description: "A code snippet for the beetroot_soup item"
+ms.service: minecraft-bedrock-edition
 ---
 
 # beetroot_soup

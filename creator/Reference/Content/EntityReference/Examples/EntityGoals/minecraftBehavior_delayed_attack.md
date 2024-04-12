@@ -1,13 +1,14 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.delayed_attack
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.delayed_attack' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.delayed_attack
 
-`minecraft:behavior.delayed_attack` allows an entity to attack, while also delaying the damage-dealt until a specific time in the attack animation.
+`minecraft:behavior.delayed_attack` compels an entity to attack while also delaying the damage dealt until a specific time in the attack animation.
 
 | Name| Default Value| Type| Description |
 |:-----------:|:-----------:|:-----------:|:-----------:|
@@ -26,10 +27,11 @@ ms.prod: gaming
 | path_fail_time_increase| 0.75| Decimal| Time (in seconds) to add to attack path recalculation when this entity cannot move along the current path. |
 | path_inner_boundary| 16| Decimal| Distance at which to increase attack path recalculation by "inner_boundary_tick_increase". |
 | path_outer_boundary| 32| Decimal| Distance at which to increase attack path recalculation by "outer_boundary_tick_increase". |
-| random_stop_interval| 0| Integer| This entity will have a 1 in N chance to stop it's current attack, where N = "random_stop_interval". |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+| random_stop_interval| 0| Integer| This entity will have a 1 in N chance to stop its current attack, where N = "random_stop_interval". |
 | reach_multiplier| 2| Decimal| Used with the base size of the entity to determine minimum target-distance before trying to deal attack damage. |
 | require_complete_path| false| Boolean| Toggles (on/off) the need to have a full path from the entity to the target when using this melee attack behavior. |
-| set_persistent| false| Boolean| Allows the actor to be set to persist upon targeting a player |
+| set_persistent| false| Boolean| Allows the entity to be set to persist upon targeting a player |
 | speed_multiplier| 1| Decimal| This multiplier modifies the attacking entity's speed when moving toward the target. |
 | target_dist| N/a| Decimal| Unused. No effect on "minecraft:behavior.melee_attack". |
 | track_target| false| Boolean| Allows the entity to track the attack target, even if the entity has no sensing. |
@@ -49,7 +51,6 @@ ms.prod: gaming
     "random_stop_interval": 0,
     "reach_multiplier": 1.5,
     "speed_multiplier": 1.0,
-    "attack_duration": 0.75,
     "hit_delay_pct": 0.5
 }
 ```
@@ -75,4 +76,3 @@ ms.prod: gaming
 ## Vanilla entities using `delayed_attack`
 
 - [ravager](../../../../Source/VanillaBehaviorPack_Snippets/entities/ravager.md)
-

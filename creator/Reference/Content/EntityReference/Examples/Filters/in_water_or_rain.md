@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Entity Documentation - in_water_or_rain
-ms.prod: gaming
+description: "A reference document detailing the 'in_water_or_rain' entity filter"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - in_water_or_rain
@@ -11,7 +12,7 @@ Returns true when the subject entity is in water or rain.
 
 ## Parameters
 
-> [!Note]
+> [!NOTE]
 > `in_water_or_rain` does **not** require any parameters to work properly. It can be used as a standalone filter.
 >
 > `in_water_or_rain` can also use `subject`, [operator](../Definitions/NestedTables/operator.md) and `value` parameters.
@@ -21,7 +22,7 @@ Returns true when the subject entity is in water or rain.
 | Options| Description |
 |:-----------|:-----------|
 | block| The block involved with the interaction. |
-| damager| The damaging actor involved with the interaction. |
+| damager| The damaging entity involved with the interaction. |
 | other| The other member of an interaction, not the caller. |
 | parent| The caller's current parent. |
 | player| The player involved with the interaction. |
@@ -65,18 +66,13 @@ Returns true when the subject entity is in water or rain.
 
 ## Vanilla entities examples
 
-### enderman
+### axolotl
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/enderman.json" range="60-73":::
-
-### dolphin
-
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/dolphin.json" range="146-150":::
+```json
+{ "test": "in_water_or_rain", "operator": "!=", "value": true }
+```
 
 ## Vanilla entities using `in_water_or_rain`
 
-- [blaze](../../../../Source/VanillaBehaviorPack_Snippets/entities/blaze.md)
+- [axolotl](../../../../Source/VanillaBehaviorPack_Snippets/entities/axolotl.md)
 - [dolphin](../../../../Source/VanillaBehaviorPack_Snippets/entities/dolphin.md)
-- [enderman](../../../../Source/VanillaBehaviorPack_Snippets/entities/enderman.md)
-- [snow_golem](../../../../Source/VanillaBehaviorPack_Snippets/entities/snow_golem.md)
-- [strider](../../../../Source/VanillaBehaviorPack_Snippets/entities/strider.md)

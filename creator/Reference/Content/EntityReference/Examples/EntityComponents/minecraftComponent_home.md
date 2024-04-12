@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:home
-ms.prod: gaming
+description: "A reference document detailing the 'home' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:home
@@ -27,9 +28,13 @@ ms.prod: gaming
 
 ## Vanilla entities examples
 
-### bee
+### elder_guardian
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/bee.json" range="433-439":::
+```json
+"minecraft:home": {
+    "restriction_radius": 16
+}
+```
 
 ## Vanilla entities using `minecraft:home`
 

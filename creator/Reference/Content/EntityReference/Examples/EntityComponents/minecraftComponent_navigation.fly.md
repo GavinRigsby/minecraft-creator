@@ -1,13 +1,14 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:navigation.fly
-ms.prod: gaming
+description: "A reference document detailing the 'navigation.fly' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:navigation.fly
 
-`minecraft:navigation.fly` allows this entity to generate paths in the air like the vanilla Parrots do.
+`minecraft:navigation.fly` allows the entity to generate paths in the air like vanilla Parrots.
 
 ## Parameters
 
@@ -63,7 +64,10 @@ ms.prod: gaming
 
 ### parrot
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/parrot.json" range="138-141":::
+```json
+"minecraft:movement.fly": {
+      }
+```
 
 ## Vanilla entities using `minecraft:navigation.fly`
 

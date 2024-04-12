@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: horse
-ms.prod: gaming
+description: "A code snippet for the horse entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
 # horse

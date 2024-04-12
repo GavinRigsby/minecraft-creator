@@ -1,26 +1,28 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.work
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.work' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.work
 
-`minecraft:behavior.work` allows the NPC to use their jobsite POI.
+`minecraft:behavior.work` compels the NPC to use their jobsite point of interest (POI).
 
 ## Parameters
 
 | Name| Default Value| Type| Description |
 |:-----------:|:-----------:|:-----------:|:-----------:|
-| active_time| 0| Integer| The amount of ticks the NPC will stay in their the work location |
+| active_time| 0| Integer| The amount of ticks the NPC will stay in their the work location. |
 | can_work_in_rain| false| Boolean| If true, this entity can work when their jobsite POI is being rained on. |
-| goal_cooldown| 0| Integer| The amount of ticks the goal will be on cooldown before it can be used again |
+| goal_cooldown| 0| Integer| The amount of ticks the goal will be on cooldown before it can be used again. |
 | on_arrival| | Trigger| Event to run when the mob reaches their jobsite. |
 | sound_delay_max| 0| Integer| The max interval in which a sound will play. |
 | sound_delay_min| 0| Integer| The min interval in which a sound will play. |
-| speed_multiplier| 0.50| Decimal| Movement speed multiplier of the mob when using this AI Goal |
-| work_in_rain_tolerance| -1| Integer| If "can_work_in_rain" is false, this is the maximum number of ticks left in the goal where rain will not interrupt the goal |
+| speed_multiplier| 0.50| Decimal| Movement speed multiplier of the mob when using this AI Goal. |
+| work_in_rain_tolerance| -1| Integer| If "can_work_in_rain" is false, this is the maximum number of ticks left in the goal where rain will not interrupt the goal. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 
 ## Example
 
@@ -62,8 +64,6 @@ ms.prod: gaming
 }
 ```
 
-
 ## Vanilla entities using `minecraft:behavior.work`
 
 - [villager_v2](../../../../Source/VanillaBehaviorPack_Snippets/entities/villager_v2.md)
-

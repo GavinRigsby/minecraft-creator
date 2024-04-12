@@ -1,23 +1,24 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.defend_village_target
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.defend_village_target' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.defend_village_target
 
-`minecraft:behavior.defend_village_target` allows the entity to stay in a village and defend the village from aggressors. If a player is in bad standing with the village, this goal will cause the entity to attack the player regardless of filter conditions.
-
-
+`minecraft:behavior.defend_village_target` compels the entity to stay in a village and defend the village from aggressors. If a player is in bad standing with the village, this goal will cause the entity to attack the player regardless of filter conditions.
 
 ## Parameters
+
 | Name| Default Value| Type| Description |
 |:-----------:|:-----------:|:-----------:|:-----------:|
 | attack_chance| 0.05| Decimal| The percentage chance that the entity has to attack aggressors of its village, where 1.0 = 100%. |
-| priority | 1 | Decimal| The percentage chance that the entity has to attack aggressors of its village, where 1.0 = 100%. |
-| must_reach | true | Boolean | The entity must be able to reach attacker. |
 | entity_types | {} | JSON Object | Entity filter to determine which targets the behavior affects. |
+| must_reach | true | Boolean | The entity must be able to reach attacker. |
+| priority | 1 | Decimal| The percentage chance that the entity has to attack aggressors of its village, where 1.0 = 100%. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 
 ## Example
 
@@ -52,4 +53,3 @@ ms.prod: gaming
 ## Vanilla entities using `defend_village_target`
 
 - [iron_golem](../../../../Source/VanillaBehaviorPack_Snippets/entities/iron_golem.md)
-

@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: xp_bottle
-ms.prod: gaming
+description: "A code snippet for the xp_bottle entity"
+ms.service: minecraft-bedrock-edition
 ---
 
 # xp_bottle

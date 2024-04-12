@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: wither_skull_dangerous
-ms.prod: gaming
+description: "A code snippet for the wither_skull_dangerous entity"
+ms.service: minecraft-bedrock-edition
 ---
 
 # wither_skull_dangerous

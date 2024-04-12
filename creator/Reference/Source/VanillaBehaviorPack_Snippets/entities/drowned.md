@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: drowned
-ms.prod: gaming
+description: "A code snippet for the drowned entity"
+ms.service: minecraft-bedrock-edition
 ---
 
 # drowned

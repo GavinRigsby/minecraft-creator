@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: JimSeaman42
+ms.author: mikeam
 title: Entity Documentation - minecraft:custom_hit_test
-ms.prod: gaming
+description: "A reference document detailing the 'custom_hit_test' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:custom_hit_test

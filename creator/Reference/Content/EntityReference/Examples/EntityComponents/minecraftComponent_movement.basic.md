@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:movement.basic
-ms.prod: gaming
+description: "A reference document detailing the 'movement.basic' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:movement.basic
@@ -13,7 +14,7 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-| max_turn| 30.0| Decimal| The maximum number in degrees the mob can turn per tick. |
+| max_turn| 30.0| Decimal| The maximum number in degrees the entity can turn per tick. |
 
 ## Example
 
@@ -27,7 +28,10 @@ ms.prod: gaming
 
 ### horse
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/horse.json" range="349-350":::
+```json
+"minecraft:movement.basic": {
+      }
+```
 
 ## Vanilla entities using `minecraft:movement.basic`
 

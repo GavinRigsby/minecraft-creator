@@ -1,13 +1,14 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.drop_item_for
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.drop_item_for' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.drop_item_for
 
-`minecraft:behavior.drop_item_for` allows the entity to move toward a target, and drop an item near the target. This goal requires a `minecraft:navigation` to execute.
+`minecraft:behavior.drop_item_for` compels the entity to move toward a target and drop an item near the target. This goal requires a `minecraft:navigation` to execute.
 
 ## Parameters
 
@@ -16,12 +17,13 @@ ms.prod: gaming
 | cooldown| 0.2| Decimal| Total time that the goal is on cooldown before it can be used again. |
 | drop_item_chance| 1.0| Decimal| The percent chance the entity will drop an item when using this goal. |
 | entity_types| | Minecraft Filter| The list of conditions another entity must meet to be a valid target to drop an item for. |
-| goal_radius| 0.50| Decimal| Distance in blocks within the entity considers it has reached it's target position.  |
+| goal_radius| 0.50| Decimal| Distance in blocks within the entity considers it has reached its target position.  |
 | loot_table| | String| The loot table that contains the possible loot the entity can drop with this goal. |
 | max_head_look_at_height| 10.0| Decimal| The maximum height the entities head will look at when dropping the item. The entity will always be looking at its target. |
 | minimum_teleport_distance| 2.0| Decimal| If the target position is farther away than this distance on any tick, the entity will teleport to the target position. |
 | offering_distance| 1.0| Decimal| The preferred distance the entity tries to be from the target it is dropping an item for. |
 | on_drop_attempt| | Trigger| The event to trigger when the entity attempts to drop an item. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 | search_count| 0| Integer| The number of blocks each tick that the entity will check within its search range and height for a valid block to move to. A value of 0 will have the mob check every block within range in one tick. |
 | search_height| 1| Integer| The Height in blocks the entity will search within to find a valid target position. |
 | search_range| 0| Integer| The distance in blocks the entity will search within to find a valid target position. |
@@ -102,4 +104,3 @@ ms.prod: gaming
 ## Vanilla entities using `drop_item_for`
 
 - [cat](../../../../Source/VanillaBehaviorPack_Snippets/entities/cat.md)
-

@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: desert_pyramid
-ms.prod: gaming
+description: "A code snippet for the desert pyramid chest loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
 # desert_pyramid

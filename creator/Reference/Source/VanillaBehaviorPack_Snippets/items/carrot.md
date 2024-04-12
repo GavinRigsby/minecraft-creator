@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: carrot
-ms.prod: gaming
+description: "A code snippet for the carrot item"
+ms.service: minecraft-bedrock-edition
 ---
 
 # carrot

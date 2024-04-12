@@ -1,19 +1,20 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: JimSeaman42
+ms.author: mikeam
 title: Entity Documentation - minecraft:instant_despawn
-ms.prod: gaming
+description: "A reference document detailing the 'instant_despawn' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:instant_despawn
 
-`minecraft:instant_despawn` despawns the Actor immediately.
+`minecraft:instant_despawn` despawns the entity immediately.
 
 ## Parameters
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-| remove_child_entities| False| Boolean| If true, all entities linked to this entity in a child relationship (eg. leashed) will also be despawned. |
+| remove_child_entities| False| Boolean| If true, all linked entities in a child relationship (eg. leashed) will also be despawned. |
 
 ## Example
 

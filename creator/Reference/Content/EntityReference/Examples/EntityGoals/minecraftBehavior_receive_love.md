@@ -1,13 +1,14 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.receive_love
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.receive_love' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.receive_love
 
-`minecraft:behavior.receive_love` allows an entity to mate with another similar entity when approached to breed.
+`minecraft:behavior.receive_love` inspires an entity to mate with another similar entity when approached to breed.
 
 > [!NOTE]
 > This behavior can only be used by the `villager` entity type.
@@ -16,14 +17,15 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|speed_multiplier| 1.0| Decimal| Movement speed multiplier of the mob when using this AI Goal |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+|speed_multiplier| 1.0| Decimal| Movement speed multiplier of the mob when using this AI Goal. |
 
 ## Example
 
 ```json
 "minecraft:behavior.receive_love":{
     "priority": 2,
-    "speed_multiplier": 1.0,
+    "speed_multiplier": 1.0
 }
 ```
 
@@ -31,7 +33,11 @@ ms.prod: gaming
 
 ### villager_v2
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/villager_v2.json" range="1241-1243":::
+```json
+"minecraft:behavior.receive_love": {
+          "priority": 6
+        }
+```
 
 ## Vanilla entities using `minecraft:behavior.receive_love`
 

@@ -1,22 +1,29 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.dragonscanning
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.dragonscanning' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.dragonscanning
 
-`minecraft:behavior.dragonscanning` allows an entity to look around for a player to attack while in perch mode.
+`minecraft:behavior.dragonscanning` compels an entity to look around for a player to attack while in perch mode.
 
 > [!NOTE]
 > This behavior can only be used by the `ender_dragon` entity type.
+
+## Parameters
+
+|Name |Default Value  |Type  |Description  |
+|:----------|:----------|:----------|:----------|
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 
 ## Example
 
 ```json
 "minecraft:behavior.dragonscanning":{
-    "priority": 3,
+    "priority": 3
 }
 ```
 
@@ -24,7 +31,11 @@ ms.prod: gaming
 
 ### ender_dragon
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/ender_dragon.json" range="19-21":::
+```json
+"minecraft:behavior.dragonscanning": {
+    "priority": 2
+}
+```
 
 ## Vanilla entities using `minecraft:behavior.dragonscanning`
 

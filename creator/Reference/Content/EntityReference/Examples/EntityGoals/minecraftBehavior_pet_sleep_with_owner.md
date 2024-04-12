@@ -1,13 +1,14 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.pet_sleep_with_owner
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.pet_sleep_with_owner' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.pet_sleep_with_owner
 
-`minecraft:behavior.pet_sleep_with_owner` allows an entity to sleep on a bed shared with its sleeping owner.
+`minecraft:behavior.pet_sleep_with_owner` compels an entity to sleep on a bed shared with its sleeping owner.
 
 > [!NOTE]
 > `minecraft:behavior.pet_sleep_with_owner` requires a `player` to be tagged as the entity's owner, via taming or console command.
@@ -16,10 +17,12 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|goal_radius| 0.5| Decimal| Distance in blocks within the mob considers it has reached the goal. This is the "wiggle room" to stop the AI from bouncing back and forth trying to reach a specific spot |
+|goal_radius| 0.5| Decimal| Distance in blocks within the mob considers it has reached the goal. This is the "wiggle room" to stop the AI from bouncing back and forth trying to reach a specific spot. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 |search_height| 1| Integer| Height in blocks from the owner the pet can be to sleep with owner. |
-|search_range| 0| Integer| The range that the mob will search for a treasure chest within a ruin or shipwreck to move towards. |
-|speed_multiplier| 1.0| Decimal| Movement speed multiplier of the mob when using this AI Goal |
+|search_radius| 10| Integer| The radius that the mob will search for an owner to curl up with. |
+|search_range| 10| Integer| The range that the mob will search for an owner to curl up with. |
+|speed_multiplier| 1.0| Decimal| Movement speed multiplier of the mob when using this AI Goal. |
 
 ## Example
 
@@ -28,7 +31,7 @@ ms.prod: gaming
     "priority": 2,
     "search_range": 8,
     "cooldown_time":10,
-    "speed_multiplier":3,
+    "speed_multiplier":3
 }
 ```
 
@@ -36,7 +39,15 @@ ms.prod: gaming
 
 ### cat
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/cat.json" range="183-189":::
+```json
+"minecraft:behavior.pet_sleep_with_owner": {
+          "priority": 2,
+          "speed_multiplier": 1.2,
+          "search_radius": 10,
+          "search_height": 10,
+          "goal_radius": 1.0
+        }
+```
 
 ## Vanilla entities using `minecraft:behavior.pet_sleep_with_owner`
 

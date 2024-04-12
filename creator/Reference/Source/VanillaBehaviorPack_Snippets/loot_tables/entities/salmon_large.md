@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: salmon_large
-ms.prod: gaming
+description: "A code snippet for the salmon large entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
 # salmon_large

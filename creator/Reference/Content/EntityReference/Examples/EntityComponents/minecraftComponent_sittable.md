@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:sittable
-ms.prod: gaming
+description: "A reference document detailing the 'sittable' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:sittable
@@ -20,8 +21,8 @@ ms.prod: gaming
 
 ```json
 "minecraft:sittable":{
-    "sit_event": "minecraft:taking_a_seat",
-    "stand_event": "minecraft:time_to_go"
+    "sit_event": {"event": "minecraft:taking_a_seat"},
+    "stand_event": {"event": "minecraft:time_to_go"}
 }
 ```
 
@@ -29,7 +30,10 @@ ms.prod: gaming
 
 ### cat
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/cat.json" range="151-152":::
+```json
+"minecraft:sittable": {
+}
+```
 
 ## Vanilla entities using `minecraft:sittable`
 

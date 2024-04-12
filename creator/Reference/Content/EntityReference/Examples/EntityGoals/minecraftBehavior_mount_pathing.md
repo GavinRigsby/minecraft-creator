@@ -1,21 +1,23 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.mount_pathing
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.mount_pathing' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.mount_pathing
 
-`minecraft:behavior.mount_pathing` allows an entity to move around on its own while mounted. `minecraft:behavior.mount_pathing` also will allow an entity to target another entity for an attack.
+`minecraft:behavior.mount_pathing` compels an entity to move around on its own while mounted. `minecraft:behavior.mount_pathing` also will allow an entity to target another entity for an attack.
 
 ## Parameters
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|speed_multiplier| 1.0| Decimal| Movement speed multiplier of the mob when using this AI Goal |
-|target_dist| 0.0| Decimal| The distance at which this mob wants to be away from its target |
-|track_target| false| Boolean| If true, this mob will chase after the target as long as it's a valid target |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+|speed_multiplier| 1.0| Decimal| Movement speed multiplier of the mob when using this AI Goal. |
+|target_dist| 0.0| Decimal| The distance at which this mob wants to be away from its target. |
+|track_target| false| Boolean| If true, this mob will chase after the target as long as it's a valid target. |
 
 ## Example
 
@@ -32,7 +34,14 @@ ms.prod: gaming
 
 ### husk
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/husk.json" range="96-101":::
+```json
+"minecraft:behavior.mount_pathing": {
+          "priority": 2,
+          "speed_multiplier": 1.25,
+          "target_dist": 0.0,
+          "track_target": true
+        }
+```
 
 ## Vanilla entities using `minecraft:behavior.mount_pathing`
 

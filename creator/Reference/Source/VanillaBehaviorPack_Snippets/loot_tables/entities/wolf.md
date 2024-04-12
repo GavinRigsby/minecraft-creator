@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: wolf
-ms.prod: gaming
+description: "A code snippet for the wolf entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
 # wolf

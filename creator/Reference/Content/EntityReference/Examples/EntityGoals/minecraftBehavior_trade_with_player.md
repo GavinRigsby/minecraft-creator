@@ -1,13 +1,22 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.trade_with_player
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.trade_with_player' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.trade_with_player
 
-`minecraft:behavior.trade_with_player` allows an entity to focus on a player that will initiate a trade.
+`minecraft:behavior.trade_with_player` compels the entity to stop moving and trade with the player.
+
+## Parameters
+
+|Name |Default Value  |Type  |Description  |
+|:----------|:----------|:----------|:----------|
+|priority|*not set*|Integer|Conditions that need to be met for the behavior to start.|
+|filters| -- |Minecraft filter|The higher the priority, the sooner this behavior will be executed as a goal.|
+|max_distance_from_player|8.00|Decimal|The max distance that the mob can be from the player before exiting the goal.|
 
 ## Example
 
@@ -21,7 +30,11 @@ ms.prod: gaming
 
 ### wandering_trader
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/wandering_trader.json" range="152-154":::
+```json
+"minecraft:behavior.trade_with_player": {
+        "priority": 1
+      }
+```
 
 ## Vanilla entities using `minecraft:behavior.trade_with_player`
 

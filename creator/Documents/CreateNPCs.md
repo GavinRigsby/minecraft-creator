@@ -1,13 +1,14 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: mammerla
+ms.author: kakinnun
 title: Create a Custom NPC
-ms.prod: gaming
 description: "A tutorial covering how to create a Non-Playable Character (NPC) within Minecraft: Bedrock Edition"
+ms.service: minecraft-bedrock-edition
 ---
+
 # Create a Custom NPC
 
-Non-Player Characters (NPCs) are characters in Minecraft that are not controlled by the player. NPCs can perform commands and deliver dialog when players interact with them, making them excellent tools for creating amazing narrative and gameplay experiences in Minecraft.
+Non-Player Characters (NPCs) are characters in Minecraft that are not controlled by the player. NPCs can perform commands and deliver dialog when players interact with them, making them excellent tools for creating narrative and gameplay experiences.
 
 :::image type="content" source="Media/NPCs/Create-a-Custom-NPC.jpg" alt-text="Image showing a custom NPC and dialogue box":::
 
@@ -20,15 +21,24 @@ In this tutorial, you will learn the following:
 > - How to add commands to an NPC.
 > - How to add buttons to an NPC.
 
-## Create an NPC
+## Prequisites
 
-To create NPCs, make sure that you are playing in Creative mode with cheats enabled and that you have Operator permissions for your world. To interact with your custom NPCs, you will need to switch from Creative mode to Survival mode or Adventure mode.
+To create NPCs, start in a world with the following settings:
 
-To create a custom NPC, follow these instructions:
+- Creative mode
+- Cheats enabled
+- Operator permissions
 
-1. Obtain an NPC spawn egg from the creative menu or by using the command `/give @p spawn_egg 1 51`.
+> [!NOTE]
+> Later, to interact with your custom NPCs, you will need to switch from **Creative** mode to either **Survival** mode or **Adventure** mode.
+
+## Spawn an NPC
+
+To obtain a custom NPC, follow these instructions:
+
+1. Get an NPC spawn egg from the creative menu or by using the command `/give @p spawn_egg 1 51`.
 2. Right-click to place an NPC on your desired block. If you misplace an NPC, you can left-click to despawn them.
-3. Right-click your new NPC to open the NPC interface.
+3. Right-click the NPC to open the NPC interface.
 4. Enter a **name** for your NPC. Names are limited to 32 characters. You can use color codes to change the color of the name text.
 
 ![NPC Editor Interface](Media\NPCs\LearningPortal_NPCEditor.PNG)
@@ -37,7 +47,7 @@ The NPC editor has a built in dialog feature to give players more information ab
 
 This dialog box has a limit of 307 characters before the text goes off the screen. You can also use color codes to change the color of the text.
 
-You can use behaviour packs and commands to create a more advanced dialogue system for your custom NPCs. See [NPC Dialogue Command](/minecraft/creator/Documents/NPCDialogue) for more information.
+You can use behavior packs and commands to create a more advanced dialogue system for your custom NPCs. See [NPC Dialogue Command](/minecraft/creator/Documents/NPCDialogue) for more information.
 
 ## Change NPC skins
 
@@ -61,7 +71,29 @@ To add commands to an NPC, follow these instructions:
 
 ![NPC Command Interface](Media\NPCs\LearningPortal_NPCEditorCommands.PNG)
 
-Your NPC will execute these commands in order whenever a player interacts with them and closes their dialog box. For a list of commands that your NPCs can execute, see [Commands](https://minecraft.fandom.com/wiki/Commands).
+Your NPC will execute these commands in order whenever a player interacts with them and closes their dialog box. There is more information about commands in the [Introduction to Commands article](CommandsIntroduction.md).
+
+## Advanced Command Settings
+
+There are settings to customize the way commands work with NPCs.
+
+### Button Mode
+
+If Button Mode is toggled on, a text box appears where you can enter text that will appear on a button. This command will only run if the button is pressed.
+
+For example, we could use a combination of the command `/give @p gold_ingot` and a button labelled `Money?` When players click the `Money?` button, they receive one gold ingot into their inventory.
+
+### On Enter
+
+If On Enter is toggled, then the command will run when players initiate a conversation with the NPC.
+
+In this case, with On Enter toggled on and the command `/give @p gold_ingot`, players would receive one gold ingot in their inventory when the dialogue box opens on dialogue initiation with the NPC.
+
+### On Exit
+
+If On Exit is toggled, then the command will trigger when the player ends and interaction and closes the NPC dialogue.
+
+In this case, with On Exit toggled on and the command `/give @p gold_ingot`, players would receive one gold ingot in their inventory when the dialogue box closes and the NPC interaction ends.
 
 ## Add buttons to an NPC
 

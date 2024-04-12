@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: dragon_fireball
-ms.prod: gaming
+description: "A code snippet for the dragon_fireball entity"
+ms.service: minecraft-bedrock-edition
 ---
 
 # dragon fireball

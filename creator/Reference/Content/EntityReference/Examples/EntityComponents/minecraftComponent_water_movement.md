@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:water_movement
-ms.prod: gaming
+description: "A reference document detailing the 'water_movement' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:water_movement
@@ -27,7 +28,11 @@ ms.prod: gaming
 
 ### panda
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/panda.json" range="389-391":::
+```json
+"minecraft:water_movement": {
+        "drag_factor": 0.98
+      }
+```
 
 ## Vanilla entities using `minecraft:water_movement`
 

@@ -1,22 +1,29 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.squid_flee
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.squid_flee' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.squid_flee
 
-`minecraft:behavior.squid_flee` allows an entity to swim away when attacked.
+`minecraft:behavior.squid_flee` compels an entity to swim away when attacked.
 
 > [!NOTE]
 > This behavior can only be used by the `squid` entity type.
+
+## Parameters
+
+|Name |Default Value  |Type  |Description  |
+|:----------|:----------|:----------|:----------|
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 
 ## Example
 
 ```json
 "minecraft:behavior.squid_flee":{
-    "priority": 2,
+    "priority": 2
 }
 ```
 
@@ -24,7 +31,11 @@ ms.prod: gaming
 
 ### squid
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/squid.json" range="83-85":::
+```json
+"minecraft:behavior.squid_flee": {
+    "priority": 2
+}
+```
 
 ## Vanilla entities using `minecraft:behavior.squid_flee`
 

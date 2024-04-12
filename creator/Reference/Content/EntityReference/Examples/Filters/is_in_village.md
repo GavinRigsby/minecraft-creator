@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Entity Documentation - is_in_village
-ms.prod: gaming
+description: "A reference document detailing the 'is_in_village' entity filter"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - is_in_village
@@ -11,7 +12,7 @@ Tests whether the Subject is inside the bounds of a village.
 
 ## Parameters
 
-> [!Note]
+> [!NOTE]
 > `is_in_village` does **not** require any parameters to work properly. It can be used as a standalone filter.
 >
 > `is_in_village` can also use `subject`, [operator](../Definitions/NestedTables/operator.md) and `value` parameters.
@@ -21,7 +22,7 @@ Tests whether the Subject is inside the bounds of a village.
 | Options| Description |
 |:-----------|:-----------|
 | block| The block involved with the interaction. |
-| damager| The damaging actor involved with the interaction. |
+| damager| The damaging entity involved with the interaction. |
 | other| The other member of an interaction, not the caller. |
 | parent| The caller's current parent. |
 | player| The player involved with the interaction. |
@@ -67,7 +68,9 @@ Tests whether the Subject is inside the bounds of a village.
 
 ### player
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/player.json" range="148-152":::
+```json
+{ "test": "is_in_village", "subject": "self", "value": true }
+```
 
 ## Vanilla entities using `is_in_village`
 

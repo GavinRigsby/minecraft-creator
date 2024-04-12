@@ -1,13 +1,14 @@
 ---
-author: mammerla
-ms.author: v-josjones
+author: JimSeaman42
+ms.author: mikeam
 title: Entity Documentation - minecraft:burns_in_daylight
-ms.prod: gaming
+description: "A reference document detailing the 'burns_in_daylight' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:burns_in_daylight
 
-`minecraft:burns_in_daylight` allows an entity to burn when it's daylight.
+`minecraft:burns_in_daylight` compels an entity to burn when it's daylight.
 
 ## Example
 

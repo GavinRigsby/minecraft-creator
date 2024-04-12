@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:scale_by_age
-ms.prod: gaming
+description: "A reference document detailing the 'scale_by_age' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:scale_by_age
@@ -29,7 +30,12 @@ ms.prod: gaming
 
 ### horse
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/horse.json" range="15-18":::
+```json
+"minecraft:scale_by_age": {
+    "start_scale": 0.5,
+    "end_scale": 1.0
+}
+```
 
 ## Vanilla entities using `minecraft:scale_by_age`
 

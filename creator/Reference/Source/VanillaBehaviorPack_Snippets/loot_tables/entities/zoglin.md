@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: zoglin
-ms.prod: gaming
+description: "A code snippet for the zoglin entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
 # zoglin

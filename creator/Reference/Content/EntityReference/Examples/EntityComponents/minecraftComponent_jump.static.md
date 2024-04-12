@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:jump.static
-ms.prod: gaming
+description: "A reference document detailing the 'jump.static' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:jump.static
@@ -27,7 +28,10 @@ ms.prod: gaming
 
 ### horse
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/horse.json" range="351-352":::
+```json
+"minecraft:jump.static": {
+      }
+```
 
 ## Vanilla entities using `minecraft:jump.static`
 

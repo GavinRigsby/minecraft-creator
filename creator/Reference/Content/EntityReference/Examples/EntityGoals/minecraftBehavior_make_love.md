@@ -1,19 +1,26 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.make_love
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.make_love' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.make_love
 
-`minecraft:behavior.make_love` allows an entity to interact with other similar entities to produce an offspring.
+`minecraft:behavior.make_love` compels an entity to interact with other similar entities to produce an offspring.
+
+## Parameters
+
+|Name |Default Value  |Type  |Description  |
+|:----------|:----------|:----------|:----------|
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 
 ## Example
 
 ```json
 "minecraft:behavior.make_love":{
-    "priority": 8,
+    "priority": 8
 }
 ```
 
@@ -21,7 +28,11 @@ ms.prod: gaming
 
 ### villager_v2
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/villager_v2.json" range="1238-1240":::
+```json
+"minecraft:behavior.make_love": {
+          "priority": 5
+        }
+```
 
 ## Vanilla entities using `minecraft:behavior.make_love`
 

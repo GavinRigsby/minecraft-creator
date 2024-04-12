@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: cooked_salmon
-ms.prod: gaming
+description: "A code snippet for the cooked_salmon item"
+ms.service: minecraft-bedrock-edition
 ---
 
 # cooked_salmon

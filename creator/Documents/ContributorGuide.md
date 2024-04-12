@@ -1,15 +1,15 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: mammerla
+ms.author: mikeam
 title: Contributing to Minecraft Bedrock Documentation
-ms.prod: gaming
-description: A guide covering how Creators can contribute to the Creator Portal public repository and how user-created content is integrated into the Portal.
+description: "A guide covering how creators can contribute to the Creator Portal public repository and how user-created content is integrated into the Portal."
+ms.service: minecraft-bedrock-edition
 ---
 # Contributing to Minecraft Bedrock Documentation
 
 Welcome to the public repo for Minecraft Bedrock documentation! Any articles you create or edit in this repo will be visible to the public.
 
-The Minecraft Bedrock docs are on the docs.microsoft.com platform, which uses GitHub-flavored Markdown with Markdig features. The content you edit in this repo will be formatted into Microsoft Docs stylized pages that show up at [Minecraft Bedrock docs](/minecraft/creator). Content created by you and other members of the Bedrock Community will be released as a part of our content drops and Minecraft: Bedrock Edition updates.
+The Minecraft Bedrock docs are published to Microsoft Learn, which uses GitHub-flavored Markdown with Markdig features. The content you edit in this repo will be formatted into Microsoft Docs stylized pages that are published to [Minecraft Bedrock documentation](/minecraft/creator). Content created by you and other members of the Bedrock Community will be released as a part of our content drops and Minecraft: Bedrock Edition updates.
 
 This page covers the basic steps and guidelines for contributing and links to Markdown basics. Thank you for your contribution!
 
@@ -68,7 +68,7 @@ If your change will rename or delete an existing article, be sure to add a redir
 
 To add a redirect to .openpublishing.redirection.json, add an entry to the `redirections` array:
 
-```JSON
+```json
 {
     "redirections": [
         {
@@ -76,6 +76,9 @@ To add a redirect to .openpublishing.redirection.json, add an entry to the `redi
             "redirect_url": "new-article#section-about-old-topic",
             "redirect_document_id": false
         },
+        ...
+    ]
+}
 ```
 
 - The `source_path` is the relative repository path to the old article that you're removing. Be sure the path starts with `minecraft-creator/creator` and ends with `.md`.
@@ -90,7 +93,7 @@ Use the following workflow to create new articles in the documentation repo via 
 
 1. Create a fork off the MicrosoftDocs/minecraft-creator 'main' branch (using the Fork button in the top right).
 
-![GitHub Fork Button](\Media\ContributorGuide\LearningPortal_GitHubFork.png)
+![GitHub Fork Button](Media/ContributorGuide/LearningPortal_GitHubFork.png)
 
 2. In the "creator/Documents" folder, select **Add file** > **Create new file** in the top right.
 
@@ -123,7 +126,7 @@ keywords:
 
 9. Select New pull request and merge your fork's 'main' branch into MicrosoftDocs/minecraft-creator 'main' (make sure the arrow is pointing the correct way).
 
-![GitHub Pull Request](\Media\ContributorGuide\LearningPortal_GitHubPR.png)
+![GitHub Pull Request](Media/ContributorGuide/LearningPortal_GitHubPR.png)
 
 Your pull request will be reviewed by our content team. If it is approved, your changes will go live at our next regular release. If your pull request is not approved, a member of the content team will leave a comment in your pull request letting you know the reason it was not approved.
 
@@ -133,11 +136,11 @@ The following resources will help you learn how to edit documentation using the 
 
 - [Markdown basics](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 - [Markdown-at-a-glance reference poster](media/ContributorGuide/MarkdownPoster.jpg)
-- [Additional resources for writing Markdown for docs.microsoft.com](/contribute/markdown-reference)
+- [Additional resources for writing Markdown for Microsoft Learn content](/contribute/markdown-reference)
 
 ### Adding tables
 
-Because of the way docs.microsoft.com styles tables, they won’t have borders or custom styles even if you try inline CSS. It will appear to work for a short period of time, but eventually the platform will strip the styling out of the table. So plan ahead and keep your tables simple. Here’s a site that makes Markdown tables easy.
+When tables are styled in Microsoft Learn content, they won't have borders or custom styles even if you try using inline CSS. It will appear to work for a short period of time, but eventually the platform will strip the styling out of the table. So plan ahead and keep your tables simple. Here's a site that makes Markdown tables easy.
 
 The Docs Markdown Extension for Visual Studio Code also makes table generation easy if you're using Visual Studio Code (see below) to edit the documentation.
 
@@ -149,7 +152,7 @@ The Docs Markdown Extension for Visual Studio Code also makes table generation e
 
 ### Adding images
 
-You’ll need to upload your images to the "minecraft-creator/creator/images" folder in the repo, and then reference them appropriately in the article. Images will automatically show up at full-size, which means large images will fill the entire width of the article. We recommend pre-sizing your images before uploading them. The recommended width is between 600 and 700 pixels, though you should size up or down if it’s a dense screenshot or a fraction of a screenshot, respectively.
+You'll need to upload your images to the "minecraft-creator/creator/images" folder in the repo, and then reference them appropriately in the article. Images will automatically show up at full-size, which means large images will fill the entire width of the article. We recommend pre-sizing your images before uploading them. The recommended width is between 600 and 700 pixels, though you should size up or down if it's a dense screenshot or a fraction of a screenshot, respectively.
 
  >[!IMPORTANT]
  >You can only upload images to your forked repo before merging. So if you plan on adding images to an article, you'll need to use Visual Studio Code to add the images to your fork's "images" folder first or make sure you've done the following in a web browser:
@@ -166,7 +169,7 @@ To learn how to set up your own forked repo, follow the instructions for creatin
 While editing in GitHub via a web browser, you can select the Preview tab near the top of the page to preview your work before committing.
 
 >[!NOTE]
->Previewing your changes on review.docs.microsoft.com is only available to Microsoft employees
+>Previewing your changes on `review.learn.microsoft.com` is only available to Microsoft employees.
 
 Microsoft employees: once your contributions have been merged into the 'main' branch, you can review the content before it goes public at https://github.com/MicrosoftDocs/minecraft-creator/tree/main/creator. Find your article using the table of contents in the left column.
 
@@ -226,10 +229,10 @@ Use the following workflow to make changes to the documentation with Visual Stud
     b. In Visual Studio Code, select the sync button to sync your freshly updated fork to the local clone.
 
     ![GitHub Sync Button](Media\ContributorGuide\LearningPortal_GitHubSyncButton.png)
-
+"
 2. Create or edit articles in your cloned repo using Visual Studio Code.
 
-    a. Edit one or more articles (add images to “images” folder, if necessary).
+    a. Edit one or more articles (add images to "images" folder, if necessary).
 
     b. **Save** changes in **Explorer**.
 
@@ -241,7 +244,7 @@ Use the following workflow to make changes to the documentation with Visual Stud
 
 3. In a web browser, create a pull request to sync new changes in your fork back to MicrosoftDocs/minecraft-creator 'main' (make sure the arrow is pointing the correct way).
 
-    ![GitHub Pull Request](\Media\ContributorGuide\LearningPortal_GitHubPR.png)
+    ![Create a GitHub Pull Request](Media\ContributorGuide\LearningPortal_GitHubPR.png)
 
 ### Useful extensions
 

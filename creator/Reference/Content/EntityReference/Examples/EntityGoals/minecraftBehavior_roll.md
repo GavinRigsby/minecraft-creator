@@ -1,18 +1,20 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.roll
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.roll' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.roll
 
-`minecraft:behavior.roll` allows an entity roll forward.
+`minecraft:behavior.roll` compels an entity to roll forward.
 
 ## Parameters
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 |probability| 1.0| Decimal| The probability that the mob will use the goal. |
 
 ## Example
@@ -28,7 +30,13 @@ ms.prod: gaming
 
 ### panda
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/panda.json" range="197-200":::
+```json
+"minecraft:behavior.roll": {
+  "priority": 12,
+  "probability": 0.0016
+}
+
+```
 
 ## Vanilla entities using `minecraft:behavior.roll`
 

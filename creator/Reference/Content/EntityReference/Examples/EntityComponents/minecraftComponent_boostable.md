@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: JimSeaman42
+ms.author: mikeam
 title: Entity Documentation - minecraft:boostable
-ms.prod: gaming
+description: "A reference document detailing the 'boostable' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:boostable
@@ -14,8 +15,8 @@ ms.prod: gaming
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
 |boost_items|*not set* | List| List of items that can be used to boost while riding this entity.|
-|duration| 3.0| Decimal| Time in seconds for the boost. |
-|speed_multiplier| 1.0| Decimal| Factor by which the entity's normal speed increases. E.g. 2.0 means go twice as fast. |
+|duration| 3.00| Decimal| Time in seconds for the boost. |
+|speed_multiplier| 1.35| Decimal| Factor by which the entity's normal speed increases. For example, '2.0' will be twice the normal speed. Requires a format version of 1.20 or above; otherwise, the default value will be used. |
 
 ### boost_items
 
@@ -23,7 +24,7 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|damage| 1| Integer|  This is the damage that the item will take each time it is used. |
+|damage| 1| Integer|  The damage that the item will take each time it is used. |
 |item|*not set* | String|  Name of the item that can be used to boost. |
 |replace_item|*not set* | String|  The item used to boost will become this item once it is used up. |
 

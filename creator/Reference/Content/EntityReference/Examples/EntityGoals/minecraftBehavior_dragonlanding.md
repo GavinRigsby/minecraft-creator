@@ -1,22 +1,29 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.dragonlanding
-ms.prod: gaming
+description: "A reference document detailing the 'dragonlanding' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.dragonlanding
 
-`minecraft:behavior.dragonlanding` allows an entity to stop flying and transition into perching mode.
+`minecraft:behavior.dragonlanding` compels an entity to stop flying and transition into perching mode.
 
 > [!NOTE]
 > This behavior can only be used by the `ender_dragon` entity type.
+
+## Parameters
+
+|Name |Default Value  |Type  |Description  |
+|:----------|:----------|:----------|:----------|
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 
 ## Example
 
 ```json
 "minecraft:behavior.dragonlanding":{
-    "priority": 0,
+    "priority": 0
 }
 ```
 
@@ -24,7 +31,12 @@ ms.prod: gaming
 
 ### ender_dragon
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/ender_dragon.json" range="13-15":::
+```json
+"minecraft:on_start_landing": {
+        "event": "minecraft:start_land",
+        "target": "self"
+      }
+```
 
 ## Vanilla entities using `minecraft:behavior.dragonlanding`
 

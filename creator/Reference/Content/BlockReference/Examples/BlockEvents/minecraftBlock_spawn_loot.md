@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Block Documentation - spawn_loot
-ms.prod: gaming
+description: "A reference document detailing the 'spawn_loot' block event response"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Block Documentation - spawn_loot

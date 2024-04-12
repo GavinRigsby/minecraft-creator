@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Entity Documentation - minecraft:on_target_escape
-ms.prod: gaming
+description: "A reference document detailing the 'on_target_escape' entity trigger"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:on_target_escape
@@ -37,7 +38,12 @@ ms.prod: gaming
 
 ### magma_cube
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/magma_cube.json" range="121-124":::
+```json
+"minecraft:on_target_escape": {
+    "event": "minecraft:become_calm",
+    "target": "self"
+}
+```
 
 ## Vanilla entities using `minecraft:on_target_escape`
 

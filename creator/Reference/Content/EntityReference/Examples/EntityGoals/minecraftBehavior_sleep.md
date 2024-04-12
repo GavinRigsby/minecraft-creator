@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.sleep
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.sleep' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.sleep
@@ -16,12 +17,14 @@ ms.prod: gaming
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|cooldown_time| 0.0| Decimal| Time in seconds the mob has to wait before using the goal again |
-|sleep_collider_height| 1.0| Decimal|  The height of the mob's collider while sleeping |
-|sleep_collider_width| 1.0| Decimal|  The width of the mob's collider while sleeping |
-|sleep_y_offset| 1.0| Decimal|  The y offset of the mob's collider while sleeping |
-|speed_multiplier| 1.0| Decimal|  Movement speed multiplier of the mob when using this AI Goal |
-| timeout_cooldown| 8.0| Decimal| The cooldown time in seconds before the goal can be reused after a internal failure or timeout condition |
+| can_sleep_while_riding| false| Boolean|  If true, the mob will be able to use the sleep goal if riding something. |
+| cooldown_time| 0.0| Decimal| Time in seconds the mob has to wait before using the goal again. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+| sleep_collider_height| 1.0| Decimal|  The height of the mob's collider while sleeping. |
+| sleep_collider_width| 1.0| Decimal|  The width of the mob's collider while sleeping. |
+| sleep_y_offset| 1.0| Decimal|  The y offset of the mob's collider while sleeping. |
+| speed_multiplier| 1.0| Decimal|  Movement speed multiplier of the mob when using this AI Goal. |
+| timeout_cooldown| 8.0| Decimal| The cooldown time in seconds before the goal can be reused after a internal failure or timeout condition. |
 
 ## Example
 
@@ -41,7 +44,17 @@ ms.prod: gaming
 
 ### villager_v2
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/villager_v2.json" range="545-553":::
+```json
+"minecraft:behavior.sleep": {
+    "priority": 3,
+    "goal_radius": 1.5,
+    "speed_multiplier": 0.6,
+    "sleep_collider_height": 0.3,
+    "sleep_collider_width": 1.0,
+    "sleep_y_offset": 0.6,
+    "timeout_cooldown": 10.0
+}
+```
 
 ## Vanilla entities using `minecraft:behavior.sleep`
 

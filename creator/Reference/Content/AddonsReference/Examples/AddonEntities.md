@@ -1,8 +1,9 @@
 ---
-author: docsbryce
-ms.author: v-bbortree
+author: mammerla
+ms.author: mikeam
 title: Addons Documentation - Entity List
-ms.prod: gaming
+description: "A reference document detailing the entities and damage sources used in addons for Minecraft: Bedrock Edition"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Addons Documentation - Entity List
@@ -21,6 +22,7 @@ Listed below are the available Entities for use in Minecraft: Bedrock Edition an
 | agent| 312| 56 |
 | allay| 390| 134 |
 | area_effect_cloud| 95| 95 |
+| armadillo| 5006| 142 |
 | armor_stand| 317| 61 |
 | arrow| 12582992| 80 |
 | axolotl| 4994| 130 |
@@ -29,6 +31,10 @@ Listed below are the available Entities for use in Minecraft: Bedrock Edition an
 | bee| 378| 122 |
 | blaze| 2859| 43 |
 | boat| 90| 90 |
+| bogged| 1117072| 144 |
+| breeze| 2956| 140 |
+| breeze_wind_charge_projectile| 4194445| 141 |
+| camel| 5002| 138 |
 | cat| 21323| 75 |
 | cave_spider| 265000| 40 |
 | chalkboard| 78| 78 |
@@ -56,7 +62,6 @@ Listed below are the available Entities for use in Minecraft: Bedrock Edition an
 | eye_of_ender_signal| 70| 70 |
 | falling_block| 66| 66 |
 | fireball| 4194389| 85 |
-| firefly| 4999| 135 |
 | fireworks_rocket| 72| 72 |
 | fishing_hook| 77| 77 |
 | fox| 4985| 121 |
@@ -107,6 +112,7 @@ Listed below are the available Entities for use in Minecraft: Bedrock Edition an
 | skeleton_horse| 2186010| 26 |
 | slime| 2853| 37 |
 | small_fireball| 4194398| 94 |
+| sniffer| 5003| 139 |
 | snow_golem| 789| 21 |
 | snowball| 4194385| 81 |
 | spider| 264995| 35 |
@@ -118,6 +124,7 @@ Listed below are the available Entities for use in Minecraft: Bedrock Edition an
 | thrown_trident| 12582985| 73 |
 | tnt| 65| 65 |
 | tnt_minecart| 524385| 97 |
+| trader_llama| 5021| 157 |
 | tripod_camera| 318| 62 |
 | tropicalfish| 9071| 111 |
 | turtle| 4938| 74 |
@@ -126,7 +133,8 @@ Listed below are the available Entities for use in Minecraft: Bedrock Edition an
 | villager_v2| 16778099| 115 |
 | vindicator| 2873| 57 |
 | wandering_trader| 886| 118 |
-| warden| 387| 131 |
+| warden| 2947| 131 |
+| wind_charge_projectile| 4194447| 143 |
 | witch| 2861| 45 |
 | wither| 68404| 52 |
 | wither_skeleton| 1116976| 48 |
@@ -151,6 +159,7 @@ Listed below are the available Damage Sources that can be used when working with
 | all|  |
 | anvil|  |
 | block_explosion|  |
+| campfire|  |
 | charging|  |
 | contact|  |
 | drowning|  |
@@ -171,11 +180,14 @@ Listed below are the available Damage Sources that can be used when working with
 | override|  |
 | piston|  |
 | projectile|  |
+| self_destruct|  |
+| ram_attack|  |
+| sonic_boom|  |
+| soul_campfire|  |
 | stalactite|  |
 | stalagmite|  |
 | starve|  |
 | suffocation|  |
-| suicide|  |
 | temperature|  |
 | thorns|  |
 | void|  |

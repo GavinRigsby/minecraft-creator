@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.player_ride_tamed
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.player_ride_tamed' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.player_ride_tamed
@@ -11,7 +12,9 @@ ms.prod: gaming
 
 ## Parameters
 
-`minecraft:behavior.player_ride_tamed` does not use any parameters.
+|Name |Default Value  |Type  |Description  |
+|:----------|:----------|:----------|:----------|
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
 
 ## Example
 
@@ -24,7 +27,10 @@ ms.prod: gaming
 
 ### zombie_horse
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/zombie_horse.json" range="53-55":::
+```json
+"minecraft:behavior.player_ride_tamed": {
+}
+```
 
 ## Vanilla entities using `minecraft:behavior.player_ride_tamed`
 

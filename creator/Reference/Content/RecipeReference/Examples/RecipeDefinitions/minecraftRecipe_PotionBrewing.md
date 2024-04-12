@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: JimSeaman42
+ms.author: mikeam
 title: Recipe Documentation - Potion Brewing Container Recipe
-ms.prod: gaming
+description: "A reference document detailing potion brewing container recipes"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Recipe Documentation - Potion Brewing Container Recipe
@@ -20,7 +21,7 @@ Represents a Potion Brewing Container Recipe.
 
 ## Potion Brewing Container Recipe Example
 
-```JSON
+```json
 {
 "format_version": "1.17",
     "minecraft:recipe_brewing_container": {
@@ -30,7 +31,7 @@ Represents a Potion Brewing Container Recipe.
     "tags": [ "brewing_stand" ],
     "input": "minecraft:potion",
     "reagent": "minecraft:gunpowder",
-    "output": "minecraft:splash_potion",
+    "output": "minecraft:splash_potion"
     }
 }
 ```
@@ -39,4 +40,4 @@ Represents a Potion Brewing Container Recipe.
 
 ### Brew Potion Sulphur
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack_Snippets/recipes/brew_potion_sulphur.json":::
+:::code language="json" source="../../../../Source/VanillaBehaviorPack/recipes/brew_potion_sulphur.json":::

@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:persistent
-ms.prod: gaming
+description: "A reference document detailing the 'persistent' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:persistent
@@ -20,7 +21,10 @@ ms.prod: gaming
 
 ### armor_stand
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/armor_stand.json" range="39-40":::
+```json
+"minecraft:persistent": {
+}
+```
 
 ## Vanilla entities using `minecraft:persistent`
 

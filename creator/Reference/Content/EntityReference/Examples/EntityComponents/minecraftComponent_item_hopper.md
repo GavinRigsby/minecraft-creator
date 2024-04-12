@@ -1,8 +1,9 @@
 ---
-author: v-jeffreykim
-ms.author: v-jeffreykim
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:item_hopper
-ms.prod: gaming
+description: "A reference document detailing the 'item_hopper' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:item_hopper
@@ -20,7 +21,10 @@ ms.prod: gaming
 
 ### hopper_minecart
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/hopper_minecart.json" range="13-15":::
+```json
+"minecraft:item_hopper": {
+        }
+```
 
 ## Vanilla entities using `minecraft:item_hopper`
 

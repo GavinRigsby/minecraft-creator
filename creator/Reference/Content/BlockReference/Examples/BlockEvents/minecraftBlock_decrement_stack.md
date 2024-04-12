@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: Block Documentation - decrement_stack
-ms.prod: gaming
+description: "A reference document detailing the 'decrement_stack' block event response"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Block Documentation - decrement_stack

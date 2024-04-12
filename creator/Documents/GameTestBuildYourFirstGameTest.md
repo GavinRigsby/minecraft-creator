@@ -1,9 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: v-bbortree
 title: Building your first GameTest
-description: Tutorial for building a GameTest using structures and JavaScript.
-ms.prod: gaming
+description: "A guide to building a GameTest using structures and JavaScript"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Building your first GameTest
@@ -15,16 +15,16 @@ A GameTest is a miniature environment along with a set of starting conditions, s
 Building sets of GameTests requires building out your GameTests via a behavior Pack, and writing some simple JavaScript code.
 
 >[!IMPORTANT]
->GameTest Framework is still experimental. As with all experiments, you may see additions, removals, and changes in functionality in Minecraft versions without significant advanced warning.  Check the Minecraft Changelog for details on any changes to GameTest Framework.
+>GameTest Framework is still experimental. As with all experiments, you may see additions, removals, and changes in functionality in Minecraft versions without significant advanced warning.  Check the Minecraft Changelog for details on any changes to Beta APIs or GameTest Framework.
 >
->To learn more about Experimental Features, please visit [Experimental Features in Minecraft: Bedrock Edition](ExperimentalFeaturesToggle.md)
+>To learn more about Experimental Features, please visit [Experimental Features in Minecraft: Bedrock Edition](ExperimentalFeaturesToggle.md).
 
 >[!Caution]
 >Because GameTest Framework is adding and updating functionality frequently, we recommend using the latest Beta versions of Minecraft. See [Minecraft Betas](https://aka.ms/mcbeta) for more information. The syntax of this sample is intended to be compatible with the latest beta versions.
 
 ### Requirements
 
-It’s recommended that the following be completed before beginning this tutorial.
+It's recommended that the following be completed before beginning this tutorial.
 
 > [!div class="checklist"]
 >
@@ -70,9 +70,9 @@ You can start a behavior pack manifest with a manifest.json file within your sta
     "header": {
         "description": "Introductory tests for Minecraft GameTest Framework.",
         "name": "Starter Hello World Tests",
-        "uuid": "1A2F42BD-98D4-4E0D-8E3F-934AB8A0C05E",
+        "uuid": "1a2f42bd-98d4-4e0d-8e3f-934ab8a0c05e",
         "version": [0, 0, 1],
-        "min_engine_version": [ 1, 14, 0 ]
+        "min_engine_version": [ 1, 19, 0 ]
     }
 }
 ```
@@ -85,7 +85,7 @@ A behavior pack manifest needs to have additional elements to support GameTests.
             "description": "Script that implements basic starter tests.",
             "type": "script",
             "language": "javascript",
-            "uuid": "1A1B53FC-5653-4A75-91B7-9CDF027674AE",
+            "uuid": "1a1b53fc-5653-4a75-91b7-9cdf027674ae",
             "version": [0, 0, 1],
             "entry": "scripts/StarterTests.js"
         }
@@ -94,33 +94,31 @@ A behavior pack manifest needs to have additional elements to support GameTests.
 
 >[!Caution]
 >This sample now represents the manifest format for registering JavaScript for version 1.19. Prior to version 1.19, the `type` attribute should be set to "javascript", and the language attribute should be omittted.
+> Also note that this sample uses the new `dependencies` format and versioning introduced in version 1.19.30, where you can use `module_name` to reference built-in script modules. `version` now uses a string, and the targeted module versions should be `1.0.0-beta.`
 
 Note several facets of this `module`:
 
-- This module is of type `javascript`.
+- This module is of type `script`.
 - The `uuid` needs to be unique and generated for your project.  See the [Introduction To Behavior Packs](BehaviorPack.md) topic for tools for generating new UUIDs.
 - The `entry` attribute points to a JavaScript file that contains your GameTest code.
 
 In addition, you will need to establish dependencies on Minecraft APIs and GameTest Framework.  You can do this with additional dependencies added beneath the modules section below:
 
 ``` JSON
- "dependencies": [
+    "dependencies": [
       {
-        "uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
-        "version": [ 0, 1, 0 ]
+        "module_name": "@minecraft/server",
+        "version": "1.0.0-beta"
       },
       {
-        "uuid": "6f4b6893-1bb6-42fd-b458-7fa3d0c89616",
-        "version": [ 0, 1, 0 ]
+        "module_name": "@minecraft/server-gametest",
+        "version": "1.0.0-beta"
       }
     ]
 ```
 
->[!WARNING]
->Note that here `uuid` refers to core Minecraft components. You should **not** change these values within the dependencies section.
-
 >[!IMPORTANT]
->As you can see, GameTest Framework tests dependent on versions "0.1.0" of Minecraft APIs and GameTest Framework.  Version 0 indicates that these features are still **experimental**. As with all experiments, we are improving their capabilities over time, and API signatures may change build over build without advanced notice.  Check the Minecraft Changelog for more changes over time.
+>As you can see, GameTest Framework tests dependent on versions "1.0.0-beta" of Minecraft APIs and GameTest Framework. Beta versions indicate that these features are still **experimental**. As with all experiments, we are improving their capabilities over time, and API signatures may change build over build without advanced notice.  Check the Minecraft Changelog for more changes over time.
 
 A full manifest file for a Behavior Pack with a GameTest looks like:
 
@@ -130,35 +128,36 @@ A full manifest file for a Behavior Pack with a GameTest looks like:
     "header": {
         "description": "Introductory tests for Minecraft GameTest Framework.",
         "name": "Starter Hello World Tests",
-        "uuid": "1A2F42BD-98D4-4E0D-8E3F-934AB8A0C05E",
+        "uuid": "1a2f42bd-98d4-4e0d-8e3f-934ab8a0c05e",
         "version": [0, 0, 1],
-        "min_engine_version": [ 1, 14, 0 ]
+        "min_engine_version": [ 1, 19, 0 ]
     },
     "modules": [
         {
             "description": "Script that implements basic starter tests.",
             "type": "script",
             "language": "javascript",
-            "uuid": "1A1B53FC-5653-4A75-91B7-9CDF027674AE",
+            "uuid": "1a1b53fc-5653-4a75-91b7-9cdf027674ae",
             "version": [0, 0, 1],
             "entry": "scripts/StarterTests.js"
         }
     ],
     "dependencies": [
       {
-        "uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
-        "version": [ 0, 1, 0 ]
+        "module_name": "@minecraft/server",
+        "version": "1.0.0-beta"
       },
       {
-        "uuid": "6f4b6893-1bb6-42fd-b458-7fa3d0c89616",
-        "version": [ 0, 1, 0 ]
+        "module_name": "@minecraft/server-gametest",
+        "version": "1.0.0-beta"
       }
     ]
 }
 ```
 
 >[!Caution]
->This sample now represents the manifest format for registering JavaScript for version 1.19. Prior to version 1.19, the `type` attribute should be set to "javascript", and the language attribute should be omittted.
+> This sample now represents the manifest format for registering JavaScript for version 1.19.30. Prior to version 1.19, the `type` attribute should be set to "javascript", and the language attribute should be omittted.
+> Also note that this sample uses the new `dependencies` format and versioning introduced in version 1.19.30, where you can use `module_name` to reference built-in script modules. `version` now uses a string, and the targeted module versions should be `1.0.0-beta.`
 
 ### GameTest Registration
 
@@ -172,7 +171,7 @@ When a GameTest Framework-enabled world opens with this file registered, your Ga
 
 Note that as you make changes to your scripts or structures, you will need to exit out of your world and reload it. If there are any script errors, you will see them displayed as the world is loaded.
 
-To register your GameTest scripts, you'll want to use the RegistrationBuilder class. You can see more information on the Registration Builder class at [Registration Builder](../ScriptAPI/mojang-gametest/RegistrationBuilder.md).
+To register your GameTest scripts, you'll want to use the RegistrationBuilder class. You can see more information on the Registration Builder class at [Registration Builder](../ScriptAPI/minecraft/server-gametest/RegistrationBuilder.md).
 
 An example line of JavaScript that uses RegistrationBuilder looks like:
 
@@ -196,15 +195,14 @@ Test functions are where the actual execution of a test happens.  The test funct
 Sample Test:
 
 ```javascript
-import * as GameTest from "mojang-gametest";
-import { BlockLocation } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
 
 function simpleMobTest(test) {
   const attackerId = "fox";
   const victimId = "chicken";
 
-  test.spawn(attackerId, new BlockLocation(5, 2, 5));
-  test.spawn(victimId, new BlockLocation(2, 2, 2));
+  test.spawn(attackerId, { x: 5, y: 2, z: 5});
+  test.spawn(victimId, { x: 2, y: 2, z: 2});
 
   test.assertEntityPresentInArea(victimId, true);
 
@@ -224,15 +222,14 @@ Some things to observe in this test function:
 The full JavaScript StarterTests.js file looks like:
 
 ```javascript
-import * as GameTest from "mojang-gametest";
-import { BlockLocation } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
 
 function simpleMobTest(test) {
   const attackerId = "fox";
   const victimId = "chicken";
 
-  test.spawn(attackerId, new BlockLocation(5, 2, 5));
-  test.spawn(victimId, new BlockLocation(2, 2, 2));
+  test.spawn(attackerId, { x: 5, y: 2, z: 5});
+  test.spawn(victimId, { x: 2, y: 2, z: 2});
 
   test.assertEntityPresentInArea(victimId, true);
 
@@ -270,14 +267,14 @@ Place this mediumglass.mcstructure file within a subfolder called startertests. 
 
 ## Running your tests within the game
 
-Once you have completed your GameTest behavior pack, you'll want to try it out within Minecraft. To do this, create a new Minecraft world. For this new world, you'll want to start in Creative mode and turn the GameTest Framework experiment on. You'll want to add the GameTeset Behavior Packs in your world.  If everything is correct, you should see the Start Hello World GameTest behavior pack when you create your world:
+Once you have completed your GameTest behavior pack, you'll want to try it out within Minecraft. To do this, create a new Minecraft world. For this new world, you'll want to start in Creative mode and turn the _Beta APIs_ experiment on. You'll want to add the GameTest Behavior Packs in your world.  If everything is correct, you should see the Start Hello World GameTest behavior pack when you create your world:
 
 ![Minecraft Behavior Pack with GameTest](Media/GameTestBuildYourFirstGameTest/behaviorpack.png)
 
 Click on the Starter Hello World behavior packs tile to activate it.
 
 >[!IMPORTANT]
->You’ll also likely want to specify some additional changes in your environment:
+>You'll also likely want to specify some additional changes in your environment:
 >- Selecting a Flat world
 >- Retain Normal difficulty (mobs work differently in completely Peaceful worlds)
 
@@ -289,7 +286,7 @@ To run a specific test, use `/gametest run <classname>:<testName>`, like:
 
 ## What's Next
 
-You've created your first GameTest Framework test. GameTests allow you as a Creator to stretch your content, exercise your entities, and validate your gameplay mechanics. You can view the GameTest API below to learn more about what is included in the GameTest Framework.
+You've created your first GameTest Framework test. GameTests allow you, as a creator, to stretch your content, exercise your entities, and validate your gameplay mechanics. You can view the GameTest API below to learn more about what is included in the GameTest Framework.
 
 > [!div class="nextstepaction"]
-> [GameTest API](../ScriptAPI/mojang-gametest/mojang-gametest.md)
+> [GameTest API](../ScriptAPI/minecraft/server-gametest/minecraft-server-gametest.md)

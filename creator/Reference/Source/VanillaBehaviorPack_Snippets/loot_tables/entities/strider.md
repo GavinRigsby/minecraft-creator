@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: strider
-ms.prod: gaming
+description: "A code snippet for the strider entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
 # strider

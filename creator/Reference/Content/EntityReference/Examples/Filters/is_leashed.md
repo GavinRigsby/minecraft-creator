@@ -1,8 +1,9 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - is_leashed
-ms.prod: gaming
+description: "A reference document detailing the 'is_leashed' entity filter"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - is_leashed
@@ -11,7 +12,7 @@ Returns true if the subject entity is leashed.
 
 ## Parameters
 
-> [!Note]
+> [!NOTE]
 > `is_leashed` does **not** require any parameters to work properly. It can be used as a standalone filter.
 >
 > `is_leashed` can also use `subject`, [operator](../Definitions/NestedTables/operator.md) and `value` parameters.
@@ -21,7 +22,7 @@ Returns true if the subject entity is leashed.
 | Options| Description |
 |:-----------|:-----------|
 | block| The block involved with the interaction. |
-| damager| The damaging actor involved with the interaction. |
+| damager| The damaging entity involved with the interaction. |
 | other| The other member of an interaction, not the caller. |
 | parent| The caller's current parent. |
 | player| The player involved with the interaction. |
@@ -65,11 +66,12 @@ Returns true if the subject entity is leashed.
 
 ## Vanilla entities examples
 
-### llama
+### trader llama
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/llama.json" range="82-96":::
+```json
+{ "test": "is_leashed", "subject": "self", "value": false }
+```
 
 ## Vanilla entities using `is_leashed`
 
-- [llama](../../../../Source/VanillaBehaviorPack_Snippets/entities/llama.md)
-- [wandering_trader](../../../../Source/VanillaBehaviorPack_Snippets/entities/wandering_trader.md)
+- [trader llama](../../../../Source/VanillaBehaviorPack_Snippets/entities/trader_llama.md)

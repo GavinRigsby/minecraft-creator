@@ -1,19 +1,20 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: JimSeaman42
+ms.author: mikeam
 title: Entity Documentation - minecraft:admire_item
-ms.prod: gaming
+description: "A reference document detailing the 'admire_item' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:admire_item
 
-`minecraft:admire_item` allows an entity to ignore attackable targets for a given duration.
+`minecraft:admire_item` compels an entity to ignore attackable targets for a given duration.
 
 ## Parameters
 
-|Name |Default Value  |TypeSS  |Description  |
+|Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|cooldown_after_being_attacked| 0| Integer|  Duration, in seconds, for which mob won't admire items if it was hurt |
+|cooldown_after_being_attacked| 0| Integer|  Duration, in seconds, that th mob won't admire items if it was hurt |
 |duration| 10| Integer|  Duration, in seconds, that the mob is pacified. |
 
 ## Example

@@ -1,10 +1,11 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: mammerla
+ms.author: mikeam
 title: armor_set_diamond
-ms.prod: gaming
+description: "A code snippet for the armor set diamond entity loot table"
+ms.service: minecraft-bedrock-edition
 ---
 
-# armor_set_diamond 
+# armor_set_diamond
 
 :::code language="json" source="../../../VanillaBehaviorPack/loot_tables/entities/armor_set_diamond.json":::

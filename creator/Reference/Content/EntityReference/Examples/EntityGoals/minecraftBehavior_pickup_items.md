@@ -1,26 +1,29 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.pickup_items
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.pickup_items' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.pickup_items
 
-`minecraft:behavior.pickup_items` allows an entity to pick up selected items off the ground.
+`minecraft:behavior.pickup_items` compels an entity to pick up selected items off the ground.
 
 ## Parameters
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|can_pickup_any_item| false| Boolean| If true, the mob can pickup any item |
-|can_pickup_to_hand_or_equipment| true| Boolean| If true, the mob can pickup items to its hand or armor slots |
-|excluded_items|*not set* | List| List of items this mob will not pick up |
-|goal_radius| 0.5| Decimal| Distance in blocks within the mob considers it has reached the goal. This is the "wiggle room" to stop the AI from bouncing back and forth trying to reach a specific spot |
-|max_dist| 0.0| Decimal|  Maximum distance this mob will look for items to pick up |
-| pickup_based_on_chance| false|Boolean|  If true, depending on the difficulty, there is a random chance that the mob may not be able to pickup items |
-|speed_multiplier| 1.0| Decimal|  Movement speed multiplier of the mob when using this AI Goal |
-|track_target| false| Boolean|  If true, this mob will chase after the target as long as it's a valid target |
+|can_pickup_any_item| false| Boolean| If true, the mob can pickup any item. |
+|can_pickup_to_hand_or_equipment| true| Boolean| If true, the mob can pickup items to its hand or armor slots. |
+|cooldown_after_being_attacked | 20.0 | Decimal | Amount of time an offended entity needs before being willing to pick up items. |
+|excluded_items|*not set* | List| List of items this mob will not pick up. |
+|goal_radius| 0.5| Decimal| Distance in blocks within the mob considers it has reached the goal. This is the "wiggle room" to stop the AI from bouncing back and forth trying to reach a specific spot. |
+|max_dist| 0.0| Decimal|  Maximum distance this mob will look for items to pick up. |
+|pickup_based_on_chance| false|Boolean|  If true, depending on the difficulty, there is a random chance that the mob may not be able to pickup items. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+|speed_multiplier| 1.0| Decimal|  Movement speed multiplier of the mob when using this AI Goal. |
+|track_target| false| Boolean|  If true, this mob will chase after the target as long as it's a valid target. |
 
 ## Example
 
@@ -39,9 +42,19 @@ ms.prod: gaming
 
 ## Vanilla entities examples
 
-### zombie_villager_v2
+### piglin
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/zombie_villager_v2.json" range="600-607":::
+```json
+"minecraft:behavior.pickup_items": {
+        "priority": 6,
+        "max_dist": 10,
+        "goal_radius": 2,
+        "speed_multiplier": 0.8,
+        "pickup_based_on_chance": false,
+        "can_pickup_any_item": false,
+        "cooldown_after_being_attacked": 20.0
+      }
+```
 
 ## Vanilla entities using `minecraft:behavior.pickup_items`
 

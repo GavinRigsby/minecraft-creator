@@ -1,13 +1,14 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: JimSeaman42
+ms.author: mikeam
 title: Entity Documentation - minecraft:despawn
-ms.prod: gaming
+description: "A reference document detailing the 'despawn' entity component"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:despawn
 
-`minecraft:despawn` allows an entity despawn when the despawn rules or optional filters evaluate to true.
+`minecraft:despawn` compels an entity despawn when the despawn rules or optional filters evaluate to true.
 
 ## Parameters
 
@@ -17,7 +18,7 @@ ms.prod: gaming
 |despawn_from_chance| true| Boolean|  Determines if "min_range_random_chance" is used in the standard despawn rules. |
 |despawn_from_inactivity| true| Boolean|  Determines if the "min_range_inactivity_timer" is used in the standard despawn rules. |
 |despawn_from_simulation_edge| true|  Boolean| Determines if the mob is instantly despawned at the edge of simulation distance in the standard despawn rules. |
-|[filters](../FilterList.md)|*not set* | Minecraft Filter|  The list of conditions that must be satisfied before the Actor is despawned. If a filter is defined then standard despawn rules are ignored. |
+|[filters](../FilterList.md)|*not set* | Minecraft Filter|  The list of conditions that must be satisfied before the entity is despawned. If a filter is defined then standard despawn rules are ignored. |
 |min_range_inactivity_timer| 30| Integer|  The amount of time in seconds that the mob must be inactive. |
 |min_range_random_chance| 800| Integer|  A random chance between 1 and the given value. |
 | remove_child_entities| false| Boolean|If true, all entities linked to this entity in a child relationship (eg. leashed) will also be despawned. |
@@ -53,7 +54,49 @@ ms.prod: gaming
 
 ### zoglin
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/zoglin.json" range="141-181":::
+```json
+"minecraft:despawn": {
+        "filters": {
+          "any_of": [
+            {
+              "all_of": [
+                {
+                  "test": "is_persistent",
+                  "value": false
+                },
+                {
+                  "test": "distance_to_nearest_player",
+                  "operator": ">",
+                  "value": 54
+                }
+              ]
+            },
+            {
+              "all_of": [
+                {
+                  "test": "is_persistent",
+                  "value": false
+                },
+                {
+                  "test": "inactivity_timer",
+                  "subject": "self",
+                  "value": 30
+                },
+                {
+                  "test": "random_chance",
+                  "value": 800
+                },
+                {
+                  "test": "distance_to_nearest_player",
+                  "operator": ">",
+                  "value": 32
+                }
+              ]
+            }
+          ]
+        }
+      }
+```
 
 ## Vanilla entities using `minecraft:despawn`
 
@@ -62,7 +105,6 @@ ms.prod: gaming
 - [blaze](../../../../Source/VanillaBehaviorPack_Snippets/entities/blaze.md)
 - [cat](../../../../Source/VanillaBehaviorPack_Snippets/entities/cat.md)
 - [cave_spider](../../../../Source/VanillaBehaviorPack_Snippets/entities/cave_spider.md)
-- [chest_minecart](../../../../Source/VanillaBehaviorPack_Snippets/entities/chest_minecart.md)
 - [chicken](../../../../Source/VanillaBehaviorPack_Snippets/entities/chicken.md)
 - [cow](../../../../Source/VanillaBehaviorPack_Snippets/entities/cow.md)
 - [creeper](../../../../Source/VanillaBehaviorPack_Snippets/entities/creeper.md)
@@ -112,7 +154,7 @@ ms.prod: gaming
 - [wandering_trader](../../../../Source/VanillaBehaviorPack_Snippets/entities/wandering_trader.md)
 - [witch](../../../../Source/VanillaBehaviorPack_Snippets/entities/witch.md)
 - [wither_skeleton](../../../../Source/VanillaBehaviorPack_Snippets/entities/wither_skeleton.md)
-- [wolf](../../../../Source/VanillaBehaviorPack_Snippets/entities/wolf.md))
+- [wolf](../../../../Source/VanillaBehaviorPack_Snippets/entities/wolf.md)
 - [zoglin](../../../../Source/VanillaBehaviorPack_Snippets/entities/zoglin.md)
 - [zombie_horse](../../../../Source/VanillaBehaviorPack_Snippets/entities/zombie_horse.md)
 - [zombie_pigman](../../../../Source/VanillaBehaviorPack_Snippets/entities/zombie_pigman.md)

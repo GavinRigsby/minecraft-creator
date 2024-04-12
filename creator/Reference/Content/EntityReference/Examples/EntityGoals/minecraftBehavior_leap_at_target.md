@@ -1,13 +1,14 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.leap_at_target
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.leap_at_target' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.leap_at_target
 
-`minecraft:behavior.leap_at_target` allows an entity to jump towards a target.
+`minecraft:behavior.leap_at_target` compels an entity to jump towards a target.
 
 > [!IMPORTANT]
 > `minecraft:behavior.leap_at_target` requires a target in order to work properly. Target can be determined by using one of the following behaviors:
@@ -20,8 +21,10 @@ ms.prod: gaming
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
 |must_be_on_ground| true| Boolean|  If true, the mob will only jump at its target if its on the ground. Setting it to false will allow it to jump even if its already in the air |
-|set_persistent| false| Boolean|  Allows the actor to be set to persist upon targeting a player |
-|yd| 0.0| Decimal| The height in blocks the mob jumps when leaping at its target |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+|set_persistent| false| Boolean|  Allows the entity to be set to persist upon targeting a player |
+|target_dist| 0.3| Decimal| Distance in blocks the mob jumps when leaping at its target.|
+|yd| 0.0| Decimal| Height in blocks the mob jumps when leaping at its target. |
 
 ## Example
 
@@ -38,7 +41,13 @@ ms.prod: gaming
 
 ### spider
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/spider.json" range="128-132":::
+```json
+"minecraft:behavior.leap_at_target": {
+          "priority": 4,
+          "yd": 0.4,
+          "must_be_on_ground": false
+        }
+```
 
 ## Vanilla entities using `minecraft:behavior.leap_at_target`
 

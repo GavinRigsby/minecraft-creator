@@ -1,23 +1,26 @@
 ---
-author: v-josjones
-ms.author: v-josjones
+author: iconicNurdle
+ms.author: mikeam
 title: Entity Documentation - minecraft:behavior.look_at_player
-ms.prod: gaming
+description: "A reference document detailing the 'behavior.look_at_player' entity goal"
+ms.service: minecraft-bedrock-edition
 ---
 
 # Entity Documentation - minecraft:behavior.look_at_player
 
-`minecraft:behavior.look_at_player` allows an entity to look at the player by rotating the head bone pose within a set limit.
+`minecraft:behavior.look_at_player` compels an entity to look at the player by rotating the head bone pose within a set limit.
 
 ## Parameters
 
 |Name |Default Value  |Type  |Description  |
 |:----------|:----------|:----------|:----------|
-|angle_of_view_horizontal| 360| Integer| TThe angle in degrees that the mob can see in the X-axis (left-right)|
-|angle_of_view_vertical| 360| Integer| The angle in degrees that the mob can see in the Y-axis (up-down) |
-|look_distance| 8.0| Decimal| The distance in blocks from which the entity will look at |
-|look_time| [2, 4]| Range [a, b]| Time range to look at the entity |
-|probability| 0.02|  Decimal| The probability of looking at the target. A value of 1.00 is 100% |
+|angle_of_view_horizontal| 360| Integer| TThe angle in degrees that the mob can see in the X-axis (left-right).|
+|angle_of_view_vertical| 360| Integer| The angle in degrees that the mob can see in the Y-axis (up-down). |
+|look_distance| 8.0| Decimal| The distance in blocks from which the entity will look at. |
+|look_time| [2, 4]| Range [a, b]| Time range to look at the entity. |
+|priority|*not set*|Integer|The higher the priority, the sooner this behavior will be executed as a goal.|
+|probability| 0.02|  Decimal| The probability of looking at the target. A value of 1.00 is 100%. |
+|target_distance| 6.0 | Decimal| The distance in blocks from which the entity will choose a target. |
 
 ## Example
 
@@ -34,13 +37,16 @@ ms.prod: gaming
 
 ## Vanilla entities examples
 
-### enderman
+### axolotl
 
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/enderman.json" range="150-154":::
+```json
+"minecraft:behavior.look_at_player": {
+        "priority": 10,
+        "target_distance": 6.0,
+        "probability": 0.02
+      }
 
-### rabbit
-
-:::code language="json" source="../../../../Source/VanillaBehaviorPack/entities/rabbit.json" range="201-203":::
+```
 
 ## Vanilla entities using `minecraft:behavior.look_at_player`
 
